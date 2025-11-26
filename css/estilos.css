@@ -4,7 +4,6 @@
     --color-bg-dark: #0b0c10;
     --color-bg-card: #1f2833;
     --color-shadow: rgba(102, 252, 241, 0.3);
-    --color-shadow-strong: rgba(102, 252, 241, 0.7);
     --transition-smooth: 0.3s ease;
 }
 
@@ -53,7 +52,6 @@ body {
 
 .navbar-nav .nav-link {
     transition: var(--transition-smooth);
-    position: relative;
     color: #ccc !important;
 }
 
@@ -63,17 +61,6 @@ body {
 
 .navbar-nav .nav-link.active {
     color: var(--color-primary) !important;
-}
-
-.navbar-nav .nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 2px;
-    background: var(--color-primary);
 }
 
 /* ===== EFECTO GLASS ===== */
@@ -98,7 +85,6 @@ body {
     color: white;
     transition: all 0.4s ease;
     height: 100%;
-    overflow: hidden;
 }
 
 .card:hover {
@@ -128,7 +114,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* ===== BADGES PERSONALIZADOS ===== */
+/* ===== BADGES ===== */
 .badge-custom {
     background: rgba(102, 252, 241, 0.2);
     color: var(--color-primary);
@@ -160,16 +146,12 @@ body {
 }
 
 /* ===== BOTONES ===== */
-.btn {
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-
 .btn-detalle {
     background: var(--color-primary);
     color: var(--color-bg-dark);
     border: none;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .btn-detalle:hover {
@@ -177,15 +159,6 @@ body {
     color: var(--color-bg-dark);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(102, 252, 241, 0.5);
-}
-
-.btn-info {
-    box-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
-}
-
-.btn-info:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px var(--color-shadow-strong);
 }
 
 /* ===== MODAL ===== */
@@ -233,70 +206,7 @@ body {
     color: white;
 }
 
-.error-message h4 {
-    color: #dc3545;
-    margin-bottom: 15px;
-}
-
-.error-message code {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 2px 8px;
-    border-radius: 4px;
-    color: var(--color-primary);
-}
-
-.error-message ul {
-    text-align: left;
-    list-style-position: inside;
-}
-
-/* ===== MENSAJE SIN RESULTADOS ===== */
-.sin-resultados {
-    color: #888;
-    padding: 50px 0;
-}
-
-.sin-resultados h4 {
-    color: #666;
-}
-
-/* ===== ANIMACIONES ===== */
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.container {
-    animation: aparecer 0.8s ease;
-}
-
-/* ===== ESTADOS DE PERSONAJES ===== */
-.personaje {
-    transition: opacity 0.3s ease;
-}
-
-.personaje[style*="display: none"] {
-    opacity: 0;
-}
-
-/* ===== MENÚ LATERAL (para móvil) ===== */
+/* ===== MENÚ LATERAL ===== */
 .menu-lateral {
     height: 100%;
     width: 0;
@@ -344,7 +254,6 @@ body {
     color: white;
     min-height: 240px;
     transition: all 0.4s ease;
-    position: relative;
 }
 
 .arc-card h4 {
@@ -358,13 +267,8 @@ body {
 }
 
 .arc-card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-10px);
     box-shadow: 0 0 30px var(--color-shadow);
-}
-
-.arc-card .badge {
-    font-size: 0.9rem;
-    margin-top: 10px;
 }
 
 /* ===== GALERÍA ===== */
@@ -433,8 +337,7 @@ body {
 
 /* ===== TABLA DE CAPÍTULOS ===== */
 .table {
-    border-collapse: separate;
-    border-spacing: 0;
+    color: white;
 }
 
 .table-hover tbody tr {
@@ -443,16 +346,30 @@ body {
 
 .table-hover tbody tr:hover {
     background-color: rgba(102, 252, 241, 0.1);
-    transform: scale(1.01);
 }
 
-.table-responsive {
-    border-radius: 15px;
-    overflow: hidden;
+/* ===== ANIMACIONES ===== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: aparecer 0.8s ease;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
     .hero {
         height: 40vh;
     }
@@ -466,28 +383,30 @@ body {
     }
     
     .arc-card {
-        min-height: 200px;
+        min-height: 180px;
+        padding: 20px;
     }
-    
-    .modal-dialog {
-        margin: 1rem;
+
+    .display-4 {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 576px) {
-    body {
-        padding-top: 60px;
-    }
-    
-    .display-4 {
-        font-size: 1.8rem;
-    }
-    
     .hero {
         height: 35vh;
     }
     
     .card-img-top {
         height: 220px;
+    }
+
+    .display-4 {
+        font-size: 1.5rem;
+    }
+
+    .arc-card {
+        min-height: auto;
+        padding: 15px;
     }
 }

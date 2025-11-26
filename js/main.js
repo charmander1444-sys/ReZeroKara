@@ -1,3 +1,4 @@
+
 // ===== MENÚ LATERAL =====
 function abrirMenu() {
     document.getElementById("menuLateral").style.width = "250px";
@@ -8,12 +9,12 @@ function cerrarMenu() {
 }
 
 // Cerrar menú al hacer clic fuera de él
-document.addEventListener('click', function(e) {
-    const menu = document.getElementById("menuLateral");
-    const toggleBtn = document.querySelector('.navbar-toggler');
+document.addEventListener('click', function(event) {
+    const menu = document.getElementById('menuLateral');
+    const toggler = document.querySelector('.navbar-toggler');
     
-    if (menu && menu.style.width === "250px") {
-        if (!menu.contains(e.target) && !toggleBtn.contains(e.target)) {
+    if (menu && toggler) {
+        if (!menu.contains(event.target) && !toggler.contains(event.target)) {
             cerrarMenu();
         }
     }

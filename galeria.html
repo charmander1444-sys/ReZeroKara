@@ -2,31 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería - Re:Zero</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
     <div class="container">
-        <a class="navbar-brand fw-bold text-info" href="index.html">
-            Re:Zero
-        </a>
-
+        <a class="navbar-brand fw-bold text-info" href="index.html">Re:Zero</a>
         <button class="navbar-toggler" type="button" onclick="abrirMenu()">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <ul class="navbar-nav ms-auto d-none d-lg-flex">
             <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="personajes.html">Personajes</a></li>
             <li class="nav-item"><a class="nav-link" href="arcos.html">Arcos</a></li>
             <li class="nav-item"><a class="nav-link" href="capitulos.html">Capítulos</a></li>
-            <li class="nav-item active"><a class="nav-link text-info" href="galeria.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link active" href="galeria.html">Galería</a></li>
         </ul>
     </div>
 </nav>
@@ -41,8 +36,8 @@
     <a href="galeria.html">Galería</a>
 </div>
 
-<!-- HERO GALERÍA -->
-<header class="hero h-50">
+<!-- HERO -->
+<header class="hero">
     <div class="hero-overlay">
         <div class="container text-center">
             <h1 class="display-4 fw-bold titulo">Galería de Re:Zero</h1>
@@ -51,49 +46,60 @@
 </header>
 
 <!-- GALERÍA -->
-<div class="container mt-5">
-
-    <div class="row g-4 gallery-grid">
+<div class="container mt-5 mb-5">
+    <div class="row g-4">
 
         <!-- IMAGEN 1 -->
-        <div class="col-md-4">
+        <div class="col-12 col-sm-6 col-md-4">
             <div class="gallery-card">
-                <img src="https://images.alphacoders.com/653/653242.png" onclick="verImagen(this.src)">
+                <img src="https://images.alphacoders.com/653/653242.png" 
+                     alt="Re:Zero Imagen 1"
+                     onclick="verImagen(this.src)">
             </div>
         </div>
 
         <!-- IMAGEN 2 -->
-        <div class="col-md-4">
+        <div class="col-12 col-sm-6 col-md-4">
             <div class="gallery-card">
-                <img src="https://images6.alphacoders.com/116/1161778.jpg" onclick="verImagen(this.src)">
+                <img src="https://images6.alphacoders.com/116/1161778.jpg" 
+                     alt="Re:Zero Imagen 2"
+                     onclick="verImagen(this.src)">
             </div>
         </div>
 
         <!-- IMAGEN 3 -->
-        <div class="col-md-4">
+        <div class="col-12 col-sm-6 col-md-4">
             <div class="gallery-card">
-                <img src="https://images6.alphacoders.com/653/653243.png" onclick="verImagen(this.src)">
+                <img src="https://images6.alphacoders.com/653/653243.png" 
+                     alt="Re:Zero Imagen 3"
+                     onclick="verImagen(this.src)">
             </div>
         </div>
 
         <!-- IMAGEN 4 -->
-        <div class="col-md-4">
+        <div class="col-12 col-sm-6 col-md-4">
             <div class="gallery-card">
-                <img src="https://images2.alphacoders.com/100/1004181.png" onclick="verImagen(this.src)">
+                <img src="https://images2.alphacoders.com/100/1004181.png" 
+                     alt="Re:Zero Imagen 4"
+                     onclick="verImagen(this.src)">
             </div>
         </div>
 
         <!-- IMAGEN 5 -->
-        <div class="col-md-4">
+        <div class="col-12 col-sm-6 col-md-4">
             <div class="gallery-card">
-                <img src="https://images5.alphacoders.com/728/728652.jpg" onclick="verImagen(this.src)">
+                <img src="https://images5.alphacoders.com/728/728652.jpg" 
+                     alt="Re:Zero Imagen 5"
+                     onclick="verImagen(this.src)">
             </div>
         </div>
 
         <!-- IMAGEN 6 -->
-        <div class="col-md-4">
+        <div class="col-12 col-sm-6 col-md-4">
             <div class="gallery-card">
-                <img src="https://images4.alphacoders.com/124/1247477.jpg" onclick="verImagen(this.src)">
+                <img src="https://images4.alphacoders.com/124/1247477.jpg" 
+                     alt="Re:Zero Imagen 6"
+                     onclick="verImagen(this.src)">
             </div>
         </div>
 
@@ -102,7 +108,7 @@
 
 <!-- MODAL IMAGEN GRANDE -->
 <div id="imagenModal" class="modal-imagen" onclick="this.style.display='none'">
-    <img id="imgGrande">
+    <img id="imgGrande" alt="Imagen ampliada">
 </div>
 
 <script src="js/main.js"></script>
