@@ -1,0 +1,174 @@
+{
+  "personajes": [
+    {
+      "id": 1,
+      "nombre": "Natsuki Subaru",
+      "apodos": ["Barusu", "Lolimancer"],
+      "edad": 17,
+      "genero": "Masculino",
+      "descripcion": "Protagonista de la historia, transportado a otro mundo con la habilidad de Regreso por muerte.",
+      "habilidades": [
+        "Return by Death (Regreso por muerte)",
+        "Invisible Providence (Providencia Invisible)",
+        "Cor Leonis (Corazón del Rey León)"
+      ],
+      "afiliacion": "Campamento Emilia",
+      "arcoIntroduccion": 1,
+      "imagen": "https://pm1.aminoapps.com/6283/1fe3ae961e869e02d3db06100e72f27d2cba10e1_hq.jpg",
+      "curiosidades": [
+        "Fan de los videojuegos y anime",
+        "Tiene complejo de inferioridad",
+        "Ama a Emilia profundamente"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Emilia",
+      "apodos": ["Lia", "Emilia-tan"],
+      "edad": 107,
+      "genero": "Femenino",
+      "descripcion": "Medio elfa con apariencia similar a la Bruja de la Envidia. Candidata al trono de Lugunica.",
+      "habilidades": [
+        "Magia de hielo",
+        "Contrato con Puck",
+        "Cristalización de hielo"
+      ],
+      "afiliacion": "Campamento Emilia",
+      "arcoIntroduccion": 1,
+      "imagen": "https://animeargentina.net/wp-content/uploads/2022/09/Emilia-rezero-23-de-septiembre-1024x576.jpg",
+      "curiosidades": [
+        "Es una medio elfa",
+        "Tiene apariencia de 18 años",
+        "Puck es su espíritu guardián"
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Rem",
+      "apodos": ["Rem-rin", "Oni azul"],
+      "edad": 17,
+      "genero": "Femenino",
+      "descripcion": "Doncella oni que trabaja en la mansión Roswaal. Hermana gemela de Ram.",
+      "habilidades": [
+        "Forma oni",
+        "Fuerza sobrehumana",
+        "Magia de viento",
+        "Lucero de la mañana (arma)"
+      ],
+      "afiliacion": "Campamento Emilia",
+      "arcoIntroduccion": 2,
+      "imagen": "https://resize.cdn.otakumode.com/full/u/af9cce12c1ed43ea888ea8a538c77c29.jpg",
+      "curiosidades": [
+        "Enamorada de Subaru",
+        "Su cuerno fue cortado de niña",
+        "Tiene complejo de inferioridad con Ram"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Ram",
+      "apodos": ["Barusu (a Subaru)", "Oni rosa"],
+      "edad": 17,
+      "genero": "Femenino",
+      "descripcion": "Hermana mayor de Rem. Doncella en la mansión Roswaal con actitud arrogante.",
+      "habilidades": [
+        "Clarividencia",
+        "Magia de viento",
+        "Sinestesia (compartir visión)"
+      ],
+      "afiliacion": "Campamento Emilia",
+      "arcoIntroduccion": 2,
+      "imagen": "https://static.wikia.nocookie.net/rezero/images/d/d6/Ram_Anime.png",
+      "curiosidades": [
+        "Perdió su cuerno oni en un ataque",
+        "Era un prodigio antes de perder su cuerno",
+        "Ama a Roswaal"
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Beatrice",
+      "apodos": ["Betty", "Beako"],
+      "edad": 400,
+      "genero": "Femenino",
+      "descripcion": "Espíritu artificial guardiana de la biblioteca prohibida en la mansión Roswaal.",
+      "habilidades": [
+        "Magia de yin suprema",
+        "Teletransportación",
+        "Barrera dimensional",
+        "Shamak (magia de oscuridad)"
+      ],
+      "afiliacion": "Campamento Emilia",
+      "arcoIntroduccion": 2,
+      "imagen": "https://static.wikia.nocookie.net/rezero/images/0/08/Beatrice_Anime.png",
+      "curiosidades": [
+        "Creada por Echidna",
+        "Guarda el evangelio prohibido",
+        "Forma contrato con Subaru"
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Roswaal L. Mathers",
+      "apodos": ["Margrave", "Payaso"],
+      "edad": 400,
+      "genero": "Masculino",
+      "descripcion": "Margrave excéntrico y mago de corte. Mentor de Emilia y empleador de Ram y Rem.",
+      "habilidades": [
+        "Maestría en los 6 elementos mágicos",
+        "Posesión de cuerpos",
+        "Magia de fuego extrema"
+      ],
+      "afiliacion": "Campamento Emilia",
+      "arcoIntroduccion": 2,
+      "imagen": "https://static.wikia.nocookie.net/rezero/images/6/6e/Roswaal_Anime.png",
+      "curiosidades": [
+        "Sigue el evangelio de Echidna",
+        "Cambia de cuerpo cada generación",
+        "Ama a Echidna obsesivamente"
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Puck",
+      "apodos": ["Bestia del Final", "Pack"],
+      "edad": "Desconocida",
+      "genero": "Masculino",
+      "descripcion": "Gran espíritu en forma de gato. Guardián y figura paterna de Emilia.",
+      "habilidades": [
+        "Magia de hielo suprema",
+        "Transformación bestial",
+        "Congelar el mundo"
+      ],
+      "afiliacion": "Campamento Emilia",
+      "arcoIntroduccion": 1,
+      "imagen": "https://static.wikia.nocookie.net/rezero/images/2/2b/Puck_Anime.png",
+      "curiosidades": [
+        "Puede destruir el mundo si Emilia muere",
+        "Creado por Echidna",
+        "Es extremadamente poderoso"
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "Reinhard van Astrea",
+      "apodos": ["Caballero de los Caballeros", "Espada Santo"],
+      "edad": 19,
+      "genero": "Masculino",
+      "descripcion": "El caballero más fuerte del mundo. Heredero de la familia van Astrea.",
+      "habilidades": [
+        "Bendiciones divinas (40+)",
+        "Espada del dragón Reid",
+        "Invencibilidad en combate"
+      ],
+      "afiliacion": "Campamento Felt",
+      "arcoIntroduccion": 1,
+      "imagen": "https://static.wikia.nocookie.net/rezero/images/0/00/Reinhard_van_Astrea_Anime.png",
+      "curiosidades": [
+        "No puede salvar a todos a pesar de su poder",
+        "Tiene una relación complicada con su familia",
+        "Es prácticamente invencible"
+      ]
+    }
+  ]
+}

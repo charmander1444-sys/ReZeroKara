@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re:Zero - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-info" href="index.html">Re:Zero</a>
+        <button class="navbar-toggler" type="button" onclick="abrirMenu()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav ms-auto d-none d-lg-flex">
+            <li class="nav-item"><a class="nav-link active text-info" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="personajes.html">Personajes</a></li>
+            <li class="nav-item"><a class="nav-link" href="arcos.html">Arcos</a></li>
+            <li class="nav-item"><a class="nav-link" href="capitulos.html">Capítulos</a></li>
+            <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- MENÚ LATERAL -->
+<div id="menuLateral" class="menu-lateral">
+    <a href="javascript:void(0)" class="cerrar" onclick="cerrarMenu()">×</a>
+    <a href="index.html">Inicio</a>
+    <a href="personajes.html">Personajes</a>
+    <a href="arcos.html">Arcos</a>
+    <a href="capitulos.html">Capítulos</a>
+    <a href="galeria.html">Galería</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-overlay">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold titulo">Re:Zero kara Hajimeru Isekai Seikatsu</h1>
+        </div>
+    </div>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<div class="container mt-5 mb-5">
+    <div class="text-center my-4">
+        <img src="https://dk2dv4ezy246u.cloudfront.net/widgets/sMuLRCDBTAR_large.jpg" 
+             class="img-fluid" 
+             alt="Re:Zero Logo" 
+             width="250">
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="glass p-4">
+                <h3 class="text-info mb-3">Información General</h3>
+                <p><strong>Autor:</strong> Tappei Nagatsuki</p>
+                <p><strong>Ilustrador:</strong> Shinichirou Otsuka</p>
+                <p><strong>Publicación:</strong> 2014</p>
+                <p class="mb-0"><strong>Género:</strong> Isekai, Fantasía, Drama, Psicológico</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="glass p-4">
+                <h3 class="text-info mb-3">Datos Actuales</h3>
+                <p><strong>Arcos actuales:</strong> 9</p>
+                <p><strong>Capítulos (novela):</strong> </p>
+                <p class="mb-0"><strong>Temporadas anime:</strong> 3</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
