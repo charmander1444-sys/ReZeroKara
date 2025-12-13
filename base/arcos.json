@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "tipo": "novela_ligera",
+    "nombre": "Arco 1",
+    "titulo": "El Tumultuoso Primer Día",
+    "imagenes": [
+      "https://cdn.imgchest.com/files/57362be9d8d9.webp"
+    ],
+    "volumenes": "Volumen 1",
+    "scans": [
+      { "nombre": "Einherjar Project", "link": "#" },
+      { "nombre": "Traducciones Ferindrad", "link": "#" }
+    ],
+    "volumenes_detalle": [
+      {
+        "volumen": "Volumen 1",
+        "driveId": "1H_6GQCjhwcfq_h-t5KWrtVNUQ4ys8PeZ",
+        "capitulos": [
+          "Prólogo: El exceso de calor del principio",
+          "Capítulo 1: El fin del principio",
+          "Capítulo 2: El conflicto tardío",
+          "Capítulo 3: Fin y principio",
+          "Capítulo 4: Cuarto encanto en el tiempo",
+          "Capítulo 5: Vivir en un mundo diferente desde cero",
+          "Epílogo: La luna está mirando"
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "tipo": "novela_ligera",
+    "nombre": "Arco 2",
+    "titulo": "La Turbulenta Semana en la Mansión",
+    "imagenes": [
+      "https://cdn.imgchest.com/files/15ac83d517f1.webp",
+      "https://cdn.imgchest.com/files/a7e0b5c956bc.webp"
+    ],
+    "volumenes": "Volúmenes 2 y 3",
+    "scans": [
+      { "nombre": "Einherjar Project", "link": "#" }
+    ],
+    "volumenes_detalle": [
+      {
+        "volumen": "Volumen 2",
+        "driveId": "1auFfNHrob-zhf2sxjF8QQF8f-VUsFwvJ",
+        "capitulos": [
+          "Prólogo: El principio de la redención",
+          "Capítulo 1: Sentimientos de inseguridad",
+          "Capítulo 2: La mañana de nuestra promesa aún está muy lejos",
+          "Capítulo 3: El sonido de las cadenas",
+          "Capítulo 4: Encuentro en el atardecer",
+          "Capítulo 5: La mañana anticipada"
+        ]
+      },
+      {
+        "volumen": "Volumen 3",
+        "driveId": "1nxQtA_IRNuUiCWSHsu86tgmTHUdqynHp",
+        "capitulos": [
+          "Capítulo 1: El reinicio de Subaru Natsuki",
+          "Capítulo 2: Lloré, lloré sin parar y dejé de llorar",
+          "Capítulo 3: El significado del valor",
+          "Capítulo 4: Métodos de un fanático demoníaco",
+          "Capítulo 5: En todo",
+          "Epílogo: La historia del futuro",
+          "Intermisión: Conversación secreta bajo la luna"
+        ]
+      }
+    ]
+  }
+]
