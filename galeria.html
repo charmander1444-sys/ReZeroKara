@@ -45,66 +45,20 @@
     </div>
 </header>
 
-<!-- GALERÍA -->
-<div class="container mt-5 mb-5">
-    <div class="row g-4">
-
-        <!-- IMAGEN 1 -->
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-card">
-                <img src="https://images.alphacoders.com/653/653242.png" 
-                     alt="Re:Zero Imagen 1"
-                     onclick="verImagen(this.src)">
-            </div>
-        </div>
-
-        <!-- IMAGEN 2 -->
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-card">
-                <img src="https://images6.alphacoders.com/116/1161778.jpg" 
-                     alt="Re:Zero Imagen 2"
-                     onclick="verImagen(this.src)">
-            </div>
-        </div>
-
-        <!-- IMAGEN 3 -->
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-card">
-                <img src="https://images6.alphacoders.com/653/653243.png" 
-                     alt="Re:Zero Imagen 3"
-                     onclick="verImagen(this.src)">
-            </div>
-        </div>
-
-        <!-- IMAGEN 4 -->
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-card">
-                <img src="https://images2.alphacoders.com/100/1004181.png" 
-                     alt="Re:Zero Imagen 4"
-                     onclick="verImagen(this.src)">
-            </div>
-        </div>
-
-        <!-- IMAGEN 5 -->
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-card">
-                <img src="https://images5.alphacoders.com/728/728652.jpg" 
-                     alt="Re:Zero Imagen 5"
-                     onclick="verImagen(this.src)">
-            </div>
-        </div>
-
-        <!-- IMAGEN 6 -->
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-card">
-                <img src="https://images4.alphacoders.com/124/1247477.jpg" 
-                     alt="Re:Zero Imagen 6"
-                     onclick="verImagen(this.src)">
-            </div>
-        </div>
-
-    </div>
+<!-- BUSCADOR -->
+<div class="container mt-5">
+    <input type="text"
+           id="buscadorGaleria"
+           class="form-control form-control-lg mb-4"
+           placeholder="Buscar por arco, volumen, capítulo, personaje..."
+           onkeyup="filtrarGaleria()">
 </div>
+
+<!-- GALERÍA DINÁMICA -->
+<div class="container mb-5">
+    <div id="galeria" class="row g-4"></div>
+</div>
+
 
 <!-- MODAL IMAGEN GRANDE -->
 <div id="imagenModal" class="modal-imagen" onclick="this.style.display='none'">
