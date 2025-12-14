@@ -1,22 +1,134 @@
-const menu = document.getElementById("menuLateral");
-const toggler = document.querySelector(".navbar-toggler");
-let galeriaItems = []; // Almacena los elementos de la galería para el filtrado
+// Inicialización INMEDIATA: Como el script se carga al final del <body>,
+// los elementos ya deberían estar en el DOM.
+const menuLateral = document.getElementById("menuLateral");
+const navToggler = document.querySelector(".navbar-toggler"); 
 
-// Función única para alternar el menú lateral
-const toggleMenu = (open) => {
-    if (menu) {
-        menu.style.width = open ? "250px" : "0";
-    }
+// Constantes de estilo de paginación de Bootstrap (Reutilizables en todo el proyecto)
+const LINK_CLASSES = 'page-link bg-dark text-info border-info';
+const ACTIVE_CLASSES = 'page-link bg-info text-dark border-info';
+
+// ---------------------------------------------
+// --- 2. Funciones de Navegación y Menú ---
+// ---------------------------------------------
+
+/**
+ * Muestra u oculta el menú lateral, ajustando su ancho.
+ * @param {boolean} open - true para mostrar (250px), false para ocultar (0px).
+ */
+window.toggleMenu = (open) => {
+    // Si menuLateral es null, la función simplemente retorna.
+    if (!menuLateral) return; 
+
+    menuLateral.style.width = open ? "250px" : "0";
 }
 
+/**
+ * Cierra automáticamente el menú lateral si el usuario hace clic fuera de él.
+ */
 document.addEventListener("click", e => {
-    if (menu && toggler && !menu.contains(e.target) && !toggler.contains(e.target)) {
+    if (!menuLateral || !navToggler) return;
+
+    if (
+        menuLateral.style.width === "250px" &&
+        !menuLateral.contains(e.target) &&
+        !navToggler.contains(e.target)
+    ) {
         toggleMenu(false);
     }
 });
 
-// ===== GALERÍA - VER IMAGEN (Modal) =====
-function verImagen(src) {
+/**
+ * Activa dinámicamente el estilo 'active' en el enlace de la página actual.
+ */
+function activarEnlaceActual() {
+    // Extrae el nombre del archivo (ej: 'galeria.html')
+    let rutaActual = window.location.pathname.split("/").pop() || "index.html"; 
+
+    const enlaces = document.querySelectorAll('.navbar-nav .nav-link, #menuLateral a');
+
+    enlaces.forEach(enlace => {
+        const href = enlace.getAttribute('href');
+        
+        // Verifica si el href coincide con la ruta actual
+        if (href === rutaActual) {
+            enlace.classList.add('active');
+        } else {
+            enlace.classList.remove('active');
+        }
+    });
+}
+
+
+// ---------------------------------------------
+// --- 3. Funciones de Paginación Global ---
+// ---------------------------------------------
+
+/**
+ * Renderiza los controles de paginación con botones numéricos.
+ * Esta función es reutilizable para Capítulos y Galería.
+ * * @param {string} contenedorId - ID del elemento DOM donde se inyectará la paginación.
+ * @param {number} totalItems - Número total de elementos disponibles.
+ * @param {number} itemsPerPage - Elementos visibles por página.
+ * @param {number} currentPage - La página actual (base 1).
+ * @param {string} changePageFunctionName - Nombre de la función JS local a llamar al hacer clic (e.g., 'cambiarPagina' o 'changePage').
+ */
+window.renderizarPaginacionNumerica = (contenedorId, totalItems, itemsPerPage, currentPage, changePageFunctionName) => {
+    const contenedorPaginacion = document.getElementById(contenedorId);
+    if (!contenedorPaginacion) return;
+
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    if (totalPages <= 1) {
+        contenedorPaginacion.innerHTML = "";
+        return;
+    }
+
+    let numericButtons = '';
+
+    // Generación de botones numéricos
+    for (let i = 1; i <= totalPages; i++) {
+        const linkClass = i === currentPage ? ACTIVE_CLASSES : LINK_CLASSES;
+
+        numericButtons += `
+            <li class="page-item ${i === currentPage ? 'active' : ''}">
+                <a class="${linkClass}" href="#" 
+                   onclick="event.preventDefault(); ${changePageFunctionName}(${i});">${i}</a>
+            </li>
+        `;
+    }
+
+    const htmlPaginacion = `
+        <ul class="pagination justify-content-center mt-3">
+            <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                <a class="${LINK_CLASSES}" href="#" 
+                   onclick="event.preventDefault(); ${changePageFunctionName}(${currentPage - 1});">
+                    Anterior
+                </a>
+            </li>
+
+            ${numericButtons}
+
+            <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                <a class="${LINK_CLASSES}" href="#" 
+                   onclick="event.preventDefault(); ${changePageFunctionName}(${currentPage + 1});">
+                    Siguiente
+                </a>
+            </li>
+        </ul>
+    `;
+
+    contenedorPaginacion.innerHTML = htmlPaginacion;
+}
+
+
+// ---------------------------------------------
+// --- 4. Funciones de Modal/Overlay ---
+// ---------------------------------------------
+
+/**
+ * Muestra el modal de imagen con la fuente especificada.
+ * @param {string} src - Ruta de la imagen a mostrar.
+ */
+window.verImagen = (src) => {
     const modal = document.getElementById("imagenModal");
     const img = document.getElementById("imgGrande");
 
@@ -26,92 +138,24 @@ function verImagen(src) {
     modal.style.display = "flex";
 }
 
-// Cerrar modal
-function cerrarImagen() {
+/**
+ * Oculta el modal de imagen.
+ */
+window.cerrarImagen = () => {
     const modal = document.getElementById("imagenModal");
     if (modal) modal.style.display = "none";
 }
 
-// Cerrar con ESC
+// Cerrar modal con la tecla ESC
 document.addEventListener("keydown", e => {
     if (e.key === "Escape") cerrarImagen();
 });
 
 
-// ===== GALERÍA DINÁMICA: CARGA Y RENDERIZADO =====
-document.addEventListener("DOMContentLoaded", async () => {
-    const galeria = document.getElementById("galeria");
-    if (!galeria) return;
+// ---------------------------------------------
+// --- 5. Ejecución Inicial ---
+// ---------------------------------------------
 
-    try {
-        // Asegúrate de que la ruta 'base/arcos.json' sea correcta.
-        const res = await fetch("base/arcos.json"); 
-        const arcos = await res.json();
-
-        let html = "";
-        
-        arcos.forEach(arco => {
-            
-            // Tags base para todas las imágenes de este arco: nombre del arco, título
-            const baseTags = [arco.nombre, arco.titulo].map(s => s.toLowerCase());
-
-            // 1. Imágenes principales del arco
-            (arco.imagenes || []).forEach(img => {
-                const combinedTags = [...baseTags, ...(img.tags || [])].join(" ").toLowerCase();
-                html += crearCard(img.src, img.tags, combinedTags);
-            });
-
-            // 2. Imágenes por volumen
-            (arco.volumenes_detalle || []).forEach(v => {
-                const volumenTags = v.volumen.toLowerCase();
-                
-                (v.imagenes || []).forEach(img => {
-                    // Combinamos tags del arco + volumen + tags específicos de la imagen
-                    const combinedTags = [...baseTags, volumenTags, ...(img.tags || [])].join(" ").toLowerCase();
-                    html += crearCard(img.src, img.tags, combinedTags);
-                });
-            });
-        });
-        
-        galeria.innerHTML = html;
-        // Almacenamos todos los elementos de la galería para poder filtrarlos
-        galeriaItems = document.querySelectorAll(".galeria-item");
-
-    } catch (error) {
-        console.error("Error cargando galería:", error);
-        // Si hay un error, puedes mostrar un mensaje en la galería:
-        // galeria.innerHTML = '<p class="text-danger">Error al cargar la galería. Verifica la ruta del archivo JSON.</p>';
-    }
+document.addEventListener("DOMContentLoaded", () => {
+    activarEnlaceActual();
 });
-
-// ===== CARD DE IMAGEN =====
-function crearCard(src, tags, allTags) {
-    // Usamos col-md-3 para 4 imágenes en escritorio
-    return `
-        <div class="col-6 col-sm-4 col-md-3 galeria-item"
-             data-tags="${allTags}">
-            <div class="gallery-card">
-                <img src="${src}"
-                     alt="${(tags || []).join(", ")}"
-                     onclick="verImagen('${src}')">
-            </div>
-        </div>
-    `;
-}
-
-// ===== FILTRAR GALERÍA =====
-function filtrarGaleria() {
-    const texto = document
-        .getElementById("buscadorGaleria")
-        .value
-        .toLowerCase()
-        .trim();
-
-    if (galeriaItems.length === 0) return;
-
-    galeriaItems.forEach(item => {
-        const tags = item.dataset.tags;
-        // Muestra si los tags del ítem incluyen el texto buscado
-        item.style.display = tags.includes(texto) ? "block" : "none";
-    });
-}

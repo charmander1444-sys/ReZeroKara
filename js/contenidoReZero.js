@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         contenedor.innerHTML = `
             <div class="col-md-4">
-                <a href="novela-ligera.html" class="text-decoration-none">
+                <a href="subhtml/novela-ligera.html" class="text-decoration-none">
                     <div class="card bg-dark text-light h-100 shadow">
                         <div class="card-img-container">
                             <img src="${imagenPortada}" class="card-img-top" alt="Portada Novela Ligera">

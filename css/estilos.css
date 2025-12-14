@@ -1,69 +1,96 @@
-/* ===== VARIABLES GLOBALES ===== */
+/* ===== 1. VARIABLES GLOBALES Y RESET ===== */
 :root {
-    --color-primary: #66fcf1;
-    --color-bg-dark: #0b0c10;
-    --color-bg-card: #1f2833;
-    --color-shadow: rgba(102, 252, 241, 0.3);
-    --transition-smooth: 0.3s ease;
+    --color-primary: #66fcf1;        /* Teal/Cian brillante */
+    --color-bg-dark: #0b0c10;        /* Fondo principal oscuro */
+    --color-bg-card: #1f2833;        /* Fondo de tarjetas/elementos glass */
+    --color-shadow: rgba(102, 252, 241, 0.3); /* Sombra de luz cian */
+    --transition-smooth: 0.3s ease;  /* Transición estándar */
 }
 
-/* ===== RESET Y BASE ===== */
+/* Reset Box Model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos Base del Cuerpo */
 body {
     background: var(--color-bg-dark);
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 70px;
+    padding-top: 70px; /* Espacio para el Navbar fijo */
     min-height: 100vh;
 }
 
-/* ===== TIPOGRAFÍA ===== */
+/* Título Principal */
 .titulo {
     color: var(--color-primary);
     text-shadow: 0 0 20px var(--color-shadow);
 }
 
-/* ===== HERO ===== */
-.hero {
-    height: 50vh;
-    background: url('https://cdn.imgchest.com/files/caa4fe058406.jpg') center/cover no-repeat;
-    position: relative;
-}
 
-.hero-overlay {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* ===== 2. NAVEGACIÓN Y MENÚ LATERAL ===== */
 
-/* ===== NAVBAR ===== */
+/* Navbar Fijo (Filtro de fondo) */
 .navbar {
     backdrop-filter: blur(10px);
-    background-color: rgba(11, 12, 16, 0.95) !important;
+    background-color: rgba(0, 0, 0, 0.95) !important;
 }
 
+/* Enlaces del Navbar */
 .navbar-nav .nav-link {
     transition: var(--transition-smooth);
-    color: #ccc !important;
+    color: #ffffff !important;
 }
 
-.navbar-nav .nav-link:hover {
-    color: var(--color-primary) !important;
-}
-
+.navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
     color: var(--color-primary) !important;
 }
 
-/* ===== EFECTO GLASS ===== */
+/* Menú Lateral (Sidebar) */
+.menu-lateral {
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    background-color: var(--color-bg-dark);
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    padding-top: 60px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-lateral a {
+    /* Compacto */
+    padding: 12px 25px; 
+    text-decoration: none;
+    font-size: 18px; 
+    color: var(--color-primary);
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.menu-lateral a:hover {
+    background: var(--color-bg-card);
+    padding-left: 30px; 
+}
+
+.menu-lateral .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px; 
+    padding: 0;
+}
+
+
+/* ===== 3. COMPONENTES REUTILIZABLES ===== */
+
+/* Efecto Glass */
 .glass {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -78,12 +105,11 @@ body {
     box-shadow: 0 0 20px var(--color-shadow);
 }
 
-/* ===== CARDS DE PERSONAJES ===== */
+/* Cards Generales (Personajes, Arcos, etc.) */
 .card {
     border-radius: 16px;
     transition: .4s;
 }
-
 
 .card:hover {
     transform: translateY(-10px);
@@ -91,11 +117,10 @@ body {
     box-shadow: 0 10px 30px var(--color-shadow);
 }
 
-/* ===== CARD IMAGEN CONTENIDO RE:ZERO ===== */
+/* Card Imagen (Para portadas de LNs) */
 .card-img-top {
     width: 100%;
-    /* Formato más común para portadas de novelas ligeras */
-    aspect-ratio: 2 / 3; 
+    aspect-ratio: 2 / 3; /* Formato vertical común */
     object-fit: cover;
     padding: 0;
     background: #000;
@@ -107,11 +132,11 @@ body {
 }
 
 .card-text {
-    color: #ccc;
+    color: #ffffff;
     font-size: 0.95rem;
 }
 
-/* ===== BADGES ===== */
+/* Badges/Etiquetas Personalizadas */
 .badge-custom {
     background: rgba(102, 252, 241, 0.2);
     color: var(--color-primary);
@@ -123,7 +148,7 @@ body {
     display: inline-block;
 }
 
-/* ===== FORMULARIOS ===== */
+/* Formularios (Input) */
 .form-control {
     background: #1f2833;
     border: 2px solid var(--color-primary);
@@ -142,7 +167,7 @@ body {
     color: #aaa;
 }
 
-/* ===== BOTONES ===== */
+/* Botones de Detalle */
 .btn-detalle {
     background: var(--color-primary);
     color: var(--color-bg-dark);
@@ -158,94 +183,26 @@ body {
     box-shadow: 0 5px 15px rgba(102, 252, 241, 0.5);
 }
 
-/* ===== MODAL ===== */
-.modal-content {
-    background: #1f2833;
-    border: 2px solid var(--color-primary);
-    color: white;
+
+/* ===== 4. SECCIONES ESPECÍFICAS (Hero, Arcos, Tablas) ===== */
+
+/* Hero Section */
+.hero {
+    height: 50vh;
+    background: url('https://cdn.imgchest.com/files/caa4fe058406.jpg') center/cover no-repeat;
+    position: relative;
 }
 
-.modal-header {
-    border-bottom: 1px solid var(--color-primary);
-}
-
-.modal-footer {
-    border-top: 1px solid var(--color-primary);
-}
-
-.modal-body img {
-    max-height: 300px;
-    object-fit: contain;
-}
-
-/* ===== SPINNER Y LOADING ===== */
-.spinner-border {
-    color: var(--color-primary);
-    width: 3rem;
-    height: 3rem;
-}
-
-#loading {
-    color: var(--color-primary);
-}
-
-/* ===== ERROR ===== */
-.error-container {
-    display: none;
-}
-
-.error-message {
-    background: rgba(220, 53, 69, 0.1);
-    border: 2px solid #dc3545;
-    border-radius: 15px;
-    padding: 30px;
-    margin: 20px 0;
-    color: white;
-}
-
-/* ===== MENÚ LATERAL ===== */
-.menu-lateral {
+.hero-overlay {
+    width: 100%;
     height: 100%;
-    /* REDUCCIÓN: Ancho del menú lateral de 250px a 200px */
-    width: 0; 
-    position: fixed;
-    z-index: 1050;
-    top: 0;
-    left: 0;
-    background-color: var(--color-bg-dark);
-    overflow-x: hidden;
-    transition: width 0.3s ease;
-    padding-top: 60px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.menu-lateral a {
-    /* REDUCCIÓN: Padding vertical de 15px a 12px para hacerlo más compacto */
-    padding: 12px 25px; 
-    text-decoration: none;
-    /* REDUCCIÓN: Tamaño de fuente de 20px a 18px */
-    font-size: 18px; 
-    color: var(--color-primary);
-    display: block;
-    transition: var(--transition-smooth);
-}
-
-.menu-lateral a:hover {
-    background: var(--color-bg-card);
-    /* REDUCCIÓN: Menor desplazamiento al hacer hover */
-    padding-left: 30px; 
-}
-
-.menu-lateral .cerrar {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    /* Mantenido */
-    font-size: 36px; 
-    padding: 0;
-}
-
-/* ===== ARCOS NARRATIVOS ===== */
+/* Arc Cards (Sección Arcos Narrativos) */
 .arc-card {
     padding: 25px;
     color: white;
@@ -268,48 +225,7 @@ body {
     box-shadow: 0 0 30px var(--color-shadow);
 }
 
-/* ================================
-   GALERÍA / IMÁGENES RESPONSIVE
-================================ */
-
-/* Contenedor de imagen */
-.gallery-card {
-    position: relative;
-    width: 100%;
-    /* Aspecto vertical uniforme (2/3 es común para ilustración) */
-    aspect-ratio: 2 / 3; 
-    overflow: hidden;
-    border-radius: 12px;
-    background-color: #000;
-}
-
-/* Imagen */
-.gallery-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* CLAVE */
-    display: block;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.gallery-card img:hover {
-    transform: scale(1.05);
-}
-
-/* ================================
-   GALERÍA EN DETALLE
-================================ */
-#galeria img {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-}
-
-/* ================================
-   IMÁGENES DE ARCOS
-================================ */
+/* Imágenes de Arcos y Contenedor */
 .image-container {
     min-height: 400px; 
     padding: 10px;
@@ -324,13 +240,46 @@ body {
 }
 
 
-@media (max-width: 768px) {
-    .image-container {
-        min-height: 250px;
-    }
+/* Tabla de Capítulos */
+.table {
+    color: white;
 }
 
-/* Overlay */
+.table-hover tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(102, 252, 241, 0.1);
+}
+
+
+/* ===== 5. GALERÍA Y VISUALIZACIÓN DE IMAGEN (MODAL) ===== */
+
+/* Contenedor de Imagen de Galería */
+.gallery-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 3; 
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #000;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card img:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay de Galería (Efecto "Ver imagen") */
 .gallery-card::after {
     content: "Ver imagen";
     position: absolute;
@@ -350,12 +299,19 @@ body {
     opacity: 1;
 }
 
-/* ===== MODAL DE IMAGEN ===== */
+/* Galería en Detalle (Dentro de un Modal o Página Específica) */
+#galeria img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+/* Modal de Imagen (Pantalla completa) */
 .modal-imagen {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.9);
-    display: none; /* Estado inicial oculto */
+    display: none; 
     justify-content: center;
     align-items: center;
     z-index: 9999;
@@ -369,27 +325,80 @@ body {
 }
 
 
+/* ===== 6. UTILIDADES Y FEEDBACK ===== */
 
-/* ===== TABLA DE CAPÍTULOS ===== */
-.table {
+/* Modal Bootstrap (Sobrescribe estilos base para el tema oscuro) */
+.modal-content {
+    background: #1f2833;
+    border: 2px solid var(--color-primary);
     color: white;
 }
 
-.table-hover tbody tr {
-    transition: all 0.2s ease;
+.modal-header,
+.modal-footer {
+    border-color: var(--color-primary);
 }
 
-.table-hover tbody tr:hover {
-    background-color: rgba(102, 252, 241, 0.1);
+.modal-body img {
+    max-height: 300px;
+    object-fit: contain;
 }
 
-/* ===== ANIMACIONES ===== */
+/* Loading/Spinner */
+.spinner-border {
+    color: var(--color-primary);
+    width: 3rem;
+    height: 3rem;
+}
+
+#loading {
+    color: var(--color-primary);
+}
+
+/* Manejo de Errores */
+.error-container {
+    display: none;
+}
+
+.error-message {
+    background: rgba(220, 53, 69, 0.1);
+    border: 2px solid #dc3545;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    color: white;
+}
+
+/* Visor PDF (Iframe/Canvas) */
+.pdf-visor-custom {
+    height: 80vh; 
+    width: 100%;
+    overflow: hidden;
+}
+
+.pdf-visor-custom iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#pdfCanvas {
+    background: #1c1c1c;
+    max-width: 100%;
+}
+
+/* Utilidades Misceláneas */
+.col-md-3 {
+    min-height: 280px; /* Asegura un alto mínimo para las columnas/tarjetas */
+}
+
+
+/* ===== 7. ANIMACIONES ===== */
+
 @keyframes aparecer {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -400,7 +409,9 @@ body {
     animation: aparecer 0.8s ease;
 }
 
-/* ===== RESPONSIVE ===== */
+
+/* ===== 8. RESPONSIVE / MEDIA QUERIES ===== */
+
 @media (max-width: 768px) {
     body {
         padding-top: 60px;
@@ -408,6 +419,10 @@ body {
 
     .hero {
         height: 40vh;
+    }
+    
+    .image-container {
+        min-height: 250px;
     }
 
     .display-4 {
@@ -437,43 +452,4 @@ body {
     .gallery-card {
         aspect-ratio: 2 / 3;
     }
-}
-
-.arco-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background-color: #000;
-}
-
-
-.carousel,
-.carousel-inner,
-.carousel-item {
-    height: 100%;
-}
-
-.col-md-3 {
-    min-height: 280px;
-}
-
-#pdfCanvas {
-    background: #1c1c1c;
-    max-width: 100%;
-}
-
-
-.pdf-visor-custom {
-    height: 80vh; 
-    width: 100%;
-    overflow: hidden;
-}
-
-.pdf-visor-custom iframe {
-    width: 100%;
-    height: 100%;
-}
-
-.card {
-    border-radius: 16px;
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re:Zero - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-info" href="../index.html">Re:Zero</a>
+        <button class="navbar-toggler" type="button" onclick="toggleMenu(true)">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav ms-auto d-none d-lg-flex">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="../personajes.html">Personajes</a></li>
+            <li class="nav-item"><a class="nav-link" href="../arcos.html">Arcos</a></li>
+            <li class="nav-item"><a class="nav-link" href="../capitulos.html">Capítulos</a></li>
+            <li class="nav-item"><a class="nav-link" href="../galeria.html">Galería</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div id="menuLateral" class="menu-lateral">
+    <a href="javascript:void(0)" class="cerrar" onclick="toggleMenu(false)">×</a>
+    <a href="../index.html">Inicio</a>
+    <a href="../personajes.html">Personajes</a>
+    <a href="../arcos.html">Arcos</a>
+    <a href="../capitulos.html">Capítulos</a>
+    <a href="../galeria.html">Galería</a>
+</div>
+
+
+<section class="container mt-5 mb-5">
+    <h2 class="text-center text-info mb-4">Novela Ligera - Arcos</h2> 
+    <div class="row g-4" id="contenedor-arcos"></div> 
+</section>
+
+<script src="../js/arcos.js"></script> 
+<script src="../js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
