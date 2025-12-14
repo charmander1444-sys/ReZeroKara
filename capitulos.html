@@ -13,22 +13,21 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
     <div class="container">
         <a class="navbar-brand fw-bold text-info" href="index.html">Re:Zero</a>
-        <button class="navbar-toggler" type="button" onclick="abrirMenu()">
+        <button class="navbar-toggler" type="button" onclick="toggleMenu(true)">
             <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav ms-auto d-none d-lg-flex">
             <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="personajes.html">Personajes</a></li>
-            <li class="nav-item"><a class="nav-link" href="arcos.html">Arcos</a></li>
-            <li class="nav-item"><a class="nav-link active" href="capitulos.html">Capítulos</a></li>
+            <li class="nav-item"><a class="nav-link active" href="arcos.html">Arcos</a></li>
+            <li class="nav-item"><a class="nav-link" href="capitulos.html">Capítulos</a></li>
             <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- MENÚ LATERAL -->
 <div id="menuLateral" class="menu-lateral">
-    <a href="javascript:void(0)" class="cerrar" onclick="cerrarMenu()">×</a>
+    <a href="javascript:void(0)" class="cerrar" onclick="toggleMenu(false)">×</a>
     <a href="index.html">Inicio</a>
     <a href="personajes.html">Personajes</a>
     <a href="arcos.html">Arcos</a>

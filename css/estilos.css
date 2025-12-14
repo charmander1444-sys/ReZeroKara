@@ -31,7 +31,7 @@ body {
 /* ===== HERO ===== */
 .hero {
     height: 50vh;
-    background: url('https://wallpapers.com/images/hd/re-zero-anime-characters-art-jk9qptyhihseog0m.jpg') center/cover no-repeat;
+    background: url('https://cdn.imgchest.com/files/caa4fe058406.jpg') center/cover no-repeat;
     position: relative;
 }
 
@@ -80,12 +80,10 @@ body {
 
 /* ===== CARDS DE PERSONAJES ===== */
 .card {
-    background: rgba(31, 40, 51, 0.8);
-    border: 1px solid rgba(102, 252, 241, 0.2);
-    color: white;
-    transition: all 0.4s ease;
-    height: 100%;
+    border-radius: 16px;
+    transition: .4s;
 }
+
 
 .card:hover {
     transform: translateY(-10px);
@@ -93,16 +91,15 @@ body {
     box-shadow: 0 10px 30px var(--color-shadow);
 }
 
+/* ===== CARD IMAGEN CONTENIDO RE:ZERO ===== */
 .card-img-top {
-    height: 300px;
-    object-fit: contain;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    /* Formato más común para portadas de novelas ligeras */
+    aspect-ratio: 2 / 3; 
+    object-fit: cover;
+    padding: 0;
+    background: #000;
     transition: transform 0.3s ease;
-}
-
-.card:hover .card-img-top {
-    transform: scale(1.05);
 }
 
 .card-title {
@@ -209,7 +206,8 @@ body {
 /* ===== MENÚ LATERAL ===== */
 .menu-lateral {
     height: 100%;
-    width: 0;
+    /* REDUCCIÓN: Ancho del menú lateral de 250px a 200px */
+    width: 0; 
     position: fixed;
     z-index: 1050;
     top: 0;
@@ -222,9 +220,11 @@ body {
 }
 
 .menu-lateral a {
-    padding: 15px 25px;
+    /* REDUCCIÓN: Padding vertical de 15px a 12px para hacerlo más compacto */
+    padding: 12px 25px; 
     text-decoration: none;
-    font-size: 20px;
+    /* REDUCCIÓN: Tamaño de fuente de 20px a 18px */
+    font-size: 18px; 
     color: var(--color-primary);
     display: block;
     transition: var(--transition-smooth);
@@ -232,20 +232,17 @@ body {
 
 .menu-lateral a:hover {
     background: var(--color-bg-card);
-    padding-left: 35px;
+    /* REDUCCIÓN: Menor desplazamiento al hacer hover */
+    padding-left: 30px; 
 }
 
 .menu-lateral .cerrar {
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 36px;
+    /* Mantenido */
+    font-size: 36px; 
     padding: 0;
-}
-
-.menu-lateral .cerrar:hover {
-    color: #ff4444;
-    background: transparent;
 }
 
 /* ===== ARCOS NARRATIVOS ===== */
@@ -271,45 +268,82 @@ body {
     box-shadow: 0 0 30px var(--color-shadow);
 }
 
-/* ===== GALERÍA ===== */
+/* ================================
+   GALERÍA / IMÁGENES RESPONSIVE
+================================ */
+
+/* Contenedor de imagen */
 .gallery-card {
-    border-radius: 15px;
-    overflow: hidden;
     position: relative;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    /* Aspecto vertical uniforme (2/3 es común para ilustración) */
+    aspect-ratio: 2 / 3; 
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #000;
 }
 
+/* Imagen */
 .gallery-card img {
     width: 100%;
-    height: 260px;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    /* CLAVE */
     display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.gallery-card:hover {
-    transform: scale(1.03);
+.gallery-card img:hover {
+    transform: scale(1.05);
 }
 
-.gallery-card:hover img {
-    transform: scale(1.1);
+/* ================================
+   GALERÍA EN DETALLE
+================================ */
+#galeria img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
 }
 
+/* ================================
+   IMÁGENES DE ARCOS
+================================ */
+.image-container {
+    min-height: 400px; 
+    padding: 10px;
+}
+
+.arco-img {
+    width: 100%;
+    height: 100%; 
+    object-fit: contain; 
+    background-color: #000;
+    border-radius: 10px !important; 
+}
+
+
+@media (max-width: 768px) {
+    .image-container {
+        min-height: 250px;
+    }
+}
+
+/* Overlay */
 .gallery-card::after {
     content: "Ver imagen";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, .6);
     color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    transition: opacity 0.3s ease;
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none;
 }
 
 .gallery-card:hover::after {
@@ -318,22 +352,23 @@ body {
 
 /* ===== MODAL DE IMAGEN ===== */
 .modal-imagen {
-    display: none;
     position: fixed;
-    z-index: 9999;
     inset: 0;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.9);
+    display: none; /* Estado inicial oculto */
     justify-content: center;
     align-items: center;
+    z-index: 9999;
     cursor: pointer;
 }
 
 .modal-imagen img {
-    max-width: 90%;
+    max-width: 95%;
     max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 40px var(--color-primary);
+    object-fit: contain;
 }
+
+
 
 /* ===== TABLA DE CAPÍTULOS ===== */
 .table {
@@ -354,6 +389,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -373,32 +409,20 @@ body {
     .hero {
         height: 40vh;
     }
-    
-    .card-img-top {
-        height: 250px;
-    }
-    
-    .gallery-card img {
-        height: 200px;
-    }
-    
-    .arc-card {
-        min-height: 180px;
-        padding: 20px;
-    }
 
     .display-4 {
         font-size: 2rem;
+    }
+
+    .arc-card {
+        min-height: 180px;
+        padding: 20px;
     }
 }
 
 @media (max-width: 576px) {
     .hero {
         height: 35vh;
-    }
-    
-    .card-img-top {
-        height: 220px;
     }
 
     .display-4 {
@@ -409,7 +433,12 @@ body {
         min-height: auto;
         padding: 15px;
     }
+    
+    .gallery-card {
+        aspect-ratio: 2 / 3;
+    }
 }
+
 .arco-img {
     width: 100%;
     height: 100%;
@@ -431,6 +460,18 @@ body {
 #pdfCanvas {
     background: #1c1c1c;
     max-width: 100%;
+}
+
+
+.pdf-visor-custom {
+    height: 80vh; 
+    width: 100%;
+    overflow: hidden;
+}
+
+.pdf-visor-custom iframe {
+    width: 100%;
+    height: 100%;
 }
 
 .card {

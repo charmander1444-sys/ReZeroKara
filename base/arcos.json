@@ -5,7 +5,10 @@
     "nombre": "Arco 1",
     "titulo": "El Tumultuoso Primer Día",
     "imagenes": [
-      "https://cdn.imgchest.com/files/57362be9d8d9.webp"
+      {
+        "src": "https://cdn.imgchest.com/files/57362be9d8d9.webp",
+        "tags": ["emilia", "puck","portada"]
+      }
     ],
     "volumenes": "Volumen 1",
     "scans": [
@@ -17,10 +20,22 @@
         "volumen": "Volumen 1",
         "driveId": "1H_6GQCjhwcfq_h-t5KWrtVNUQ4ys8PeZ",
         "imagenes": [
-          "https://cdn.imgchest.com/files/c267235d2f9d.webp",
-          "https://cdn.imgchest.com/files/364bb06d07bc.webp",
-          "https://cdn.imgchest.com/files/4c2a7a5a27cc.webp",
-          "https://cdn.imgchest.com/files/0ba1d3da5344.webp"
+          {
+            "src": "https://cdn.imgchest.com/files/c267235d2f9d.webp",
+            "tags": ["emilia", "portada"]
+          },
+          {
+            "src": "https://cdn.imgchest.com/files/364bb06d07bc.webp",
+            "tags": ["emilia","puck"]
+          },
+          {
+            "src": "https://cdn.imgchest.com/files/4c2a7a5a27cc.webp",
+            "tags": ["emilia","puck"]
+          },
+          {
+            "src": "https://cdn.imgchest.com/files/0ba1d3da5344.webp",
+            "tags": ["emilia","puck"]
+          }
         ],
         "capitulos": [
           "Prólogo: El exceso de calor del principio",
@@ -41,8 +56,14 @@
     "nombre": "Arco 2",
     "titulo": "La Turbulenta Semana en la Mansión",
     "imagenes": [
-      "https://cdn.imgchest.com/files/15ac83d517f1.webp",
-      "https://cdn.imgchest.com/files/a7e0b5c956bc.webp"
+      {
+        "src": "https://cdn.imgchest.com/files/15ac83d517f1.webp",
+        "tags": ["rem", "ram", "portada"]
+      },
+      {
+        "src": "https://cdn.imgchest.com/files/a7e0b5c956bc.webp",
+        "tags": ["beatrice","portada"]
+      }
     ],
     "volumenes": "Volúmenes 2 y 3",
     "scans": [
@@ -53,10 +74,22 @@
         "volumen": "Volumen 2",
         "driveId": "1auFfNHrob-zhf2sxjF8QQF8f-VUsFwvJ",
         "imagenes": [
-          "https://cdn.imgchest.com/files/27ac5e77a487.webp",
-          "https://cdn.imgchest.com/files/9367a33c35dd.webp",
-          "https://cdn.imgchest.com/files/eb96c6a2d0c9.webp",
-          "https://cdn.imgchest.com/files/94c67f633377.webp"
+          {
+            "src": "https://cdn.imgchest.com/files/27ac5e77a487.webp",
+            "tags": ["rem", "ram"]
+          },
+          {
+            "src": "https://cdn.imgchest.com/files/9367a33c35dd.webp",
+            "tags": ["rem", "ram"]
+          },
+          {
+            "src": "https://cdn.imgchest.com/files/eb96c6a2d0c9.webp",
+            "tags": ["rem", "ram"]
+          },
+          {
+            "src": "https://cdn.imgchest.com/files/94c67f633377.webp",
+            "tags": ["rem", "ram"]
+          }
         ],
         "capitulos": [
           "Prólogo: El principio de la redención",
@@ -71,9 +104,18 @@
         "volumen": "Volumen 3",
         "driveId": "1nxQtA_IRNuUiCWSHsu86tgmTHUdqynHp",
         "imagenes": [
-          "https://cdn.imgchest.com/files/34cef8b6e6e5.webp",
-          "https://cdn.imgchest.com/files/c3904f932e9e.webp",
-          "https://cdn.imgchest.com/files/a518407135db.webp"
+          {
+            "src": "https://cdn.imgchest.com/files/34cef8b6e6e5.webp",
+            "tags": ["beatrice"]
+          },
+          {
+            "src": "https://cdn.imgchest.com/files/c3904f932e9e.webp",
+            "tags": ["beatrice"]
+          },
+          {
+            "src": "https://cdn.imgchest.com/files/a518407135db.webp",
+            "tags": ["beatrice","puck"]
+          }
         ],
         "capitulos": [
           "Capítulo 1: El reinicio de Subaru Natsuki",
