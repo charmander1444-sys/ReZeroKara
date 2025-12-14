@@ -16,7 +16,6 @@ document.addEventListener("click", e => {
 });
 
 // ===== GALERÍA - VER IMAGEN (Modal) =====
-// ===== GALERÍA - VER IMAGEN (Modal) =====
 function verImagen(src) {
     const modal = document.getElementById("imagenModal");
     const img = document.getElementById("imgGrande");
