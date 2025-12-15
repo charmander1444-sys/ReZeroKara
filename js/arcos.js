@@ -5,13 +5,18 @@
  * @param {string} filename - El nombre del archivo JSON a cargar (ej: 'arcosNL.json' o 'arcosWN.json').
  * @param {string} arcoType - El valor del campo 'tipo' por el que filtrar (ej: 'novela_ligera' o 'web_novel').
  */
+const BASE_PATH = location.pathname.includes("/subhtml/")
+    ? "../base/"
+    : "base/";
+
+
 async function cargarArcos(filename, arcoType) {
     const contenedor = document.getElementById("contenedor-arcos");
     if (!contenedor) return;
 
     try {
         // La ruta se ajusta automáticamente, subiendo un nivel desde 'subhtml/'
-        const res = await fetch(`../base/${filename}`); 
+        const res = await fetch(`${BASE_PATH}${filename}`);
         
         if (!res.ok) {
             throw new Error(`Error HTTP ${res.status}: No se pudo cargar el archivo ${filename}.`);
