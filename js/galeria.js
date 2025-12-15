@@ -1,4 +1,3 @@
-
 const ITEMS_PER_PAGE = 20;
 let allGalleryItems = [];
 let filteredItems = [];
@@ -44,26 +43,33 @@ function renderizarPagina(page) {
 // FUNCIÓN DE PAGINACIÓN (Genera los botones)
 // ---------------------------------------------
 function renderizarPaginacion(totalItems) {
+    // Asumiendo que 'renderizarPaginacionNumerica' es una función global disponible
     // Llama a la función global, especificando la función de callback local (changePage)
-    renderizarPaginacionNumerica(
-        'paginacionContenedor', // ID del contenedor de paginación en el HTML de galería
-        totalItems,
-        ITEMS_PER_PAGE, // ITEMS_PER_PAGE es la constante local de galería
-        currentPage,
-        'changePage' // Nombre de la función en galeria.js que maneja el cambio
-    );
+    if (typeof renderizarPaginacionNumerica === 'function') {
+        renderizarPaginacionNumerica(
+            'paginacionContenedor', // ID del contenedor de paginación en el HTML de galería
+            totalItems,
+            ITEMS_PER_PAGE, // ITEMS_PER_PAGE es la constante local de galería
+            currentPage,
+            'changePage' // Nombre de la función en galeria.js que maneja el cambio
+        );
+    } else {
+        // En caso de que la función no esté disponible
+        console.warn("renderizarPaginacionNumerica no está definida globalmente.");
+    }
 }
 
 // ---------------------------------------------
 // FUNCIÓN GLOBAL PARA CAMBIAR DE PÁGINA (Se mantiene, pero ahora es importante que sea global)
 // ---------------------------------------------
 window.changePage = (newPage) => {
-    // ... (El cuerpo de la función se mantiene igual) ...
     const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
 
     if (newPage >= 1 && newPage <= totalPages) {
         renderizarPagina(newPage);
-        galeriaContenedor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Asegúrate de que esta línea es correcta para tu entorno (por ejemplo, si tienes un input de búsqueda)
+        const elementToScroll = document.getElementById("buscadorGaleria") || galeriaContenedor;
+        elementToScroll.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
@@ -78,23 +84,36 @@ window.filtrarGaleria = () => {
         .toLowerCase()
         .trim();
 
-    // 1. Aplicar filtro sobre todos los ítems
-    filteredItems = allGalleryItems.filter(itemHtml => {
-        // Método actual para extraer tags desde el string HTML
-        const tagsIndex = itemHtml.indexOf('data-tags="') + 11;
-        const tagsEndIndex = itemHtml.indexOf('"', tagsIndex);
-        const tags = itemHtml.substring(tagsIndex, tagsEndIndex);
+    // 1. Si el campo de búsqueda está vacío, mostramos todos los ítems.
+    if (texto === "") {
+        filteredItems = allGalleryItems;
+    } else {
+        // Divide el texto de búsqueda en palabras clave individuales
+        // (Ejemplo: "subaru natsuki arco 1" se convierte en ["subaru", "natsuki", "arco", "1"])
+        const keywords = texto.split(/\s+/).filter(kw => kw.length > 0);
 
-        return tags.includes(texto);
-    });
+        // 2. Aplicar filtro sobre todos los ítems
+        filteredItems = allGalleryItems.filter(itemHtml => {
+            // Método para extraer el valor de data-tags
+            const match = itemHtml.match(/data-tags="([^"]+)"/);
+            
+            if (match && match[1]) {
+                const tagsString = match[1]; // Cadena completa de tags, nombres y volúmenes (ej: "emilia puck portada arco 1 volumen 1")
+                
+                // Verifica que CADA palabra clave (keyword) esté contenida
+                // en la cadena completa de tags (tagsString).
+                return keywords.every(keyword => tagsString.includes(keyword));
+            }
+            return false;
+        });
+    }
 
-    // 2. Renderizar la primera página de los resultados filtrados
+    // 3. Renderizar la primera página de los resultados filtrados
     renderizarPagina(1);
 }
 
-
 // ---------------------------------------------
-// Carga Inicial y Renderizado (MODIFICADO)
+// Carga Inicial y Renderizado (SE MANTIENE IGUAL - Carga correcta de data-tags)
 // ---------------------------------------------
 document.addEventListener("DOMContentLoaded", async () => {
     if (!galeriaContenedor) return;
@@ -107,22 +126,25 @@ document.addEventListener("DOMContentLoaded", async () => {
         let items = []; // Almacena temporalmente los HTML de todas las tarjetas
 
         arcos.forEach(arco => {
+            // Tags base: nombre de arco y título de arco (por ejemplo, "arco 1", "el tumultuoso primer día")
             const baseTags = [arco.nombre, arco.titulo].map(s => s.toLowerCase());
 
-            // 1. Imágenes principales del arco (Se mantiene igual, asumiendo que arco.imagenes sigue el formato viejo: {src: string, tags: array})
+            // 1. Imágenes principales del arco
             (arco.imagenes || []).forEach(img => {
+                // Combinamos tags base + tags de la imagen
                 const combinedTags = [...baseTags, ...(img.tags || [])].join(" ").toLowerCase();
                 items.push(crearCard(img.src, img.tags, combinedTags));
             });
 
-            // 2. Imágenes por volumen (AQUÍ ESTÁ EL CAMBIO CLAVE)
+            // 2. Imágenes por volumen
             (arco.volumenes_detalle || []).forEach(v => {
+                // Tags de volumen (por ejemplo, "volumen 1")
                 const volumenTags = v.volumen.toLowerCase();
 
-                // v.imagenes es ahora un array de grupos de imágenes {src: string[], tags: array}
+                // v.imagenes es un array de grupos de imágenes {src: string[], tags: array}
                 (v.imagenes || []).forEach(grupo => {
                     
-                    // Crea una lista combinada de tags para el atributo data-tags (una vez por grupo)
+                    // Crea una lista combinada de tags para el atributo data-tags (arco.nombre, arco.titulo, volumen, tags de la imagen)
                     const combinedTags = [...baseTags, volumenTags, ...(grupo.tags || [])].join(" ").toLowerCase();
                     
                     // Itera sobre el array de URLs (src) dentro del grupo

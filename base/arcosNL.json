@@ -7,11 +7,7 @@
     "imagenes": [
       {
         "src": "https://cdn.imgchest.com/files/57362be9d8d9.webp",
-        "tags": [
-          "emilia",
-          "puck",
-          "portada"
-        ]
+        "tags": ["emilia","puck","portada"]
       }
     ],
     "volumenes": "Volumen 1",
@@ -31,161 +27,63 @@
         "driveId": "1H_6GQCjhwcfq_h-t5KWrtVNUQ4ys8PeZ",
         "imagenes": [
           {
-            "src": [
-              "https://cdn.imgchest.com/files/c267235d2f9d.webp"
-            ],
-            "tags": [
-              "emilia",
-              "portada"
-            ]
+            "src": ["https://cdn.imgchest.com/files/c267235d2f9d.webp"],
+            "tags": ["emilia","portada"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/364bb06d07bc.webp",
-              "https://cdn.imgchest.com/files/4c2a7a5a27cc.webp",
-              "https://cdn.imgchest.com/files/0ba1d3da5344.webp",
-              "https://cdn.imgchest.com/files/bd527ed13f1d.webp"
-            ],
-            "tags": [
-              "emilia",
-              "puck"
-            ]
+            "src": ["https://cdn.imgchest.com/files/364bb06d07bc.webp", "https://cdn.imgchest.com/files/4c2a7a5a27cc.webp", "https://cdn.imgchest.com/files/0ba1d3da5344.webp", "https://cdn.imgchest.com/files/bd527ed13f1d.webp"],
+            "tags": ["emilia","puck"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/1f31e64269c6.webp"
-            ],
-            "tags": [
-              "emilia",
-              "puck",
-              "subaru natsuki",
-              "japones"
-            ]
+            "src": ["https://cdn.imgchest.com/files/1f31e64269c6.webp"],
+            "tags": ["emilia","puck","subaru natsuki"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/97bbbe09285c.webp"
-            ],
-            "tags": [
-              "emilia",
-              "puck",
-              "subaru natsuki",
-              "diseño",
-              "japones"
-            ]
+            "src": ["https://cdn.imgchest.com/files/97bbbe09285c.webp"],
+            "tags": ["emilia","puck","subaru natsuki","diseño"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/e058b4b2b576.webp"
-            ],
-            "tags": [
-              "elsa granhiert",
-              "kadomon Risch",
-              "felt",
-              "rom",
-              "reinhard van astrea",
-              "japones",
-              "diseño"
-            ]
+            "src": ["https://cdn.imgchest.com/files/e058b4b2b576.webp"],
+            "tags": ["elsa granhiert","kadomon Risch","felt","rom","reinhard van astrea","diseño"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/ef31fc80a750.webp"
-            ],
-            "tags": [
-              "felt",
-              "gaston",
-              "rachins hoffman",
-              "camberley"
-            ]
+            "src": ["https://cdn.imgchest.com/files/ef31fc80a750.webp"],
+            "tags": ["felt","gaston","rachins hoffman","camberley"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/2c6f643e1806.webp"
-            ],
-            "tags": [
-              "subaru natsuki",
-              "emilia",
-              "plum Risch"
-            ]
+            "src": ["https://cdn.imgchest.com/files/2c6f643e1806.webp"],
+            "tags": ["subaru natsuki","emilia","plum Risch"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/c4e37aa8a3b3.webp"
-            ],
-            "tags": [
-              "subaru natsuki",
-              "emilia"
-            ]
+            "src": ["https://cdn.imgchest.com/files/c4e37aa8a3b3.webp"],
+            "tags": ["subaru natsuki","emilia"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/0982737efe37.webp"
-            ],
-            "tags": [
-              "felt",
-              "rom",
-              "subaru natsuki"
-            ]
+            "src": ["https://cdn.imgchest.com/files/0982737efe37.webp"],
+            "tags": ["felt","rom","subaru natsuki"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/be53e5e232eb.webp",
-              "https://cdn.imgchest.com/files/6c9fc9434ea8.webp"
-            ],
-            "tags": [
-              "elsa granhiert"
-            ]
+            "src": ["https://cdn.imgchest.com/files/be53e5e232eb.webp", "https://cdn.imgchest.com/files/6c9fc9434ea8.webp"],
+            "tags": ["elsa granhiert"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/3c8910b1fb32.webp",
-              "https://cdn.imgchest.com/files/fcbb4148065e.webp"
-            ],
-            "tags": [
-              "emilia"
-            ]
+            "src": ["https://cdn.imgchest.com/files/3c8910b1fb32.webp", "https://cdn.imgchest.com/files/fcbb4148065e.webp"],
+            "tags": ["emilia"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/411eb0114c20.webp"
-            ],
-            "tags": [
-              "felt",
-              "reinhard van astrea"
-            ]
+            "src": ["https://cdn.imgchest.com/files/411eb0114c20.webp"],
+            "tags": ["felt","reinhard van astrea"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/bfd31dacad28.webp"
-            ],
-            "tags": [
-              "emilia",
-              "subaru natsuki",
-              "diseño",
-              "japones"
-            ]
+            "src": ["https://cdn.imgchest.com/files/bfd31dacad28.webp"],
+            "tags": ["emilia","subaru natsuki","diseño"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/ca42a112d6e4.webp"
-            ],
-            "tags": [
-              "rem",
-              "ram",
-              "japones"
-            ]
+            "src": ["https://cdn.imgchest.com/files/ca42a112d6e4.webp"],
+            "tags": ["rem","ram"]
           }
         ],
-        "capitulos": [
-          "Prólogo: El exceso de calor del principio",
-          "Capítulo 1: El fin del principio",
-          "Capítulo 2: El conflicto tardío",
-          "Capítulo 3: Fin y principio",
-          "Capítulo 4:  Cuarto encanto en el tiempo",
-          "Capítulo 5: Vivir en un mundo diferente desde cero",
-          "Epílogo: La luna está mirando"
-        ]
+        "capitulos": ["Prólogo: El exceso de calor del principio", "Capítulo 1: El fin del principio", "Capítulo 2: El conflicto tardío", "Capítulo 3: Fin y principio", "Capítulo 4:  Cuarto encanto en el tiempo", "Capítulo 5: Vivir en un mundo diferente desde cero", "Epílogo: La luna está mirando"]
       }
     ]
   },
@@ -197,18 +95,11 @@
     "imagenes": [
       {
         "src": "https://cdn.imgchest.com/files/15ac83d517f1.webp",
-        "tags": [
-          "rem",
-          "ram",
-          "portada"
-        ]
+        "tags": ["rem","ram","portada"]
       },
       {
         "src": "https://cdn.imgchest.com/files/a7e0b5c956bc.webp",
-        "tags": [
-          "beatrice",
-          "portada"
-        ]
+        "tags": ["beatrice","portada"]
       }
     ],
     "volumenes": "Volúmenes 2 y 3",
@@ -224,161 +115,110 @@
         "driveId": "1auFfNHrob-zhf2sxjF8QQF8f-VUsFwvJ",
         "imagenes": [
           {
-            "src": [
-              "https://cdn.imgchest.com/files/27ac5e77a487.webp",
-              "https://cdn.imgchest.com/files/9367a33c35dd.webp",
-              "https://cdn.imgchest.com/files/eb96c6a2d0c9.webp",
-              "https://cdn.imgchest.com/files/94c67f633377.webp",
-              "https://cdn.imgchest.com/files/9ab345388745.webp",
-              "https://cdn.imgchest.com/files/2675c3dc6a80.webp",
-              "https://cdn.imgchest.com/files/69ce293ca03a.webp"
-            ],
-            "tags": [
-              "rem",
-              "ram"
-            ]
+            "src": ["https://cdn.imgchest.com/files/27ac5e77a487.webp", "https://cdn.imgchest.com/files/9367a33c35dd.webp", "https://cdn.imgchest.com/files/eb96c6a2d0c9.webp", "https://cdn.imgchest.com/files/94c67f633377.webp", "https://cdn.imgchest.com/files/9ab345388745.webp", "https://cdn.imgchest.com/files/2675c3dc6a80.webp", "https://cdn.imgchest.com/files/69ce293ca03a.webp"],
+            "tags": ["rem","ram"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/03eaa39ebad1.webp"
-            ],
-            "tags": [
-              "rem",
-              "ram",
-              "beatrice",
-              "roswaal L mathers",
-              "diseño",
-              "japones"
-            ]
+            "src": ["https://cdn.imgchest.com/files/03eaa39ebad1.webp"],
+            "tags": ["rem","ram","beatrice","roswaal L mathers","diseño"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/62a674bfe4a7.webp"
-            ],
-            "tags": [
-              "subaru natsuki",
-              "ram",
-              "japones"
-            ]
+            "src": ["https://cdn.imgchest.com/files/62a674bfe4a7.webp"],
+            "tags": ["subaru natsuki","ram"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/ce72562a8c9b.webp"
-            ],
-            "tags": [
-              "beatrice"
-            ]
+            "src": ["https://cdn.imgchest.com/files/ce72562a8c9b.webp"],
+            "tags": ["beatrice"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/a0db28afe2a6.webp",
-              "https://cdn.imgchest.com/files/7d461811d1be.webp"
-            ],
-            "tags": [
-              "rem",
-              "ram",
-              "subaru natsuki"
-            ]
+            "src": ["https://cdn.imgchest.com/files/a0db28afe2a6.webp", "https://cdn.imgchest.com/files/7d461811d1be.webp"],
+            "tags": ["rem","ram","subaru natsuki"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/2b0e817edeaa.webp"
-            ],
-            "tags": [
-              "ram",
-              "roswaal L mathers"
-            ]
+            "src": ["https://cdn.imgchest.com/files/2b0e817edeaa.webp"],
+            "tags": ["ram","roswaal L mathers"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/f111c482fd8b.webp",
-              "https://cdn.imgchest.com/files/fa54e913f8ae.webp"
-            ],
-            "tags": [
-              "rem",
-              "subaru natsuki"
-            ]
+            "src": ["https://cdn.imgchest.com/files/f111c482fd8b.webp", "https://cdn.imgchest.com/files/fa54e913f8ae.webp"],
+            "tags": ["rem","subaru natsuki"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/cac7caa8b236.webp"
-            ],
-            "tags": [
-              "subaru natsuki"
-            ]
+            "src": ["https://cdn.imgchest.com/files/cac7caa8b236.webp"],
+            "tags": ["subaru natsuki"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/de584b277454.webp"
-            ],
-            "tags": [
-              "emilia",
-              "subaru natsuki"
-            ]
+            "src": ["https://cdn.imgchest.com/files/de584b277454.webp"],
+            "tags": ["emilia","subaru natsuki"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/46e6c3b0ee9f.webp"
-            ],
-            "tags": [
-              "puck",
-              "beatrice",
-              "diseño"
-            ]
+            "src": ["https://cdn.imgchest.com/files/46e6c3b0ee9f.webp"],
+            "tags": ["puck","beatrice","diseño"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/d811a8e08df6.webp"
-            ],
-            "tags": [
-              "rem",
-              "ram",
-              "diseño",
-              "japones"
-            ]
+            "src": ["https://cdn.imgchest.com/files/d811a8e08df6.webp"],
+            "tags": ["rem","ram","diseño"]
           }
         ],
-        "capitulos": [
-          "Prólogo: El principio de la redención",
-          "Capítulo 1: Sentimientos de inseguridad",
-          "Capítulo 2: La mañana de nuestra promesa aún está muy lejos",
-          "Capítulo 3: El sonido de las cadenas",
-          "Capítulo 4: Encuentro en el atardecer",
-          "Capítulo 5: La mañana anticipada"
-        ]
+        "capitulos": ["Prólogo: El principio de la redención", "Capítulo 1: Sentimientos de inseguridad", "Capítulo 2: La mañana de nuestra promesa aún está muy lejos", "Capítulo 3: El sonido de las cadenas", "Capítulo 4: Encuentro en el atardecer", "Capítulo 5: La mañana anticipada"]
       },
       {
         "volumen": "Volumen 3",
         "driveId": "1nxQtA_IRNuUiCWSHsu86tgmTHUdqynHp",
         "imagenes": [
           {
-            "src": [
-              "https://cdn.imgchest.com/files/34cef8b6e6e5.webp",
-              "https://cdn.imgchest.com/files/c3904f932e9e.webp"
-            ],
-            "tags": [
-              "beatrice"
-            ]
+            "src": ["https://cdn.imgchest.com/files/34cef8b6e6e5.webp", "https://cdn.imgchest.com/files/c3904f932e9e.webp"],
+            "tags": ["beatrice"]
           },
           {
-            "src": [
-              "https://cdn.imgchest.com/files/a518407135db.webp"
-            ],
-            "tags": [
-              "beatrice",
-              "puck"
-            ]
+            "src": ["https://cdn.imgchest.com/files/a518407135db.webp"],
+            "tags": ["beatrice","puck"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/20aceb17e390.webp"],
+            "tags": ["emilia","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/97391f2b8006.webp", "https://cdn.imgchest.com/files/dcf04cacca2d.webp", "https://cdn.imgchest.com/files/28405cfe0514.webp", "https://cdn.imgchest.com/files/dd3b8ab65d63.webp"],
+            "tags": ["rem"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/b0810d471d5c.webp"],
+            "tags": ["rem","ram","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/094adf82e0e1.webp"],
+            "tags": ["beatrice","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/39d0114a2305.webp"],
+            "tags": ["lucas","mild","subaru natsuki","petra leyte","meili portroute"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/e2eec776d1a9.webp"],
+            "tags": ["emilia","subaru natsuki","rem"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/e5bd1953b71e.webp"],
+            "tags": ["ram","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/47fdcac15a33.webp"],
+            "tags": ["wolgram","mabestia","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/c0e82f9b76e0.webp"],
+            "tags": ["emilia"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/4fe1e1fe4d71.webp"],
+            "tags": ["emilia","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/b68259df4587.webp"],
+            "tags": ["roswaal L mathers","diseño"]
           }
         ],
-        "capitulos": [
-          "Capítulo 1: El reinicio de Subaru Natsuki",
-          "Capítulo 2: Lloré, lloré sin parar y dejé de llorar",
-          "Capítulo 3: El significado del valor",
-          "Capítulo 4: Métodos de un fanático demoníaco",
-          "Capítulo 5: En todo",
-          "Epílogo: La historia del futuro",
-          "Intermisión: Conversación secreta bajo la luna"
-        ]
+        "capitulos": ["Capítulo 1: El reinicio de Subaru Natsuki", "Capítulo 2: Lloré, lloré sin parar y dejé de llorar", "Capítulo 3: El significado del valor", "Capítulo 4: Métodos de un fanático demoníaco", "Capítulo 5: En todo", "Epílogo: La historia del futuro", "Intermisión: Conversación secreta bajo la luna"]
       }
     ]
   }
