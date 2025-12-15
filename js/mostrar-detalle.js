@@ -34,7 +34,7 @@ async function init() {
 
     // Intentar cargar desde Novela Ligera (NL)
     try {
-        const arcosNL = await cargarJSON("../base/arcosNL.json");
+        const arcosNL = await cargarJSON("/base/arcosNL.json");
         arco = arcosNL.find(a => a.id === id);
     } catch (e) {
         console.warn("No se pudo cargar arcosNL.json. Intentando con WN.", e);
@@ -43,7 +43,7 @@ async function init() {
     // Si no se encuentra en NL, intentar con Web Novel (WN)
     if (!arco) {
         try {
-            const arcosWN = await cargarJSON("../base/arcosWN.json");
+            const arcosWN = await cargarJSON("/base/arcosWN.json");
             arco = arcosWN.find(a => a.id === id);
         } catch (e) {
             console.warn("No se pudo cargar arcosWN.json.");
