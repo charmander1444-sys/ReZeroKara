@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Función auxiliar para generar la estructura de la tarjeta HTML
     const createCardHTML = (link, imgSrc, title, description) => `
-        <div class="col-md-4">
+        <div class="col-6 col-md-4">
             <a href="${link}" class="text-decoration-none">
                 <div class="card bg-dark text-light h-100 shadow">
                     <div class="card-img-container">

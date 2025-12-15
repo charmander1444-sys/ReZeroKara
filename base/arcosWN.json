@@ -6,7 +6,9 @@
         "titulo": "Contrato eterno",
         "imagenes": [
             {
-                "src": "https://cdn.imgchest.com/files/2670e54f55e3.jpg"
+                "src": [
+                    "https://cdn.imgchest.com/files/2670e54f55e3.jpg"
+                ]
             }
         ],
         "volumenes": "Volumen 10,11,12,13,14,15",
@@ -26,8 +28,13 @@
                 "driveId": "186kmqL24g6Ffir2awdSIz4XQTe79Pg7a",
                 "imagenes": [
                     {
-                        "src": ["https://cdn.imgchest.com/files/e39a59e0ed19.webp"],
-                        "tags": ["echidna","portada"]
+                        "src": [
+                            "https://cdn.imgchest.com/files/e39a59e0ed19.webp"
+                        ],
+                        "tags": [
+                            "echidna",
+                            "portada"
+                        ]
                     }
                 ],
                 "capitulos": [
