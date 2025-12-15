@@ -9,7 +9,7 @@ let capitulosFiltrados = [];
  */
 async function inicializarCapitulos() {
     try {
-        const respuesta = await fetch('base/arcos.json');
+        const respuesta = await fetch('base/arcosNL.json');
 
         if (!respuesta.ok) {
             throw new Error(`Error al cargar los datos: ${respuesta.statusText}`);
@@ -28,9 +28,9 @@ async function inicializarCapitulos() {
         configurarPaginacion(capitulosFiltrados.length, paginaActual);
 
     } catch (error) {
-        console.error("No se pudo cargar o procesar arcos.json:", error);
+        console.error("No se pudo cargar o procesar arcosNL.json:", error);
         const tbody = document.getElementById('tablaCapitulos').querySelector('tbody');
-        tbody.innerHTML = `<tr><td colspan="5" class="text-center text-danger">⚠️ Error: No se pudieron cargar los capítulos. Revisa la ruta 'base/arcos.json' o el servidor local.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="5" class="text-center text-danger">⚠️ Error: No se pudieron cargar los capítulos. Revisa la ruta 'base/arcosNL.json' o el servidor local.</td></tr>`;
     }
 }
 
@@ -103,10 +103,6 @@ function mostrarCapitulosPorPagina(capitulos, pagina) {
         const celdaAccion = row.insertCell();
         const botonVer = document.createElement('a');
 
-        // CONSTRUCCIÓN DEL ENLACE CON PARÁMETROS:
-        // Se asume que mostrar-detalle.html está en una subcarpeta (ej: 'subhtml')
-        // El parámetro 'id' carga el arco.
-        // El parámetro 'volumen' se pasa para saber qué volumen específico se busca (aunque no lo uses aún).
         botonVer.href = `mostrar-detalle.html?id=${cap.arcId}&volumen=${encodeURIComponent(cap.volumen)}`;
         // **********************************************
 

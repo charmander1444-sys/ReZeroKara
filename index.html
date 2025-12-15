@@ -1,108 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Re:Zero - Inicio</title>
-
-    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Estilos propios -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-    <div class="container">
-        <a class="navbar-brand fw-bold text-info" href="index.html">Re:Zero</a>
-        <button class="navbar-toggler" type="button" onclick="toggleMenu(true)">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <ul class="navbar-nav ms-auto d-none d-lg-flex">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="personajes.html">Personajes</a></li>
-            <li class="nav-item"><a class="nav-link" href="arcos.html">Arcos</a></li>
-            <li class="nav-item"><a class="nav-link" href="capitulos.html">Capítulos</a></li>
-            <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
-        </ul>
-    </div>
-</nav>
-
-<div id="menuLateral" class="menu-lateral">
-    <a href="javascript:void(0)" class="cerrar" onclick="toggleMenu(false)">×</a>
-    <a href="index.html">Inicio</a>
-    <a href="personajes.html">Personajes</a>
-    <a href="arcos.html">Arcos</a>
-    <a href="capitulos.html">Capítulos</a>
-    <a href="galeria.html">Galería</a>
-</div>
-
-
-<!-- ================= HERO ================= -->
-<header class="hero">
-    <div class="hero-overlay">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bold titulo">
-                Re:Zero kara Hajimeru Isekai Seikatsu
-            </h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="index.html">Re:Zero</a>
+            <button class="navbar-toggler" type="button" onclick="toggleMenu(true)">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav ms-auto d-none d-lg-flex">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="personajes.html">Personajes</a></li>
+                <li class="nav-item"><a class="nav-link" href="arcos.html">Arcos</a></li>
+                <li class="nav-item"><a class="nav-link" href="capitulos.html">Capítulos</a></li>
+                <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+            </ul>
         </div>
-    </div>
-</header>
+    </nav>
 
-<!-- ================= CONTENIDO PRINCIPAL ================= -->
-<main class="container my-5">
-
-    <!-- Logo -->
-    <div class="text-center mb-5">
-        <img
-            src="https://dk2dv4ezy246u.cloudfront.net/widgets/sMuLRCDBTAR_large.jpg"
-            alt="Re:Zero Logo"
-            class="img-fluid"
-            width="250">
+    <div id="menuLateral" class="menu-lateral">
+        <a href="javascript:void(0)" class="cerrar" onclick="toggleMenu(false)">×</a>
+        <a href="index.html">Inicio</a>
+        <a href="personajes.html">Personajes</a>
+        <a href="arcos.html">Arcos</a>
+        <a href="capitulos.html">Capítulos</a>
+        <a href="galeria.html">Galería</a>
     </div>
 
-    <!-- Info -->
-    <div class="row g-4 mb-5">
-        <div class="col-md-6">
-            <div class="glass p-4 h-100">
-                <h3 class="text-info mb-3">Información General</h3>
-                <p><strong>Autor:</strong> Tappei Nagatsuki</p>
-                <p><strong>Ilustrador:</strong> Shinichirou Otsuka</p>
-                <p><strong>Publicación:</strong> 2014</p>
-                <p class="mb-0">
-                    <strong>Género:</strong> Isekai, Fantasía, Drama, Psicológico
-                </p>
+
+    <header class="hero">
+        <div class="hero-overlay">
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold titulo">
+                    Re:Zero kara Hajimeru Isekai Seikatsu
+                </h1>
             </div>
         </div>
+    </header>
 
-        <div class="col-md-6">
-            <div class="glass p-4 h-100">
-                <h3 class="text-info mb-3">Datos Actuales</h3>
-                <p><strong>Arcos actuales:</strong> 9</p>
-                <p><strong>Capítulos (novela):</strong> —</p>
-                <p class="mb-0"><strong>Temporadas anime:</strong> 3</p>
+    <main class="container my-5">
+
+        <section class="glass p-4 mb-5">
+            <h3 class="text-center text-warning mb-4">CRÉDITOS</h3>
+            <p class="text-center agradecimientos-nota">Un agradecimiento especial a las personas que permitieron el uso
+                de su contenido (PDF, RECOPILACIONES, ETC).</p>
+            <div class="row g-4 justify-content-center mt-3">
+
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="text-center">
+                        <img src="https://cdn.imgchest.com/files/9d01f1037d3f.jpg" alt="Foto Re:chidna 2.0"
+                            class="rounded-circle mb-3 border border-3 border-rechidna" width="120" height="120"
+                            style="object-fit: cover;">
+
+                        <h5 class="text-light">Re:chidna 2.0</h5>
+                        <p class="text-info small fw-bold">Carpetas Drive/PDF</p>
+
+                        <div class="mt-3">
+                            <a href="https://www.facebook.com/profile.php?id=100063801846154" target="_blank"
+                                class="social-icon-btn facebook" title="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="text-center">
+                        <img src="https://cdn.imgchest.com/files/053a5774ba5d.jpg" alt="Foto Einherjar Project"
+                            class="rounded-circle mb-3 border border-3 border-einherjar" width="120" height="120"
+                            style="object-fit: cover;">
+
+                        <h5 class="text-light">Einherjar Project</h5>
+                        <p class="text-info small fw-bold">Traduccion/Scan</p>
+
+                        <div class="mt-3">
+                            <a href="https://www.facebook.com/EinherjarProject/?locale=es_LA" target="_blank"
+                                class="social-icon-btn facebook me-2" title="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="https://www.patreon.com/einherjarproject/about?l=it" target="_blank"
+                                class="social-icon-btn patreon me-2" title="Patreon">
+                                <i class="fa-brands fa-patreon"></i>
+                            </a>
+
+                            <a href="https://x.com/ehjrproject" target="_blank" class="social-icon-btn twitter"
+                                title="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="text-center">
+                        <img src="https://cdn.imgchest.com/files/20fadf97f483.jpg" alt="Foto Mundos Isekai"
+                            class="rounded-circle mb-3 border border-3 border-mundos-isekai" width="120" height="120"
+                            style="object-fit: cover;">
+
+                        <h5 class="text-light">Mundos Isekai</h5>
+                        <p class="text-info small fw-bold">Traduccion/Scan</p>
+
+                        <div class="mt-3">
+                            <a href="https://animecreators07.wixsite.com/mundosisekai/blog" target="_blank"
+                                class="social-icon-btn blogger me-2" title="Blog/Sitio Web">
+                                <i class="fa-brands fa-blogger-b"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/channel/UCN9orPfQdEzMSs0pYRzP2-A" target="_blank"
+                                class="social-icon-btn youtube me-2" title="YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="text-center">
+                        <img src="https://cdn.imgchest.com/files/13081aa1fa64.jpg" alt="Foto Traducciones Isekai"
+                            class="rounded-circle mb-3 border border-3 border-traducciones" width="120" height="120"
+                            style="object-fit: cover;">
+
+                        <h5 class="text-light">Traducciones Isekai</h5>
+                        <p class="text-info small fw-bold">Traduccion/Scan</p>
+
+                        <div class="mt-3">
+                            <a href="https://traduccionesisekai.blogspot.com/p/rezero-kara-hajimeru-isekai-seikatsu.html"
+                                target="_blank" class="social-icon-btn blogger me-2" title="Blogspot">
+                                <i class="fa-brands fa-blogger-b"></i>
+                            </a>
+
+                            <a href="https://x.com/traduisekai?lang=es" target="_blank" class="social-icon-btn twitter"
+                                title="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="glass p-4 h-100">
+                    <h3 class="text-info mb-3">Información General</h3>
+                    <p><strong>Autor:</strong> Tappei Nagatsuki</p>
+                    <p><strong>Ilustrador:</strong> Shinichirou Otsuka</p>
+                    <p><strong>Publicación:</strong> 2014</p>
+                    <p class="mb-0">
+                        <strong>Género:</strong> Isekai, Fantasía, Drama, Psicológico
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="glass p-4 h-100">
+                    <h3 class="text-info mb-3">Datos Actuales</h3>
+                    <p><strong>Arcos actuales:</strong> 9</p>
+                    <p><strong>Capítulos (novela):</strong> —</p>
+                    <p class="mb-0"><strong>Temporadas anime:</strong> 3</p>
+                </div>
             </div>
         </div>
-    </div>
+        <section class="glass p-4">
+            <h2 class="text-center text-info mb-4">
+                Contenido de Re:Zero
+            </h2>
 
-    <!-- ================= CONTENIDO ================= -->
-    <section class="glass p-4">
-        <h2 class="text-center text-info mb-4">
-            Contenido de Re:Zero
-        </h2>
-
-        <div class="row g-4" id="contenedor-rezero">
+            <div class="row g-4" id="contenedor-rezero">
             </div>
-    </section>
+        </section>
 
-</main>
+    </main>
 
-<!-- ================= SCRIPTS ================= -->
-<script src="js/main.js"></script>
-<script src="js/contenidoReZero.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contenidoReZero.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

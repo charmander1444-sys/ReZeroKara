@@ -253,6 +253,45 @@ body {
     background-color: rgba(102, 252, 241, 0.1);
 }
 
+/* Clase que se aplica a la lista <ul> para limitar su altura */
+.capitulos-lista.max-height-list {
+    max-height: 300px; /* Altura máxima visible. Ajusta este valor si lo deseas */
+    overflow: hidden; /* Oculta el contenido que excede la altura */
+    position: relative;
+    
+    /* Efecto de desvanecimiento para indicar que la lista continúa */
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+/* Cuando la lista NO tiene la clase 'max-height-list', muestra todo */
+.capitulos-lista:not(.max-height-list) {
+    max-height: none; 
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+/* Estilo para el botón de 'Ver más' */
+.ver-mas-btn {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+.ver-mas-btn:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-bg-dark) !important;
+}
+
+/* Asegura que el botón de lectura se mantenga abajo en la tarjeta */
+.lector-volumen {
+    display: flex;
+    flex-direction: column;
+}
+
+.lector-volumen .btn-detalle {
+    margin-top: auto; /* Empuja el botón hasta el fondo de la tarjeta */
+}
+
 
 /* ===== 5. GALERÍA Y VISUALIZACIÓN DE IMAGEN (MODAL) ===== */
 
@@ -451,5 +490,534 @@ body {
     
     .gallery-card {
         aspect-ratio: 2 / 3;
+    }
+}
+
+/* ===== 1. VARIABLES GLOBALES Y RESET ===== */
+:root {
+    --color-primary: #66fcf1;        /* Teal/Cian brillante */
+    --color-bg-dark: #0b0c10;        /* Fondo principal oscuro */
+    --color-bg-card: #1f2833;        /* Fondo de tarjetas/elementos glass */
+    --color-shadow: rgba(102, 252, 241, 0.3); /* Sombra de luz cian */
+    --transition-smooth: 0.3s ease;  /* Transición estándar */
+}
+
+/* Reset Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Base del Cuerpo */
+body {
+    background: var(--color-bg-dark);
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 70px; /* Espacio para el Navbar fijo */
+    min-height: 100vh;
+}
+
+/* Título Principal */
+.titulo {
+    color: var(--color-primary);
+    text-shadow: 0 0 20px var(--color-shadow);
+}
+
+
+/* ===== 2. NAVEGACIÓN Y MENÚ LATERAL ===== */
+
+/* Navbar Fijo (Filtro de fondo) */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Enlaces del Navbar */
+.navbar-nav .nav-link {
+    transition: var(--transition-smooth);
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-primary) !important;
+}
+
+/* Menú Lateral (Sidebar) */
+.menu-lateral {
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    background-color: var(--color-bg-dark);
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    padding-top: 60px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-lateral a {
+    /* Compacto */
+    padding: 12px 25px; 
+    text-decoration: none;
+    font-size: 18px; 
+    color: var(--color-primary);
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.menu-lateral a:hover {
+    background: var(--color-bg-card);
+    padding-left: 30px; 
+}
+
+.menu-lateral .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px; 
+    padding: 0;
+}
+
+
+/* ===== 3. COMPONENTES REUTILIZABLES ===== */
+
+/* Efecto Glass */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.glass:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px var(--color-shadow);
+}
+
+/* Cards Generales (Personajes, Arcos, etc.) */
+.card {
+    border-radius: 16px;
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px var(--color-shadow);
+}
+
+/* Card Imagen (Para portadas de LNs) */
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Formato vertical común */
+    object-fit: cover;
+    padding: 0;
+    background: #000;
+    transition: transform 0.3s ease;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* Badges/Etiquetas Personalizadas */
+.badge-custom {
+    background: rgba(102, 252, 241, 0.2);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 2px;
+    display: inline-block;
+}
+
+/* Formularios (Input) */
+.form-control {
+    background: #1f2833;
+    border: 2px solid var(--color-primary);
+    color: white;
+    transition: var(--transition-smooth);
+}
+
+.form-control:focus {
+    background: #1f2833;
+    border-color: var(--color-primary);
+    color: white;
+    box-shadow: 0 0 15px var(--color-shadow);
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+/* Botones de Detalle */
+.btn-detalle {
+    background: var(--color-primary);
+    color: var(--color-bg-dark);
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-detalle:hover {
+    background: #45dbd0;
+    color: var(--color-bg-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 252, 241, 0.5);
+}
+
+
+/* ===== 4. SECCIONES ESPECÍFICAS (Hero, Arcos, Tablas) ===== */
+
+/* Hero Section */
+.hero {
+    height: 50vh;
+    background: url('https://cdn.imgchest.com/files/caa4fe058406.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Arc Cards (Sección Arcos Narrativos) */
+.arc-card {
+    padding: 25px;
+    color: white;
+    min-height: 240px;
+    transition: all 0.4s ease;
+}
+
+.arc-card h4 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.arc-card h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.arc-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px var(--color-shadow);
+}
+
+/* Imágenes de Arcos y Contenedor */
+.image-container {
+    min-height: 400px; 
+    padding: 10px;
+}
+
+.arco-img {
+    width: 100%;
+    height: 100%; 
+    object-fit: contain; 
+    background-color: #000;
+    border-radius: 10px !important; 
+}
+
+
+/* Tabla de Capítulos */
+.table {
+    color: white;
+}
+
+.table-hover tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(102, 252, 241, 0.1);
+}
+
+
+/* ===== 5. GALERÍA Y VISUALIZACIÓN DE IMAGEN (MODAL) ===== */
+
+/* Contenedor de Imagen de Galería */
+.gallery-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 3; 
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #000;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-card img:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay de Galería (Efecto "Ver imagen") */
+.gallery-card::after {
+    content: "Ver imagen";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, .6);
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none;
+}
+
+.gallery-card:hover::after {
+    opacity: 1;
+}
+
+/* Galería en Detalle (Dentro de un Modal o Página Específica) */
+#galeria img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+/* Modal de Imagen (Pantalla completa) */
+.modal-imagen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.modal-imagen img {
+    max-width: 95%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+
+/* ===== 6. UTILIDADES Y FEEDBACK ===== */
+
+/* Modal Bootstrap (Sobrescribe estilos base para el tema oscuro) */
+.modal-content {
+    background: #1f2833;
+    border: 2px solid var(--color-primary);
+    color: white;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--color-primary);
+}
+
+.modal-body img {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* Loading/Spinner */
+.spinner-border {
+    color: var(--color-primary);
+    width: 3rem;
+    height: 3rem;
+}
+
+#loading {
+    color: var(--color-primary);
+}
+
+/* Manejo de Errores */
+.error-container {
+    display: none;
+}
+
+.error-message {
+    background: rgba(220, 53, 69, 0.1);
+    border: 2px solid #dc3545;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    color: white;
+}
+
+/* Visor PDF (Iframe/Canvas) */
+.pdf-visor-custom {
+    height: 100vh; 
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5px; /* Pequeño espacio para los botones de control */
+}
+
+.pdf-visor-custom iframe {
+    height: calc(100% - 40px); 
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+#pdfCanvas {
+    background: #1c1c1c;
+    max-width: 100%;
+}
+
+/* Nuevo estilo para la barra de control del PDF */
+.pdf-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+/* Utilidades Misceláneas */
+.col-md-3 {
+    min-height: 280px; /* Asegura un alto mínimo para las columnas/tarjetas */
+}
+
+
+/* ===== 7. ANIMACIONES ===== */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: aparecer 0.8s ease;
+}
+
+
+/* ===== 8. RESPONSIVE / MEDIA QUERIES ===== */
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+    
+    .image-container {
+        min-height: 250px;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .arc-card {
+        min-height: 180px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 35vh;
+    }
+
+    .display-4 {
+        font-size: 1.5rem;
+    }
+
+    .arc-card {
+        min-height: auto;
+        padding: 15px;
+    }
+    
+    .gallery-card {
+        aspect-ratio: 2 / 3;
+    }
+}
+
+/* -------------------------------------------
+   Estilos Adicionales para Agradecimientos
+   ------------------------------------------- */
+
+/* Bordes personalizados */
+.border-rechidna { border-color: #3b5998 !important; }
+.border-einherjar { border-color: #ff4500 !important; }
+.border-mundos-isekai { border-color: #ff0000 !important; }
+.border-traducciones { border-color: #1da1f2 !important; }
+
+/* Botones sociales */
+.social-icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.social-icon-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.6);
+}
+
+/* Colores por red */
+.social-icon-btn.facebook { background-color: #3b5998; }
+.social-icon-btn.youtube { background-color: #ff0000; }
+.social-icon-btn.twitter { background-color: #000; border: 1px solid #1da1f2; }
+.social-icon-btn.patreon { background-color: #ff4500; }
+.social-icon-btn.blogger { background-color: #ff8c00; }
+
+/* Nota */
+.agradecimientos-nota {
+    color: #ffffff !important;
+    font-style: italic;
+    font-size: 0.9rem !important;
+}
+
+/* -------------------------------------------
+   AJUSTES GLASS PARA CELULARES
+   ------------------------------------------- */
+@media (max-width: 576px) {
+
+    .glass {
+        padding: 1.25rem !important;
+        backdrop-filter: blur(6px);
+        border-radius: 12px;
+    }
+
+    /* Quitamos hover innecesario en móvil */
+    .glass:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+        box-shadow: none;
     }
 }

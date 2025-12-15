@@ -100,8 +100,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!galeriaContenedor) return;
 
     try {
-        const res = await fetch("base/arcos.json");
-        if (!res.ok) throw new Error("No se pudo cargar arcos.json");
+        const res = await fetch("base/arcosNL.json");
+        if (!res.ok) throw new Error("No se pudo cargar arcosNL.json");
         const arcos = await res.json();
 
         let items = []; // Almacena temporalmente los HTML de todas las tarjetas
@@ -141,6 +141,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } catch (error) {
         console.error("Error cargando galería:", error);
-        galeriaContenedor.innerHTML = '<p class="text-danger">❌ Error al cargar la galería. Verifique el archivo `base/arcos.json`.</p>';
+        galeriaContenedor.innerHTML = '<p class="text-danger">❌ Error al cargar la galería. Verifique el archivo `base/arcosNL.json`.</p>';
     }
 });
