@@ -221,5 +221,167 @@
         "capitulos": ["Capítulo 1: El reinicio de Subaru Natsuki", "Capítulo 2: Lloré, lloré sin parar y dejé de llorar", "Capítulo 3: El significado del valor", "Capítulo 4: Métodos de un fanático demoníaco", "Capítulo 5: En todo", "Epílogo: La historia del futuro", "Intermisión: Conversación secreta bajo la luna"]
       }
     ]
+  },
+  {
+    "id": 3,
+    "tipo": "novela_ligera",
+    "nombre": "Arco 3",
+    "titulo": "Regreso a la Capital",
+    "imagenes": [
+      {"src": "https://cdn.imgchest.com/files/3e67841dfb2c.webp",
+        "tags": ["aldebaran","priscilla barielle","portada"]},
+
+      {"src": "https://cdn.imgchest.com/files/31346e6d66ef.webp",
+        "tags": ["crusch karsten", "felix argyle","portada"]},
+
+      {"src": "https://cdn.imgchest.com/files/0ee97d76bf15.webp",
+        "tags": ["anastasia hoshin","mimi pearlbaton","tivey pearlbaton","hetaro pearlbaton","portada"]},
+
+      {"src": "https://cdn.imgchest.com/files/8f7c02a7e33a.webp",
+        "tags": ["wilhelm van astrea","theresia van astrea","portada"]},
+
+      {"src": "https://cdn.imgchest.com/files/d46d2d5cc741.webp",
+        "tags": ["reinhard van astrea","felt","portada"]},
+
+      {"src": "https://cdn.imgchest.com/files/fc8114990048.webp",
+        "tags": ["emilia","portada"]}
+    ],
+
+    "volumenes": "Volúmenes 4, 5, 6, 7, 8 y 9",
+    "scans": [
+      {"nombre": "Einherjar Project",
+        "link": "#"}
+    ],
+    "volumenes_detalle": [
+      {
+        "volumen": "Volumen 4",
+        "driveId": "1rlH_WulXE38TAQwSoQXZ2SsygzsewNPq",
+        "imagenes": [
+          {
+            "src": ["https://cdn.imgchest.com/files/c9d12613841e.webp"],
+            "tags": ["anastasia hoshin","aldebaran","priscilla barielle","priscilla barielle","julius juukulius","diseño"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/6fc234f933d8.webp"],
+            "tags": ["felix argyle","crusch karsten","wilhelm van astrea","diseño"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/b20e5952d8a2.webp"],
+            "tags": ["subaru natsuki","emilia","aldebaran","priscilla barielle"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/98b124c4ca1a.webp"],
+            "tags": ["rem","subaru natsuki","felix argyle","wilhelm van astrea"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/e1b27c13e72e.webp"],
+            "tags": ["subaru natsuki","emilia","kadomon Risch","chamov"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/28a9efe8fe7b.webp"],
+            "tags": ["priscilla barielle","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/4cfb9ff88500.webp"],
+            "tags": ["subaru natsuki","aldebaran"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/cd0d03a280f8.webp"],
+            "tags": ["anastasia hoshin","emilia","crusch karsten","priscilla barielle","marcos gildark"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/521a3f9ea3c9.webp"],
+            "tags": ["flam remendis","felt","grassis remendis"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/ac1b80fa0105.webp"],
+            "tags": ["felix argyle","crusch karsten","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/e0cded510ea2.webp"],
+            "tags": ["emilia","puck"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/2eedf3821b0e.webp"],
+            "tags": ["julius juukulius","emilia","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/7a48b2e9fe35.webp"],
+            "tags": ["emilia","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/2c17cdf67c7e.webp"],
+            "tags": ["ram","beatrice"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/0c6b8ca4f2d2.webp"],
+            "tags": ["priscilla barielle"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/306bee9b7a2e.webp"],
+            "tags": ["aldebaran"]
+          }
+        ],
+        "capitulos": ["Prólogo: El tesoro del bufón","Capítulo 1: Regreso a la Capital Real","Capítulo 2: Protección Divina y reunión y promesa","Capítulo 3: Las personas en malos términos con los demás","Capítulo 4: Las candidatas y sus caballeros","Capítulo 5: El autoproclamado caballero, Subaru Natsuki",
+        "Epílogo: Las intenciones de los caballeros"]
+      },
+      {
+        "volumen": "Volumen 5",
+        "driveId": "1Ory5rLW2XCLVxAEHM-V0sclDryNnQpwd",
+        "imagenes": [
+          {
+            "src": ["https://cdn.imgchest.com/files/679a89d61466.webp"],
+            "tags": ["rem","subaru natsuki","wilhelm van astrea","crusch karsten","felix argyle"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/7f18fa96ab69.webp"],
+            "tags": ["subaru natsuki","crusch karsten"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/3c75c2d3e9b7.webp","https://cdn.imgchest.com/files/2b1e4599bcb2.webp"],
+            "tags": ["rem"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/0c347302cb9c.webp"],
+            "tags": ["crusch karsten","anastasia hoshin","kadomon Risch","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/4aea1e10dc1b.webp"],
+            "tags": ["felix argyle","rem","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/caa3ff86c5d8.webp"],
+            "tags": ["wilhelm van astrea"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/32a90422681f.webp"],
+            "tags": ["subaru natsuki","otto suwen"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/ed960ccfe873.webp","https://cdn.imgchest.com/files/892678d99e1a.webp","https://cdn.imgchest.com/files/bf03ca0f81ea.webp","https://cdn.imgchest.com/files/b6957216c197.webp"],
+            "tags": ["rem","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/e0ff368f55e4.webp"],
+            "tags": ["subaru natsuki","petelgeuse romanee-conti"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/ffa2d2010f7e.webp"],
+            "tags": ["emilia"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/7e9d15105c05.webp"],
+            "tags": ["subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/af0b0b21d8e8.webp"],
+            "tags": ["otto suwen"]
+          }
+        ],
+        "capitulos": ["Prólogo: Su nombre es-", "Capítulo 1: Espíritu podrido","Capítulo 2: La situación en movimiento y la situación de Rem","Capítulo 3: Una enfermedad llamada desesperación","Capítulo 4: El exterior de la locura","Capítulo 5: Pereza"]
+      }
+    ]
   }
+
+  
 ]

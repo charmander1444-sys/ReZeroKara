@@ -24,7 +24,7 @@
         ],
         "volumenes_detalle": [
             {
-                "volumen": "arco 4",
+                "volumen": "Arco 4",
                 "driveId": "186kmqL24g6Ffir2awdSIz4XQTe79Pg7a",
                 "imagenes": [
                     {
@@ -184,6 +184,143 @@
                     "Interludio I - Concesiones mutuas",
                     "Interludio II - Facción de Emilia • Brujo • Espíritu • Espiritualista",
                     "Apéndice - El regreso"
+                ]
+            },
+            {
+                "volumen": "One Day II",
+                "driveId": "1xIDDJPfV2Y-s2epwrd5QhDr_xFuh8yt0",
+                "capitulos": [
+                    "Capítulo 1 - La relación de estas hermanas",
+                    "Capítulo 2 - Almas jóvenes y un observador",
+                    "Capítulo 3 - Hermosas chicas, hermosa dama, hermosa abuela",
+                    "Capítulo 4 - El nacimiento del Ministro de Asuntos Internos de la facción de Emilia",
+                    "Capítulo 5 - La trampa de Annerose y la relación fraternal",
+                    "Capítulo 6 - Solo queda una cosa pendiente",
+                    "Capítulo 7 - Bajo la luna, pasos sin sentido"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "tipo": "web_novel",
+        "nombre": "Arco 5",
+        "titulo": "Estrellas que marcan la historia",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/65ef43543f38.png"
+                ]
+            }
+        ],
+        "volumenes": "Volumen 16,17,18,19,20",
+        "scans": [
+            {
+                "nombre": "Mundos Isekai",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Arco 5",
+                "driveId": "1Se67PKQOMrsMVN1BqvrTbXEnxLn_bXVL",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 1: Siempre comienza con un visitante",
+                    "Capítulo 2: la línea de sangre del sirviente",
+                    "Capítulo 3: Diferentes perspectivas",
+                    "Capítulo 4: Durante el camino",
+                    "Capítulo 5: La ciudad de Watergate Pristella",
+                    "Capítulo 6: Dos caballeros espirituales, dos mercaderes codiciosos y un ángel desinteresado",
+                    "Capítulo 7: El hombre pecador se pone en marcha",
+                    "Capítulo 8: Viajando con marco",
+                    "Capítulo 9: El valor de una cantante",
+                    "Capítulo 10: Caminando por la Ciudad del Agua",
+                    "Capítulo 11: Una reunión sorprendente, una reunión predestinada y una reunión no intencionada",
+                    "Capítulo 12: Una atmósfera aplastante en la sala de té",
+                    "Capítulo 13: Una cena pacífica",
+                    "Capítulo 14: El demonio de la espada bajo la luna",
+                    "Capítulo 15: Un silencio ensordecedor",
+                    "Capítulo 16: Invitados no invitados",
+                    "Capítulo 17: Esa armadura siempre presente",
+                    "Capítulo 18: Un tiempo para cantar y bailar",
+                    "Capítulo 19: Teatro de la malicia",
+                    "Capítulo 20: Empatía compartida",
+                    "Capítulo 21: Solución óptima",
+                    "Capítulo 22: Una respuesta casual",
+                    "Capítulo 23: Situación diferente",
+                    "Capítulo 24: Resolución de Hielo y Fuego",
+                    "Capítulo 25: El teatro de Leo",
+                    "Capítulo 26: Lanza del amor",
+                    "Capítulo 27: Ruido",
+                    "Capítulo 28: Una reunión cubierta de heridas",
+                    "Capítulo 29: Gorgeous Tiger",
+                    "Capítulo 30: Tigre y gato bajo la luna",
+                    "Capítulo 31: El costo de un error",
+                    "Capítulo 32: La conferencia de asaltantes del ayuntamiento",
+                    "Capítulo 33: Estratagema en el Ayuntamiento",
+                    "Capítulo 34: Duelo Caótico",
+                    "Capítulo 35: Emboscadas y Sorpresas",
+                    "Capítulo 36: El principio y la conclusión del amor",
+                    "Capítulo 37: Reagrupar",
+                    "Capítulo 38: Las propuestas del culto de la bruja",
+                    "Capítulo 39: La caballería y el hombre que llegó tarde",
+                    "Capítulo 40: La erosión de la ira",
+                    "Capítulo 41: Consecuencias heroicas",
+                    "Capítulo 42: El nuevo héroe y antiguo el héroe",
+                    "Capítulo 43: Antes de la batalla",
+                    "Capítulo 44: No queda nada sin decir",
+                    "Capítulo 45: Una maldición ineludible",
+                    "Capítulo 46: Donde está el corazón",
+                    "Capítulo 47: El preludio para retomar la ciudad",
+                    "Capítulo 48: Del que me enamorare algún día",
+                    "Capítulo 49: ¡Comienza la cruzada contra la codicia!",
+                    "Capítulo 50: Las cadenas del amor",
+                    "Capítulo 51: Un engaño malicioso",
+                    "Capítulo 52: Las estrellas y los arzobispos del pecado",
+                    "Capítulo 53: Una ciudad llena de conflictos",
+                    "Capítulo SS: La enciclopedia del digno Joshua Juukulius",
+                    "Capítulo 54: El poder de los que no combaten",
+                    "Capítulo 55: El guerrero que desafía a Dios",
+                    "Capítulo 56: Firma de un divorcio",
+                    "Capítulo 57: Donde miente el corazón",
+                    "Capítulo 58: Fe",
+                    "Capítulo 59: Regulus Córneas",
+                    "Capítulo 60: Un final, una batalla",
+                    "Capítulo 61: Víctima del Territorio",
+                    "Capítulo 62: Elogio del guerrero",
+                    "Capítulo 63: La pasión de Liliana Masquerade",
+                    "Capítulo 64: El desaliento de Liliana Masquerade",
+                    "Capítulo 65: El arrepentimiento de Liliana Masquerade",
+                    "Capítulo 66: El escenario de Liliana Masquerade",
+                    "Capítulo 67: Liliana Masquerade",
+                    "Capítulo 68: Saboreando un nombre como Gourmet",
+                    "Capítulo 69: Un banquete de cena repulsivo",
+                    "Capítulo 70: Eclipsando",
+                    "Capítulo 71: El Demonio de la Espada vs la anterior Santa de la Espada",
+                    "Capítulo 72: Santo de la espada Vs la anterior santa de la espada",
+                    "Capítulo 73: Thearesia van Astrea",
+                    "Capítulo 74: Frutos conseguidos tras la batalla de Pristella 1",
+                    "Capítulo 75: Frutos conseguidos tras la batalla de Pristella 2",
+                    "Capítulo 76: Frutos conseguidos tras la batalla de Pristella 3",
+                    "Capítulo 77: Un caballero sin nombre",
+                    "Capítulo 78: Los asuntos restantes en la ciudad de Watergate",
+                    "Capítulo 79: La Atalaya del Sabio",
+                    "Capítulo 80: Dejando atrás hondas en la superficie del agua",
+                    "Capítulo 81: El que llena el vaso de la avaricia",
+                    "Interludio I: Amor de Pareja",
+                    "Interludio II: los asuntos inconclusos de la batalla de guerreros",
+                    "Interludio Final III: El nombre de este Amor"
                 ]
             }
         ]
