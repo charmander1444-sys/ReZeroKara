@@ -66,20 +66,22 @@ function renderizarGaleria(items) {
   }
 
   items.forEach(item => {
+    const thumb = item.sample_url || item.file_url;
+
     galeria.innerHTML += `
       <div class="col-6 col-md-4 col-lg-3">
         <img
-          src="${item.preview_url}"
+          src="${thumb}"
           class="img-fluid rounded shadow-sm"
           loading="lazy"
           referrerpolicy="no-referrer"
-          crossorigin="anonymous"
           onclick="verImagen('${item.file_url}')"
         >
       </div>
     `;
   });
 }
+
 
 
 // =====================================
