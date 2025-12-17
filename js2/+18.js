@@ -60,29 +60,27 @@ function renderizarGaleria(items) {
   const galeria = document.getElementById("galeria18");
   galeria.innerHTML = "";
 
-  if (!items || items.length === 0) {
-    galeria.innerHTML = `<p class="text-center">Sin resultados</p>`;
+  if (!items.length) {
+    galeria.innerHTML = "<p class='text-center'>Sin resultados</p>";
     return;
   }
 
   items.forEach(item => {
-    if (!item.preview_url || !item.file_url) return;
-
     galeria.innerHTML += `
       <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-card glass">
-          <img
-            src="${item.preview_url}"
-            class="img-fluid rounded shadow-sm"
-            loading="lazy"
-            alt="imagen"
-            onclick="verImagen('${item.file_url}')"
-          >
-        </div>
+        <img
+          src="${item.preview_url}"
+          class="img-fluid rounded shadow-sm"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          crossorigin="anonymous"
+          onclick="verImagen('${item.file_url}')"
+        >
       </div>
     `;
   });
 }
+
 
 // =====================================
 // BUSCAR POR TAGS
