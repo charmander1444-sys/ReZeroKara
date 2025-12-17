@@ -313,25 +313,30 @@ body {
    5. GALERÍA Y MODALES
    ========================================================================= */
 
+
 /* --- Contenedor de Imagen de Galería (Card) --- */
 .gallery-card {
     position: relative;
     width: 100%;
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 2 / 3; /* <--- Esto le da la altura al contenedor */
     overflow: hidden;
     border-radius: 12px;
     background-color: #000;
 }
 
+/* --- Contenedor de Imagen de Galería (Card) --- */
+
+/* --- Contenedor de Imagen de Galería (Card) --- */
+
 .gallery-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100% !important; 
+    height: 100% !important; 
+    
+    object-fit: cover; 
     display: block;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-
 .gallery-card img:hover {
     transform: scale(1.05);
 }
@@ -356,12 +361,6 @@ body {
     opacity: 1;
 }
 
-/* Galería en Detalle */
-#galeria img {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-}
 
 /* --- Modal de Imagen (Pantalla completa) --- */
 .modal-imagen {
@@ -556,9 +555,6 @@ body {
 /* =========================================================================
    9. RESPONSIVE / MEDIA QUERIES
    ========================================================================= */
-/* =========================================================================
-   9. RESPONSIVE / MEDIA QUERIES
-   ========================================================================= */
 
 /* --- Tablet y Abajo (max-width: 768px) --- */
 @media (max-width: 768px) {
@@ -643,7 +639,7 @@ body {
         padding-right: 5px !important;
     }
 
-    .col-6.col-md-3 img {
+    #agradecimientos .col-6.col-md-3 img {
         width: 90px !important;
         height: 90px !important;
     }
@@ -659,5 +655,11 @@ body {
     /* Ajuste de las notas pequeñas en la sección de créditos */
     .agradecimientos-nota {
         font-size: 0.8rem !important;
+    }
+
+    .gallery-card img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
     }
 }
