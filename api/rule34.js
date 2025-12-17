@@ -1,4 +1,15 @@
 export default async function handler(req, res) {
+
+  // 🔥 CORS HEADERS SIEMPRE
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  // 🔥 RESPUESTA AL PREFLIGHT
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   const { tags = "rem_(re:zero)", page = 0, limit = 20 } = req.query;
 
   const USER_ID = process.env.R34_USER_ID;
@@ -18,10 +29,9 @@ export default async function handler(req, res) {
     const response = await fetch(url);
     const data = await response.json();
 
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.status(200).json(data);
+    return res.status(200).json(data);
   } catch (err) {
-    res.status(500).json({
+    return res.status(500).json({
       error: "Rule34 API error",
       details: err.message
     });

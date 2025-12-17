@@ -6,7 +6,7 @@
 //const API_URL = "/.netlify/functions/rule34";
 
 //vercel
-const API_URL = "https://re-zero-kara.vercel.app//api/rule34";
+const API_URL = "https://re-zero-kara.vercel.app/api/rule34";
 
 let paginaActual = 0;
 let tagsActuales = "rem_(re:zero)";
