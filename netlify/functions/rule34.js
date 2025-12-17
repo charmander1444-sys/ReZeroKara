@@ -1,11 +1,10 @@
-export async function handler(event) {
-  const params = event.queryStringParameters;
+exports.handler = async (event) => {
+  const params = event.queryStringParameters || {};
 
   const tags = params.tags || "rem_(re:zero)";
   const page = params.page || 0;
   const limit = params.limit || 20;
 
-  // 🔐 TUS CREDENCIALES
   const USER_ID = process.env.R34_USER_ID;
   const API_KEY = process.env.R34_API_KEY;
 
@@ -40,4 +39,4 @@ export async function handler(event) {
       })
     };
   }
-}
+};

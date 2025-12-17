@@ -21,13 +21,14 @@ async function cargarImagenes() {
     const res = await fetch(url);
     const data = await res.json();
 
-    renderizarGaleria(data || []);
-    renderizarPaginacion();
+    const posts = data?.posts?.post || [];
+    renderizarGaleria(posts);
   } catch (e) {
     galeria.innerHTML =
       `<p class="text-danger text-center">Error cargando imágenes</p>`;
   }
 }
+
 
 function renderizarGaleria(items) {
   const galeria = document.getElementById("galeria18");
