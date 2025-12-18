@@ -1,0 +1,27 @@
+/* --- Listas y Tablas de Capítulos --- */
+.table {
+    color: white;
+}
+
+.table-hover tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(102, 252, 241, 0.1);
+}
+
+/* Lista con límite de altura y fade */
+.capitulos-lista.max-height-list {
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+.capitulos-lista:not(.max-height-list) {
+    max-height: none;
+    mask-image: none;
+    -webkit-mask-image: none;
+}

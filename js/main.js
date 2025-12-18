@@ -120,35 +120,32 @@ window.renderizarPaginacionNumerica = (contenedorId, totalItems, itemsPerPage, c
 }
 
 
-// ---------------------------------------------
-// --- 4. Funciones de Modal/Overlay ---
-// ---------------------------------------------
+/* ===============================
+   VISOR DE IMÁGENES UNIFICADO
+================================ */
 
-/**
- * Muestra el modal de imagen con la fuente especificada.
- * @param {string} src - Ruta de la imagen a mostrar.
- */
-window.verImagen = (src) => {
-    const modal = document.getElementById("imagenModal");
-    const img = document.getElementById("imgGrande");
+window.abrirVisualizador = (url) => {
+    const visualizador = document.getElementById("capa-visualizador");
+    const imagenGrande = document.getElementById("imgGrande");
+    
+    if (visualizador && imagenGrande) {
+        imagenGrande.src = url;
+        visualizador.style.display = "flex";
+        document.body.style.overflow = "hidden"; // Bloquea el scroll
+    }
+};
 
-    if (!modal || !img) return;
+window.cerrarVisualizador = () => {
+    const visualizador = document.getElementById("capa-visualizador");
+    if (visualizador) {
+        visualizador.style.display = "none";
+        document.body.style.overflow = "auto"; // Restaura el scroll
+    }
+};
 
-    img.src = src;
-    modal.style.display = "flex";
-}
-
-/**
- * Oculta el modal de imagen.
- */
-window.cerrarImagen = () => {
-    const modal = document.getElementById("imagenModal");
-    if (modal) modal.style.display = "none";
-}
-
-// Cerrar modal con la tecla ESC
+// Cerrar con tecla ESC
 document.addEventListener("keydown", e => {
-    if (e.key === "Escape") cerrarImagen();
+    if (e.key === "Escape") cerrarVisualizador();
 });
 
 

@@ -88,7 +88,7 @@ async function cargarImagenes() {
 
   galeria.innerHTML = `
     <div class="text-center w-100">
-      <div class="spinner-border text-info"></div>
+  
     </div>
   `;
 
@@ -142,7 +142,6 @@ function renderizarGaleria(items) {
         <img
           src="${thumb}"
           class="img-fluid rounded shadow-sm"
-          loading="lazy"
           referrerpolicy="no-referrer"
           onclick="verContenido('${item.file_url}')"
         >

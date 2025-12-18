@@ -379,6 +379,148 @@
           }
         ],
         "capitulos": ["Prólogo: Su nombre es-", "Capítulo 1: Espíritu podrido","Capítulo 2: La situación en movimiento y la situación de Rem","Capítulo 3: Una enfermedad llamada desesperación","Capítulo 4: El exterior de la locura","Capítulo 5: Pereza"]
+      },
+      {
+        "volumen": "Volumen 6",
+        "driveId": "19N41eXwFVlrnhXXah5XRVzSqzd56cPWl",
+        "imagenes": [
+          {
+            "src": ["https://cdn.imgchest.com/files/522afdd4951a.webp"],
+            "tags": ["rem","portada"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/dbbea428b71c.webp"],
+            "tags": ["anastasia hoshin","mimi pearlbaton","tivey pearlbaton","hetaro pearlbaton"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/eee333e74dae.webp"],
+            "tags": ["rem","subaru natsuki","aldebaran","schult"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/f101b873627e.webp"],
+            "tags": ["crusch karsten","felix argyle","wilhelm van astrea"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/f6a004e6e485.webp"],
+            "tags": ["priscilla barielle"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/10ac6350f88d.webp"],
+            "tags": ["anastasia hoshin","mimi pearlbaton","tivey pearlbaton","hetaro pearlbaton","Ricardo Welkin"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/2463fa4625ba.webp"],
+            "tags": ["emilia"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/9a6bbf98de07.webp"],
+            "tags": ["subaru natsuki","rem","felix argyle","wilhelm van astrea","crusch karsten"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/6f707755b3c7.webp"],
+            "tags": ["priscilla barielle","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/d91ddfda9610.webp"],
+            "tags": ["mimi pearlbaton","subaru natsuki","anastasia hoshin"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/3b8972075514.webp"],
+            "tags": ["subaru natsuki","rem","ballena blanca","mabestia"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/f73710fad392.webp"],
+            "tags": ["subaru natsuki","ram"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/11573c9133d4.webp"],
+            "tags": ["emilia","subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/91942c924e42.webp"],
+            "tags": ["beatrice"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/ff92115ec78b.webp","https://cdn.imgchest.com/files/335188a82fbb.webp","https://cdn.imgchest.com/files/b19874199e62.webp"],
+            "tags": ["subaru natsuki","rem"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/820b302fc77a.webp"],
+            "tags": ["ram","rem"]
+          }
+        ],
+        "capitulos": ["Capítulo 1: Negociación joven","Capítulo 2: La codicia de un cerdo","Capítulo 3: La mandíbula de Hakugei","Capítulo 4: Indescriptible","Capítulo 5: Desde cero","Capítulo 6: Tarjetas distribuidas"]
+      },
+      {
+        "volumen": "Volumen 7",
+        "driveId": "",
+        "imagenes": [
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]
+          }
+        ],
+        "capitulos": [""]
       }
     ]
   }

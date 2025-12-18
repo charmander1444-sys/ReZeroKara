@@ -1,0 +1,136 @@
+/* ===============================
+   INFORMACIÓN Y CONTENEDORES
+================================ */
+
+.volumen-lector {
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    padding: 15px;
+    transition: .3s;
+    height: 100%; /* Para que todos midan lo mismo en el flex */
+}
+
+.volumen-lector:hover {
+    box-shadow: 0 0 20px var(--color-shadow);
+    background: rgba(255, 255, 255, .08);
+}
+
+/* ===============================
+   ESTILO DE TARJETAS EN DETALLE
+================================ */
+
+/* Reutilizamos el estilo de galería para las imágenes dentro de detalles */
+.tarjeta-galeria {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.tarjeta-galeria:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-galeria:hover img {
+    transform: scale(1.08);
+}
+
+.tarjeta-galeria::after {
+    content: "Ver imagen";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,.65);
+    color: var(--color-primary);
+    font-weight: bold;
+    opacity: 0;
+    transition: .3s;
+}
+
+.tarjeta-galeria:hover::after {
+    opacity: 1;
+}
+
+/* ===============================
+   LECTURA / CAPÍTULOS
+================================ */
+
+.lista-capitulos {
+    margin-top: 10px;
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+.lista-capitulos li {
+    opacity: .85;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.lista-capitulos.limitada {
+    max-height: 240px;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/* ===============================
+   BOTONES Y VISOR PDF
+================================ */
+
+.boton-ver-mas {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+    transition: .3s;
+    width: 100%;
+}
+
+.boton-ver-mas:hover {
+    background: var(--color-primary);
+    color: #000;
+}
+
+.btn-detalle {
+    background: var(--color-primary);
+    color: #0b0c10;
+    font-weight: bold;
+}
+
+.btn-detalle:hover {
+    background: #45dbd0;
+    transform: translateY(-2px);
+}
+
+.visor-pdf {
+    height: 80vh;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.visor-pdf iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.controles-pdf {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}

@@ -1,58 +1,46 @@
-/* =========================================================================
-   1. VARIABLES GLOBALES Y RESET
-   ========================================================================= */
-
+/* ==================================================
+   VARIABLES
+================================================== */
 :root {
     --color-primary: #66fcf1;
-    /* Teal/Cian brillante */
+    --color-accent: #45a29e;
+
     --color-bg-dark: #0b0c10;
-    /* Fondo principal oscuro */
     --color-bg-card: #1f2833;
-    /* Fondo de tarjetas/elementos glass */
-    --color-shadow: rgba(102, 252, 241, 0.3);
-    /* Sombra de luz cian */
-    --transition-smooth: 0.3s ease;
-    /* Transición estándar */
+
+    --color-text-main: #ffffff;
+    --color-text-muted: #c5c6c7;
+
+    --color-shadow: rgba(102, 252, 241, 0.35);
+
+    --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reset Box Model */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilos Base del Cuerpo */
+/* ==================================================
+   BASE
+================================================== */
 body {
     background: var(--color-bg-dark);
-    color: #fff;
-    /* Simplificado de rgb(255, 255, 255) */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 70px;
-    min-height: 100vh;
+    color: var(--color-text-main);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    padding-top: 80px;
 }
 
-/* Título Principal */
-.titulo {
-    color: var(--color-primary);
-    text-shadow: 0 0 20px var(--color-shadow);
+a {
+    text-decoration: none;
 }
 
-
-/* =========================================================================
-   2. NAVEGACIÓN Y MENÚ LATERAL
-   ========================================================================= */
-
-/* Navbar Fijo */
+/* ==================================================
+   NAVBAR
+================================================== */
 .navbar {
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.95) !important;
 }
 
-/* Enlaces del Navbar */
 .navbar-nav .nav-link {
+    color: #fff !important;
     transition: var(--transition-smooth);
-    color: #ffffff !important;
 }
 
 .navbar-nav .nav-link:hover,
@@ -60,24 +48,23 @@ body {
     color: var(--color-primary) !important;
 }
 
-/* Menú Lateral (Sidebar) */
+/* ==================================================
+   MENÚ LATERAL
+================================================== */
 .menu-lateral {
-    height: 100%;
-    width: 0;
     position: fixed;
+    inset: 0 auto 0 0;
+    width: 0;
     z-index: 1050;
-    top: 0;
-    left: 0;
-    background-color: var(--color-bg-dark);
+    background: var(--color-bg-dark);
     overflow-x: hidden;
-    transition: width 0.3s ease;
     padding-top: 60px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    transition: width 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,.5);
 }
 
 .menu-lateral a {
     padding: 12px 25px;
-    text-decoration: none;
     font-size: 18px;
     color: var(--color-primary);
     display: block;
@@ -94,38 +81,165 @@ body {
     top: 10px;
     right: 20px;
     font-size: 36px;
-    padding: 0;
 }
 
+/* ==================================================
+   HERO
+================================================== */
+.hero {
+    height: 50vh;
+    background: url('https://cdn.imgchest.com/files/caa4fe058406.jpg') center / cover no-repeat;
+    position: relative;
+}
 
-/* =========================================================================
-   3. COMPONENTES REUTILIZABLES (CARDS, BUTTONS, FORMS)
-   ========================================================================= */
+.hero-overlay {
+    inset: 0;
+    position: absolute;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/* Efecto Glass */
+/* ==================================================
+   GLASS
+================================================== */
 .glass {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255,255,255,0.1);
     transition: var(--transition-smooth);
 }
 
 .glass:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255,255,255,0.08);
     border-color: var(--color-primary);
     box-shadow: 0 0 20px var(--color-shadow);
 }
 
-/* --- Cards Generales (Personajes, Arcos, etc.) --- */
+/* ==================================================
+   ARCO CARD
+================================================== */
+.arco-card-moderna {
+    display: flex;
+    background: linear-gradient(145deg, #1f2833, #161d26);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,.6);
+    transition: var(--transition-smooth);
+}
+
+.arco-card-moderna:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px var(--color-shadow);
+}
+
+/* ==================================================
+   IMAGEN / CAROUSEL
+================================================== */
+.image-wrapper {
+    background: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.arco-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 🔥 elimina bordes negros */
+    display: block;
+}
+
+/* carousel fix */
+.carousel,
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==================================================
+   INFO
+================================================== */
+.info-wrapper {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.titulo-arco {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.subtitulo-arco {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==================================================
+   CAPÍTULOS
+================================================== */
+.capitulos-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.volumen-item {
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.vol-titulo {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+.capitulos-lista {
+    padding-left: 16px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* ==================================================
+   BOTÓN
+================================================== */
+.btn-primary-custom {
+    margin-top: auto;
+    align-self: flex-start;
+    background: var(--color-primary);
+    color: #000;
+    border-radius: 30px;
+    padding: 8px 22px;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary-custom:hover {
+    background: var(--color-accent);
+    box-shadow: 0 0 15px var(--color-shadow);
+}
+
+/* ==================================================
+   CARDS GENERALES
+================================================== */
 .card {
     border-radius: 16px;
-    transition: 0.4s;
+    transition: var(--transition-smooth);
 }
 
 .card:hover {
     transform: translateY(-10px);
-    border-color: var(--color-primary);
     box-shadow: 0 10px 30px var(--color-shadow);
 }
 
@@ -133,45 +247,19 @@ body {
     width: 100%;
     aspect-ratio: 2 / 3;
     object-fit: cover;
-    padding: 0;
     background: #000;
-    transition: transform 0.3s ease;
 }
 
-.card-title {
-    font-weight: bold;
-}
-
-.card-text {
-    color: #ffffff;
-    font-size: 0.95rem;
-}
-
-/* --- Badges/Etiquetas Personalizadas --- */
-.badge-custom {
-    background: rgba(102, 252, 241, 0.2);
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    margin: 2px;
-    display: inline-block;
-}
-
-/* --- Formularios (Input) --- */
+/* ==================================================
+   FORMULARIOS
+================================================== */
 .form-control {
     background: var(--color-bg-card);
-    /* Usando var en lugar de #1f2833 */
     border: 2px solid var(--color-primary);
-    color: white;
-    transition: var(--transition-smooth);
+    color: #fff;
 }
 
 .form-control:focus {
-    background: var(--color-bg-card);
-    border-color: var(--color-primary);
-    color: white;
     box-shadow: 0 0 15px var(--color-shadow);
 }
 
@@ -179,480 +267,176 @@ body {
     color: #aaa;
 }
 
-/* --- Botones de Detalle --- */
-.btn-detalle {
+/* ==================================================
+   MÓVIL
+================================================== */
+@media (max-width: 540px) {
+
+    .arco-card-moderna {
+        flex-direction: column;
+    }
+
+    .image-wrapper {
+        height: 180px; /* antes 240px */
+    }
+
+    .titulo-arco {
+        font-size: 0.95rem;
+    }
+
+    .subtitulo-arco {
+        font-size: 0.8rem;
+    }
+
+    /* ocultar botones del carrusel en móvil */
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+}
+
+/* ==================================================
+   DESKTOP
+================================================== */
+@media (min-width: 768px) {
+
+    .arco-card-moderna {
+        min-height: 320px;
+    }
+
+    .image-wrapper {
+        width: 280px;
+        height: auto;
+    }
+
+    .capitulos-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==================================================
+   SCROLL DE VOLÚMENES (MÁXIMO 2 VISIBLES)
+================================================== */
+
+/* Contenedor de volúmenes */
+.capitulos-grid-wrapper {
+    max-height: 260px; /* ≈ 2 volúmenes */
+    overflow-y: auto;
+    padding-right: 6px; /* espacio para scrollbar */
+}
+
+/* Ajuste fino del volumen */
+.volumen-item {
+    min-height: 120px;
+}
+
+/* ==================================================
+   SCROLLBAR PERSONALIZADO (CHROME / EDGE)
+================================================== */
+.capitulos-grid-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.capitulos-grid-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.capitulos-grid-wrapper::-webkit-scrollbar-thumb {
     background: var(--color-primary);
-    color: var(--color-bg-dark);
-    border: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
+    border-radius: 10px;
 }
 
-.btn-detalle:hover {
-    background: #45dbd0;
-    color: var(--color-bg-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 252, 241, 0.5);
+.capitulos-grid-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
 }
 
-
-/* =========================================================================
-   4. SECCIONES ESPECÍFICAS (HERO, ARCOS, CAPÍTULOS, GALERÍA)
-   ========================================================================= */
-
-/* --- Hero Section --- */
-.hero {
-    height: 50vh;
-    background: url('https://cdn.imgchest.com/files/caa4fe058406.jpg') center/cover no-repeat;
-    position: relative;
+/* ==================================================
+   FIREFOX
+================================================== */
+.capitulos-grid-wrapper {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) rgba(255,255,255,0.05);
 }
 
-.hero-overlay {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+@media (max-width: 540px) {
+    .capitulos-grid-wrapper {
+        max-height: 220px; /* móvil un poco más compacto */
+    }
+}
+
+/* ==================================================
+   SCANS
+================================================== */
+.scans-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 0.75rem;
 }
 
-/* --- Arc Cards (Sección Arcos Narrativos) --- */
-.arc-card {
-    padding: 25px;
-    color: white;
-    min-height: 240px;
-    transition: all 0.4s ease;
+.scans-label {
+    color: var(--color-text-muted);
+    margin-right: 4px;
 }
 
-.arc-card h4 {
+.scan-link {
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(102, 252, 241, 0.12);
     color: var(--color-primary);
-    margin-bottom: 10px;
+    font-weight: 600;
+    transition: var(--transition-smooth);
 }
 
-.arc-card h5 {
-    font-weight: bold;
-    margin-bottom: 15px;
+.scan-link:hover {
+    background: var(--color-primary);
+    color: #000;
+    box-shadow: 0 0 10px var(--color-shadow);
 }
 
-.arc-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 30px var(--color-shadow);
-}
-
-/* Imágenes de Arcos y Contenedor */
-.image-container {
-    min-height: 400px;
-    padding: 10px;
-}
-
-.arco-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background-color: #000;
-    border-radius: 10px !important;
-}
-
-/* --- Listas y Tablas de Capítulos --- */
-.table {
-    color: white;
-}
-
-.table-hover tbody tr {
-    transition: all 0.2s ease;
-}
-
-.table-hover tbody tr:hover {
-    background-color: rgba(102, 252, 241, 0.1);
-}
-
-/* Lista con límite de altura y fade */
-.capitulos-lista.max-height-list {
-    max-height: 300px;
-    overflow: hidden;
-    position: relative;
-    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-}
-
-.capitulos-lista:not(.max-height-list) {
-    max-height: none;
-    mask-image: none;
-    -webkit-mask-image: none;
-}
-
-.ver-mas-btn {
-    border-color: var(--color-primary) !important;
-    color: var(--color-primary) !important;
-}
-
-.ver-mas-btn:hover {
-    background-color: var(--color-primary) !important;
-    color: var(--color-bg-dark) !important;
-}
-
-/* Contenedor de Botón de Lectura */
-.lector-volumen {
-    display: flex;
-    flex-direction: column;
-}
-
-.lector-volumen .btn-detalle {
-    margin-top: auto;
-}
-
-
-/* =========================================================================
-   5. GALERÍA Y MODALES
-   ========================================================================= */
-
-
-/* --- Contenedor de Imagen de Galería (Card) --- */
-.gallery-card {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 2 / 3; /* <--- Esto le da la altura al contenedor */
-    overflow: hidden;
-    border-radius: 12px;
-    background-color: #000;
-}
-
-/* --- Contenedor de Imagen de Galería (Card) --- */
-
-/* --- Contenedor de Imagen de Galería (Card) --- */
-
-.gallery-card img {
-    width: 100% !important; 
-    height: 100% !important; 
-    
-    object-fit: cover; 
-    display: block;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-.gallery-card img:hover {
-    transform: scale(1.05);
-}
-
-/* Overlay de Galería (Efecto "Ver imagen") */
-.gallery-card::after {
-    content: "Ver imagen";
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    background: rgba(0, 0, 0, .6);
-    color: var(--color-primary);
-    font-size: 1.3rem;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity .3s;
-    pointer-events: none;
-}
-
-.gallery-card:hover::after {
-    opacity: 1;
-}
-
-
-/* --- Modal de Imagen (Pantalla completa) --- */
-.modal-imagen {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.9);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    cursor: pointer;
-}
-
-.modal-imagen img {
-    max-width: 95%;
-    max-height: 90%;
-    object-fit: contain;
-}
-
-/* --- Modal Bootstrap (Temas Oscuros) --- */
-.modal-content {
-    background: var(--color-bg-card);
-    /* Usando var en lugar de #1f2833 */
-    border: 2px solid var(--color-primary);
-    color: white;
-}
-
-.modal-header,
-.modal-footer {
-    border-color: var(--color-primary);
-}
-
-.modal-body img {
-    max-height: 300px;
-    object-fit: contain;
-}
-
-
-/* =========================================================================
-   6. UTILIDADES, FEEDBACK Y ESPECÍFICOS DE LECTURA
-   ========================================================================= */
-
-/* --- Loading/Spinner --- */
-.spinner-border {
-    color: var(--color-primary);
-    width: 3rem;
-    height: 3rem;
-}
-
-#loading {
-    color: var(--color-primary);
-}
-
-/* --- Manejo de Errores --- */
-.error-container {
-    display: none;
-}
-
-.error-message {
-    background: rgba(220, 53, 69, 0.1);
-    border: 2px solid #dc3545;
-    border-radius: 15px;
-    padding: 30px;
-    margin: 20px 0;
-    color: white;
-}
-
-/* --- Visor PDF (Iframe/Canvas) --- */
-.pdf-visor-custom {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 5px;
-}
-
-.pdf-visor-custom iframe {
-    height: calc(100% - 40px);
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-}
-
-.pdf-controls {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-bottom: 5px;
-}
-
-#pdfCanvas {
-    background: #1c1c1c;
-    max-width: 100%;
-}
-
-/* --- Utilidades Misceláneas --- */
-.col-md-3 {
-    min-height: 280px;
-}
-
-
-/* =========================================================================
-   7. SECCIÓN DE AGRADECIMIENTOS (Sociales)
-   ========================================================================= */
-
-/* Bordes personalizados */
-.border-rechidna {
-    border-color: #3b5998 !important;
-}
-
-.border-einherjar {
-    border-color: #ff4500 !important;
-}
-
-.border-mundos-isekai {
-    border-color: #ff0000 !important;
-}
-
-.border-traducciones {
-    border-color: #1da1f2 !important;
-}
-
-/* Botones sociales */
-.social-icon-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: white;
-    text-decoration: none;
-    transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.social-icon-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(102, 252, 241, 0.6);
-}
-
-/* Colores por red */
-.social-icon-btn.facebook {
-    background-color: #3b5998;
-}
-
-.social-icon-btn.youtube {
-    background-color: #ff0000;
-}
-
-.social-icon-btn.twitter {
-    background-color: #000;
-    border: 1px solid #1da1f2;
-}
-
-.social-icon-btn.patreon {
-    background-color: #ff4500;
-}
-
-.social-icon-btn.blogger {
-    background-color: #ff8c00;
-}
-
-/* Nota */
-.agradecimientos-nota {
-    color: #ffffff !important;
-    font-style: italic;
-    font-size: 0.9rem !important;
-}
-
-
-/* =========================================================================
-   8. ANIMACIONES
-   ========================================================================= */
-
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+/* ==================================================
+   CONTENEDOR ARCOS – DESKTOP
+================================================== */
+@media (min-width: 992px) {
+    .container-arcos {
+        max-width: 1400px; /* prueba 1400 / 1500 / 1600 */
     }
 }
+@media (min-width: 992px) {
 
-.container {
-    animation: aparecer 0.8s ease;
-}
-
-
-/* =========================================================================
-   9. RESPONSIVE / MEDIA QUERIES
-   ========================================================================= */
-
-/* --- Tablet y Abajo (max-width: 768px) --- */
-@media (max-width: 768px) {
-    body {
-        padding-top: 60px;
+    .arco-card-moderna {
+        min-height: 420px;
     }
 
-    .hero {
-        height: 40vh;
+    .image-wrapper {
+        width: 340px; /* antes 280px */
     }
 
-    .image-container {
-        min-height: 250px;
-    }
-
-    .display-4 {
-        font-size: 2rem;
-    }
-
-    .arc-card {
-        min-height: 180px;
-        padding: 20px;
+    .info-wrapper {
+        padding: 22px;
     }
 }
+@media (min-width: 992px) {
 
-/* --- Móvil Estándar (max-width: 576px) --- */
-@media (max-width: 576px) {
-    .hero {
-        height: 35vh;
+    .titulo-arco {
+        font-size: 1.35rem;
     }
 
-    .display-4 {
-        font-size: 1.5rem;
+    .subtitulo-arco {
+        font-size: 1.05rem;
     }
 
-    .arc-card {
-        min-height: auto;
-        padding: 15px;
+    .vol-titulo {
+        font-size: 1rem;
     }
 
-    .gallery-card {
-        aspect-ratio: 2 / 3;
+    .capitulos-lista {
+        font-size: 0.95rem;
     }
 
-    /* AJUSTES GLASS PARA CELULARES */
-    .glass {
-        padding: 1.25rem !important;
-        backdrop-filter: blur(6px);
-        border-radius: 12px;
-    }
-
-    /* Quitamos hover innecesario en móvil */
-    .glass:hover {
-        background: rgba(255, 255, 255, 0.05);
-        border-color: rgba(255, 255, 255, 0.1);
-        box-shadow: none;
-    }
-}
-
-/* --- Móvil Muy Pequeño (Optimizacion ~400px) --- */
-@media (max-width: 450px) {
-
-    /* Reduce la altura del Hero para dejar más espacio al contenido */
-    .hero {
-        height: 30vh;
-    }
-
-    /* Reduce el tamaño de la tipografía principal (Bootstrap Display 4) */
-    .display-4 {
-        font-size: 1.2rem;
-    }
-
-    /* Ajuste de relleno general para espacios más estrechos */
-    .glass {
-        padding: 1rem !important;
-        border-radius: 10px;
-    }
-
-    /* Ajustes en la sección de Créditos para mayor compactación */
-    .col-6.col-md-3 {
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-    }
-
-    #agradecimientos .col-6.col-md-3 img {
-        width: 90px !important;
-        height: 90px !important;
-    }
-
-    /* Reduce el tamaño de los botones sociales */
-    .social-icon-btn {
-        width: 32px;
-        /* Reducido a 32px */
-        height: 32px;
-        font-size: 0.9rem;
-    }
-
-    /* Ajuste de las notas pequeñas en la sección de créditos */
-    .agradecimientos-nota {
-        font-size: 0.8rem !important;
-    }
-
-    .gallery-card img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
+    .scan-link {
+        font-size: 0.85rem;
     }
 }

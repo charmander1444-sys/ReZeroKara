@@ -15,8 +15,7 @@ let personajesDB = null;
 // ELEMENTOS DEL DOM
 // ========================================
 const elementos = {
-    loading: null,
-    errorContainer: null,
+
     contenedor: null,
     buscador: null,
     modalTitulo: null,
@@ -28,8 +27,6 @@ const elementos = {
 // INICIALIZACIÓN
 // ========================================
 function inicializarElementos() {
-    elementos.loading = document.getElementById('loading');
-    elementos.errorContainer = document.getElementById('error-container');
     elementos.contenedor = document.getElementById('contenedor-personajes');
     elementos.buscador = document.getElementById('buscador');
     elementos.modalTitulo = document.getElementById('modalTitulo');
@@ -66,7 +63,6 @@ async function cargarDatosJSON() {
         
         await new Promise(resolve => setTimeout(resolve, CONFIG.loadingDelay));
         
-        ocultarLoading();
         cargarPersonajes();
         
     } catch (error) {
@@ -227,25 +223,14 @@ function limpiarContenedor() {
     elementos.contenedor.innerHTML = '';
 }
 
-function ocultarLoading() {
-    if (elementos.loading) {
-        elementos.loading.style.display = 'none';
-    }
-}
 
-function mostrarLoading() {
-    if (elementos.loading) {
-        elementos.loading.style.display = 'block';
-    }
-}
 
 // ========================================
 // MANEJO DE ERRORES
 // ========================================
 function manejarError(error) {
     console.error('❌ Error:', error);
-    
-    ocultarLoading();
+
     
     if (elementos.errorContainer) {
         elementos.errorContainer.style.display = 'block';
@@ -283,7 +268,6 @@ window.personajesAPI = {
     obtenerPorId: buscarPersonajePorId,
     filtrar: filtrarPersonajes,
     recargar: () => {
-        mostrarLoading();
         limpiarContenedor();
         cargarDatosJSON();
     }

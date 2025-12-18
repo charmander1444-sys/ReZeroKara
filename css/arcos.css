@@ -1,0 +1,22 @@
+/* --- Arc Cards (Sección Arcos Narrativos) --- */
+.arc-card {
+    padding: 25px;
+    color: white;
+    min-height: 240px;
+    transition: all 0.4s ease;
+}
+
+.arc-card h4 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.arc-card h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.arc-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px var(--color-shadow);
+}

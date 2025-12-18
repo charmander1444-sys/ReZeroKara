@@ -1,0 +1,65 @@
+/*css/index.css*/
+/* Bordes personalizados */
+.border-rechidna {
+    border-color: #3b5998 !important;
+}
+
+.border-einherjar {
+    border-color: #ff4500 !important;
+}
+
+.border-mundos-isekai {
+    border-color: #ff0000 !important;
+}
+
+.border-traducciones {
+    border-color: #1da1f2 !important;
+}
+
+/* Botones sociales */
+.social-icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.social-icon-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.6);
+}
+
+/* Colores por red */
+.social-icon-btn.facebook {
+    background-color: #3b5998;
+}
+
+.social-icon-btn.youtube {
+    background-color: #ff0000;
+}
+
+.social-icon-btn.twitter {
+    background-color: #000;
+    border: 1px solid #1da1f2;
+}
+
+.social-icon-btn.patreon {
+    background-color: #ff4500;
+}
+
+.social-icon-btn.blogger {
+    background-color: #ff8c00;
+}
+
+/* Nota */
+.agradecimientos-nota {
+    color: #ffffff !important;
+    font-style: italic;
+    font-size: 0.9rem !important;
+}

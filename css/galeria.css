@@ -1,0 +1,52 @@
+/* ===============================
+   DISEÑO DE TARJETAS DE GALERÍA
+================================ */
+
+.tarjeta-foto-galeria {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-foto-galeria:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px var(--color-shadow);
+}
+
+.imagen-clicable {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-foto-galeria:hover .imagen-clicable {
+    transform: scale(1.05);
+}
+
+/* --- CAPA HOVER (Efecto informativo) --- */
+.tarjeta-foto-galeria::after {
+    content: "VER IMAGEN";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.tarjeta-foto-galeria:hover::after {
+    opacity: 1;
+}
