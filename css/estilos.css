@@ -16,9 +16,29 @@
     --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+/* ==================================================
+   ANIMACIONES
+================================================== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* ==================================================
    BASE
 ================================================== */
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: var(--color-bg-dark);
     color: var(--color-text-main);
@@ -30,12 +50,22 @@ a {
     text-decoration: none;
 }
 
+.container {
+    animation: aparecer 0.8s ease forwards;
+}
+
+.titulo {
+    color: var(--color-primary);
+    text-shadow: 0 0 20px var(--color-shadow);
+}
+
+
 /* ==================================================
    NAVBAR
 ================================================== */
 .navbar {
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.95) !important;
+    background-color: rgba(0,0,0,.95) !important;
 }
 
 .navbar-nav .nav-link {
@@ -47,6 +77,7 @@ a {
 .navbar-nav .nav-link.active {
     color: var(--color-primary) !important;
 }
+
 
 /* ==================================================
    MENÚ LATERAL
@@ -83,6 +114,7 @@ a {
     font-size: 36px;
 }
 
+
 /* ==================================================
    HERO
 ================================================== */
@@ -93,142 +125,14 @@ a {
 }
 
 .hero-overlay {
-    inset: 0;
     position: absolute;
+    inset: 0;
     background: rgba(0,0,0,.7);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* ==================================================
-   GLASS
-================================================== */
-.glass {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: var(--transition-smooth);
-}
-
-.glass:hover {
-    background: rgba(255,255,255,0.08);
-    border-color: var(--color-primary);
-    box-shadow: 0 0 20px var(--color-shadow);
-}
-
-/* ==================================================
-   ARCO CARD
-================================================== */
-.arco-card-moderna {
-    display: flex;
-    background: linear-gradient(145deg, #1f2833, #161d26);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,.6);
-    transition: var(--transition-smooth);
-}
-
-.arco-card-moderna:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 25px var(--color-shadow);
-}
-
-/* ==================================================
-   IMAGEN / CAROUSEL
-================================================== */
-.image-wrapper {
-    background: #000;
-    overflow: hidden;
-    position: relative;
-}
-
-
-.arco-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 🔥 elimina bordes negros */
-    display: block;
-}
-
-/* carousel fix */
-.carousel,
-.carousel-inner,
-.carousel-item {
-    height: 100%;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ==================================================
-   INFO
-================================================== */
-.info-wrapper {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.titulo-arco {
-    color: var(--color-primary);
-    font-weight: 700;
-}
-
-.subtitulo-arco {
-    color: var(--color-text-muted);
-    font-size: 0.95rem;
-}
-
-/* ==================================================
-   CAPÍTULOS
-================================================== */
-.capitulos-grid-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-}
-
-.volumen-item {
-    background: rgba(255,255,255,0.04);
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.vol-titulo {
-    color: var(--color-primary);
-    font-size: 0.9rem;
-}
-
-.capitulos-lista {
-    padding-left: 16px;
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-}
-
-/* ==================================================
-   BOTÓN
-================================================== */
-.btn-primary-custom {
-    margin-top: auto;
-    align-self: flex-start;
-    background: var(--color-primary);
-    color: #000;
-    border-radius: 30px;
-    padding: 8px 22px;
-    font-weight: 600;
-    transition: var(--transition-smooth);
-}
-
-.btn-primary-custom:hover {
-    background: var(--color-accent);
-    box-shadow: 0 0 15px var(--color-shadow);
-}
 
 /* ==================================================
    CARDS GENERALES
@@ -250,6 +154,7 @@ a {
     background: #000;
 }
 
+
 /* ==================================================
    FORMULARIOS
 ================================================== */
@@ -267,78 +172,136 @@ a {
     color: #aaa;
 }
 
+
+
+
 /* ==================================================
-   MÓVIL
+   GLASS
 ================================================== */
-@media (max-width: 540px) {
-
-    .arco-card-moderna {
-        flex-direction: column;
-    }
-
-    .image-wrapper {
-        height: 180px; /* antes 240px */
-    }
-
-    .titulo-arco {
-        font-size: 0.95rem;
-    }
-
-    .subtitulo-arco {
-        font-size: 0.8rem;
-    }
-
-    /* ocultar botones del carrusel en móvil */
-    .carousel-control-prev,
-    .carousel-control-next {
-        display: none;
-    }
+.glass {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: var(--transition-smooth);
 }
 
-/* ==================================================
-   DESKTOP
-================================================== */
-@media (min-width: 768px) {
-
-    .arco-card-moderna {
-        min-height: 320px;
-    }
-
-    .image-wrapper {
-        width: 280px;
-        height: auto;
-    }
-
-    .capitulos-grid-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.glass:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px var(--color-shadow);
 }
 
-/* ==================================================
-   SCROLL DE VOLÚMENES (MÁXIMO 2 VISIBLES)
-================================================== */
 
-/* Contenedor de volúmenes */
+/* ==================================================
+   ARCO CARD
+================================================== */
+.arco-card-moderna {
+    display: flex;
+    background: linear-gradient(145deg, #1f2833, #161d26);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,.6);
+    transition: var(--transition-smooth);
+    will-change: transform;
+}
+
+.arco-card-moderna:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px var(--color-shadow);
+}
+
+
+/* ==================================================
+   IMÁGENES / CAROUSEL
+================================================== */
+.image-wrapper {
+    background: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+.arco-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   INFO
+================================================== */
+.info-wrapper {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1; /* 🔥 CLAVE */
+}
+
+
+.titulo-arco {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.subtitulo-arco {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+
+/* ==================================================
+   CAPÍTULOS / SCROLL
+================================================== */
 .capitulos-grid-wrapper {
-    max-height: 260px; /* ≈ 2 volúmenes */
+    max-height: 260px;
     overflow-y: auto;
-    padding-right: 6px; /* espacio para scrollbar */
+    padding-right: 6px;
+    -webkit-overflow-scrolling: touch;
 }
 
-/* Ajuste fino del volumen */
 .volumen-item {
     min-height: 120px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    padding: 10px;
 }
 
+.vol-titulo {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+.capitulos-lista {
+    padding-left: 16px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+
 /* ==================================================
-   SCROLLBAR PERSONALIZADO (CHROME / EDGE)
+   SCROLLBAR
 ================================================== */
 .capitulos-grid-wrapper::-webkit-scrollbar {
     width: 6px;
 }
 
 .capitulos-grid-wrapper::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255,255,255,0.05);
     border-radius: 10px;
 }
 
@@ -351,19 +314,12 @@ a {
     background: var(--color-accent);
 }
 
-/* ==================================================
-   FIREFOX
-================================================== */
+/* Firefox */
 .capitulos-grid-wrapper {
     scrollbar-width: thin;
     scrollbar-color: var(--color-primary) rgba(255,255,255,0.05);
 }
 
-@media (max-width: 540px) {
-    .capitulos-grid-wrapper {
-        max-height: 220px; /* móvil un poco más compacto */
-    }
-}
 
 /* ==================================================
    SCANS
@@ -378,13 +334,12 @@ a {
 
 .scans-label {
     color: var(--color-text-muted);
-    margin-right: 4px;
 }
 
 .scan-link {
     padding: 4px 10px;
     border-radius: 20px;
-    background: rgba(102, 252, 241, 0.12);
+    background: rgba(102,252,241,0.12);
     color: var(--color-primary);
     font-weight: 600;
     transition: var(--transition-smooth);
@@ -396,47 +351,23 @@ a {
     box-shadow: 0 0 10px var(--color-shadow);
 }
 
+
 /* ==================================================
-   CONTENEDOR ARCOS – DESKTOP
+   BOTONES
 ================================================== */
-@media (min-width: 992px) {
-    .container-arcos {
-        max-width: 1400px; /* prueba 1400 / 1500 / 1600 */
-    }
+.btn-primary-custom {
+    margin-top: auto;
+    align-self: flex-start;
+    background: var(--color-primary);
+    color: #000;
+    border-radius: 30px;
+    padding: 8px 22px;
+    font-weight: 600;
+    transition: var(--transition-smooth);
 }
-@media (min-width: 992px) {
 
-    .arco-card-moderna {
-        min-height: 420px;
-    }
-
-    .image-wrapper {
-        width: 340px; /* antes 280px */
-    }
-
-    .info-wrapper {
-        padding: 22px;
-    }
+.btn-primary-custom:hover {
+    background: var(--color-accent);
+    box-shadow: 0 0 15px var(--color-shadow);
 }
-@media (min-width: 992px) {
 
-    .titulo-arco {
-        font-size: 1.35rem;
-    }
-
-    .subtitulo-arco {
-        font-size: 1.05rem;
-    }
-
-    .vol-titulo {
-        font-size: 1rem;
-    }
-
-    .capitulos-lista {
-        font-size: 0.95rem;
-    }
-
-    .scan-link {
-        font-size: 0.85rem;
-    }
-}

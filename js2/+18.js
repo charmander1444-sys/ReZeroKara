@@ -1,10 +1,5 @@
-// =====================================
-// CONFIGURACIÓN
-// =====================================
-
-//netlify
-//const API_URL = "/.netlify/functions/rule34";
-
+// netlify
+// const API_URL = "/.netlify/functions/rule34";
 const API_URL = "https://re-zero-kara.vercel.app/api/rule34";
 
 let tipoContenido = "imagen"; // por defecto
@@ -12,7 +7,7 @@ const TAG_BASE = "re:zero_kara_hajimeru_isekai_seikatsu";
 const LIMITE = 20;
 
 let paginaActual = 0;
-let tagsActuales = `${TAG_BASE} rem_(re:zero)`;
+let tagsActuales = `${TAG_BASE} re:zero_kara_hajimeru_isekai_seikatsu`;
 
 // =====================================
 // MAPA DE PERSONAJES → TAGS REALES
@@ -36,24 +31,27 @@ const PERSONAJES_TAGS = {
 document.addEventListener("DOMContentLoaded", () => {
   cargarImagenes();
 
-  // ComboBox tipo contenido
-  document.getElementById("tipoContenido").addEventListener("change", e => {
-    const nuevoTipo = e.target.value;
-    tipoContenido = nuevoTipo;
+  const selectTipo = document.getElementById("tipoContenido");
+  if (selectTipo) {
+    selectTipo.addEventListener("change", e => {
+      tipoContenido = e.target.value;
 
-    // Agregar o quitar tag "video" según la selección
-    const tags = tagsActuales.split(" ").filter(t => t.trim() !== "");
-    if (nuevoTipo === "video" && !tags.includes("video")) {
-      tags.push("video");
-    } else if (nuevoTipo === "imagen") {
-      const index = tags.indexOf("video");
-      if (index !== -1) tags.splice(index, 1);
-    }
+      const tags = tagsActuales.split(" ").filter(Boolean);
 
-    tagsActuales = tags.join(" ");
-    paginaActual = 0;
-    cargarImagenes();
-  });
+      if (tipoContenido === "video" && !tags.includes("video")) {
+        tags.push("video");
+      }
+
+      if (tipoContenido === "imagen") {
+        const i = tags.indexOf("video");
+        if (i !== -1) tags.splice(i, 1);
+      }
+
+      tagsActuales = tags.join(" ");
+      paginaActual = 0;
+      cargarImagenes();
+    });
+  }
 });
 
 // =====================================
@@ -61,16 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
 // =====================================
 function normalizarTags(input) {
   if (!input || !input.trim()) {
-    let tags = [`${TAG_BASE}`, `rem_(re:zero)`];
-    if (tipoContenido === "video") tags.push("video");
-    return tags.join(" ");
+    const base = [TAG_BASE, "rem_(re:zero)"];
+    if (tipoContenido === "video") base.push("video");
+    return base.join(" ");
   }
 
-  const palabras = input
-    .toLowerCase()
-    .split(" ")
-    .filter(p => p.trim() !== "");
-
+  const palabras = input.toLowerCase().split(" ").filter(Boolean);
   const tags = palabras.map(p => PERSONAJES_TAGS[p] || p);
 
   if (!tags.includes(TAG_BASE)) tags.unshift(TAG_BASE);
@@ -86,11 +80,7 @@ async function cargarImagenes() {
   const galeria = document.getElementById("galeria18");
   if (!galeria) return;
 
-  galeria.innerHTML = `
-    <div class="text-center w-100">
-  
-    </div>
-  `;
+  galeria.innerHTML = `<div class="text-center w-100"></div>`;
 
   const url = `${API_URL}?tags=${encodeURIComponent(tagsActuales)}&page=${paginaActual}&limit=${LIMITE}`;
 
@@ -98,15 +88,12 @@ async function cargarImagenes() {
     const res = await fetch(url);
     const data = await res.json();
 
-    console.log("Rule34 API:", data);
-
     const posts = Array.isArray(data) ? data : [];
     renderizarGaleria(posts);
     renderizarPaginacion();
-  } catch (error) {
-    console.error(error);
-    galeria.innerHTML =
-      `<p class="text-danger text-center">Error cargando contenido</p>`;
+  } catch (e) {
+    console.error(e);
+    galeria.innerHTML = `<p class="text-danger text-center">Error cargando contenido</p>`;
   }
 }
 
@@ -137,6 +124,7 @@ function renderizarGaleria(items) {
 
   filtrados.forEach(item => {
     const thumb = item.sample_url || item.preview_url || item.file_url;
+
     galeria.innerHTML += `
       <div class="col-6 col-md-4 col-lg-3">
         <img
@@ -188,36 +176,45 @@ function cambiarPagina(delta) {
 }
 
 // =====================================
-// MODAL INTELIGENTE
+// MODAL INTELIGENTE (ÚNICO)
 // =====================================
 function verContenido(src) {
-  const modal = document.getElementById("imagenModal");
-  const img = document.getElementById("imgGrande");
-  const video = document.getElementById("videoGrande");
-
-  img.style.display = "none";
-  video.style.display = "none";
-
+  // Si es video → usar visor propio
   if (src.endsWith(".mp4") || src.endsWith(".webm")) {
-    video.src = src;
+    const visor = document.getElementById("capa-visualizador");
+    const video = document.getElementById("videoGrande");
+    const img = document.getElementById("imgGrande");
+
+    if (!visor || !video || !img) return;
+
+    img.style.display = "none";
     video.style.display = "block";
+    video.src = src;
     video.play();
-  } else {
-    img.src = src;
-    img.style.display = "block";
+
+    visor.style.display = "flex";
+    document.body.style.overflow = "hidden";
+    return;
   }
 
-  modal.style.display = "flex";
-}
-
-function cerrarImagen() {
-  const modal = document.getElementById("imagenModal");
-  const video = document.getElementById("videoGrande");
-
-  if (video) {
-    video.pause();
-    video.src = "";
+  // 👉 IMÁGENES: usar el visualizador GLOBAL (main.js)
+  if (window.abrirVisualizador) {
+    window.abrirVisualizador(src);
   }
-
-  modal.style.display = "none";
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".cerrar-visor")
+    ?.addEventListener("click", () => {
+      if (window.cerrarVisualizador) {
+        window.cerrarVisualizador();
+      }
+    });
+});
+
+
+
+// Cerrar con ESC
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") cerrarImagen();
+});

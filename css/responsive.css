@@ -1,155 +1,123 @@
 /* ==================================================
-   ANIMACIÓN BASE
+   MÓVIL (ANDROID) ≤ 480px
 ================================================== */
-@keyframes aparecer {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+@media (max-width: 480px) {
+    .carousel,
+    .carousel-inner,
+    .carousel-item {
+        height: 100%;
+    }
 
-.container {
-    animation: aparecer 0.8s ease forwards;
-}
+    body {
+        padding-top: 56px;
+    }
 
-.titulo {
-    color: var(--color-primary);
-    text-shadow: 0 0 20px var(--color-shadow);
-}
+    .hero {
+        height: 30vh;
+    }
 
-/* ==================================================
-   MÓVIL PEQUEÑO (≤ 450px)
-================================================== */
-@media (max-width: 450px) {
-
-    .hero { height: 30vh; }
-
-    .display-4 { font-size: 1.2rem; }
+    .display-4 {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
 
     .glass {
         padding: 1rem !important;
         border-radius: 10px;
+        backdrop-filter: none;
     }
 
-    #contenedor-arcos {
-        --bs-gutter-x: 10px;
-        --bs-gutter-y: 15px;
+    .arco-card-moderna {
+        flex-direction: column;
     }
 
-    .image-wrapper { height: 190px; }
-
-    .titulo-arco {
-        font-size: 0.85rem;
-        line-height: 1.2;
-    }
-
-    .subtitulo-arco {
-        font-size: 0.75rem;
-    }
-
-    .capitulos-grid-wrapper {
-        grid-template-columns: 1fr;
-        max-height: none;
-        overflow: visible;
-    }
-
-    .scan-tag { display: none; }
-
-    /* Créditos */
-    .col-6.col-md-3 {
-        padding-inline: 5px !important;
-    }
-
-    #agradecimientos .col-6.col-md-3 img {
-        width: 90px !important;
-        height: 90px !important;
-    }
-
-    .social-icon-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 0.9rem;
-    }
-
-    .agradecimientos-nota {
-        font-size: 0.8rem !important;
-    }
-}
-
-/* ==================================================
-   MÓVIL ESTÁNDAR (≤ 576px)
-================================================== */
-@media (max-width: 576px) {
-
-    .hero { height: 35vh; }
-
-    .display-4 { font-size: 1.5rem; }
-
-    .arc-card {
-        padding: 15px;
-        min-height: auto;
-    }
-
-    .gallery-card {
-        aspect-ratio: 2 / 3;
-    }
-
-    .gallery-card img {
+    .arco-img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Glass optimizado para touch */
-    .glass {
-        padding: 1.25rem !important;
-        backdrop-filter: blur(6px);
-        border-radius: 12px;
-    }
-
-    .glass:hover {
-        background: rgba(255,255,255,.05);
-        border-color: rgba(255,255,255,.1);
-        box-shadow: none;
-    }
-}
-
-/* ==================================================
-   TABLET (≤ 768px)
-================================================== */
-@media (max-width: 768px) {
-
-    body { padding-top: 60px; }
-
-    .hero { height: 40vh; }
-
-    .image-container { min-height: 250px; }
-
-    .display-4 { font-size: 2rem; }
-
-    .arc-card {
-        min-height: 180px;
-        padding: 20px;
-    }
-}
-
-/* ==================================================
-   DESKTOP (≥ 768px)
-================================================== */
-@media (min-width: 768px) {
-
-    .image-wrapper {
-        width: 250px;
-        height: 100%;
+        height: auto;
+        object-fit: contain;
+        /* 🔥 IMAGEN COMPLETA */
     }
 
     .info-wrapper {
-        flex: 1;
-        padding: 25px !important;
+        padding: 16px !important;
+    }
+
+    .titulo-arco {
+        font-size: 0.95rem;
+    }
+
+    .subtitulo-arco {
+        font-size: 0.8rem;
     }
 
     .capitulos-grid-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-        max-height: none;
-        overflow: visible;
+        max-height: 220px;
+        flex: unset;
+    }
+
+    .volumen-item {
+        min-height: 110px;
+    }
+
+    .scan-tag {
+        display: none;
+    }
+
+    .scan-link {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        min-height: 36px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .btn-primary-custom {
+        padding: 12px 26px;
+        font-size: 0.95rem;
+    }
+  
+}
+
+
+/* ==================================================
+   DESKTOP ≥ 992px
+================================================== */
+@media (min-width: 992px) {
+
+    .container-arcos {
+        max-width: 1400px;
+    }
+
+    .arco-card-moderna {
+        min-height: 420px;
+    }
+
+    .image-wrapper {
+        width: 340px;
+    }
+
+    .info-wrapper {
+        padding: 22px;
+        gap: 10px;
+    }
+
+    .titulo-arco {
+        font-size: 1.35rem;
+    }
+
+    .subtitulo-arco {
+        font-size: 1.05rem;
+    }
+
+    .vol-titulo {
+        font-size: 1rem;
+    }
+
+    .capitulos-lista {
+        font-size: 0.95rem;
+    }
+
+    .scan-link {
+        font-size: 0.85rem;
     }
 }
