@@ -75,6 +75,86 @@
         padding: 12px 26px;
         font-size: 0.95rem;
     }
+
+    
+    /* ----- SECCIÓN ----- */
+    .creadores {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* ----- CARD ----- */
+    .creador-card {
+        border-radius: 14px;
+    }
+
+    /* ----- BANNER ----- */
+    #ytBanner {
+        height: 120px;              /* Más compacto */
+        object-fit: cover;
+    }
+
+    /* ----- AVATAR ----- */
+    .yt-avatar-wrapper {
+        top: 80px;                  /* Baja el avatar */
+    }
+
+    #ytAvatar {
+        width: 90px;
+        height: 90px;
+        border-width: 3px;
+    }
+
+    /* ----- BODY ----- */
+    .creador-card .card-body {
+        padding-top: 55px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    /* ----- TÍTULO ----- */
+    #ytNombre {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* ----- STATS ----- */
+    .creador-card ul {
+        font-size: 0.85rem;
+    }
+
+    .creador-card ul li {
+        margin-bottom: 4px;
+    }
+
+    /* ----- LISTA DE VIDEOS ----- */
+    .yt-videos {
+        gap: 8px;
+    }
+
+    .yt-video-item {
+        padding: 6px;
+        gap: 8px;
+    }
+
+    .yt-video-item img {
+        width: 80px;
+        height: 45px;
+    }
+
+    .yt-video-title {
+        font-size: 0.75rem;
+        line-height: 1.1;
+    }
+
+    /* ----- FOOTER ----- */
+    .creador-card .card-footer {
+        padding: 10px;
+    }
+
+    .creador-card .card-footer i {
+        font-size: 1.6rem;
+    }
   
 }
 

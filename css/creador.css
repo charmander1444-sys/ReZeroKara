@@ -1,0 +1,143 @@
+:root {
+    --yt-red: #ff0000;
+    --dark-bg: #0b0c10;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --accent-blue: #66fcf1;
+}
+
+.creadores {
+    animation: aparecer 0.8s ease forwards;
+}
+
+/* ---------- CARD ---------- */
+.creador-card {
+    background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+    border: 1px solid rgba(102, 252, 241, 0.1);
+    border-radius: 24px;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.creadores {
+    animation: aparecer 0.8s ease forwards;
+}
+
+/* El nombre ahora tiene un margen superior para no ser tapado por el avatar */
+#ytNombre {
+    margin-top: 20px;
+    color: #fff;
+}
+
+/* ---------- BANNER ---------- */
+.yt-banner-container {
+    width: 100%;
+    aspect-ratio: 16 / 5; /* Proporción estándar de banner de YT */
+    overflow: hidden;
+    background: #000;
+}
+
+#ytBanner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/* ---------- AVATAR ---------- */
+.yt-avatar-wrapper {
+    position: absolute;
+    /* En lugar de un % fijo, usamos una medida que dependa del banner */
+    top: 80px; /* Ajusta este valor según la altura de tu banner */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+#ytAvatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 5px solid #1a1a2e;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.4);
+    object-fit: cover;
+}
+
+/* ---------- BODY ---------- */
+.creador-card .card-body {
+    /* Aumentamos el padding superior para que el nombre baje más */
+    padding: 85px 20px 20px 20px; 
+}
+
+#ytNombre {
+    margin-top: 20px;
+    display: block;
+}
+/* ---------- STATS GRID ---------- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-item {
+    background: var(--glass-bg);
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-item i { color: var(--accent-blue); margin-bottom: 5px; display: block; }
+.stat-item span { font-size: 0.8rem; color: #aaa; text-transform: uppercase; }
+.stat-item div { font-weight: bold; font-size: 1.1rem; }
+
+/* ---------- VIDEOS ---------- */
+.yt-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.yt-video-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255,255,255,0.03);
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+.yt-video-item:hover {
+    background: rgba(255, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+.video-thumb-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.yt-video-item img {
+    width: 120px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.yt-video-title {
+    font-size: 0.9rem;
+    color: #eee;
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
