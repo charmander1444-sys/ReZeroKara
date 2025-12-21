@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Canal YouTube</title>
+</head>
+<body>
+
+<h1 id="titulo"></h1>
+<ul id="videos"></ul>
+
+<script>
+fetch("/api/youtube")
+  .then(res => res.text())
+  .then(xml => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(xml, "text/xml");
+
+    document.getElementById("titulo").textContent =
+      doc.querySelector("title").textContent;
+
+    const entries = doc.querySelectorAll("entry");
+
+    entries.forEach(entry => {
+      const li = document.createElement("li");
+      li.textContent = entry.querySelector("title").textContent;
+      document.getElementById("videos").appendChild(li);
+    });
+  });
+</script>
+
+</body>
+</html>
