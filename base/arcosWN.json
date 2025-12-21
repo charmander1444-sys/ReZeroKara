@@ -324,5 +324,215 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 6,
+        "tipo": "web_novel",
+        "nombre": "Arco 6",
+        "titulo": "El corredor de las memorias",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/d5acace1606c.webp"
+                ]
+            }
+        ],
+        "volumenes": "Volumen 21,22,23,24,25",
+        "scans": [
+            {
+                "nombre": "Mundos Isekai",
+                "link": "#"
+            },
+             {
+                "nombre": "Natsuki-san",
+                "link": "#"
+            },
+             {
+                "nombre": "Fhol",
+                "link": "#"
+            },
+             {
+                "nombre": "Nexudus",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Arco 6-1",
+                "driveId": "1VP8yioHj7tHKNq4SygliiPjjtRwGhSxk",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 1: El Camino de Regreso ...",
+                    "Capítulo 2: Su Forma de Brindar una Cálida ...",
+                    "Capítulo 3: La Celda de una Niña",
+                    "Capítulo 4: La Razón para Sacarte",
+                    "Capítulo 5: Diversas Inquietudes",
+                    "Capítulo 6: La Genealogía Juukulius",
+                    "Capítulo 7: Apuntando al Mar de Arena",
+                    "Capítulo 8: El Inicio de la Aventura en las ...",
+                    "Capítulo 9: Romper el Tiempo de Arena",
+                    "Capítulo 10: Como si Fuera un Destello",
+                    "Capítulo 11: La Voz llorosa que llegue a Oír",
+                    "Capítulo 12: El bautismo de la Atalaya",
+                    "Capítulo 13: Burla de la Arena",
+                    "Capítulo 14: La Fe Construida Sobre la Arena",
+                    "Capítulo 15: Esparcidos en la Arena",
+                    "Capítulo 16: Restos de Masticación",
+                    "Capítulo 17: El Rey del Mar de Arena",
+                    "Capítulo 18: El Guardián de la Torre de Arena",
+                    "Capítulo 19: El Paradero del Sabio",
+                    "Capítulo 20: Shaula ≠ Sabio = Flugel"
+                ]
+            },
+            {
+                "volumen": "Arco 6-2",
+                "driveId": "1wXCcGX4KCXifxv7AvJ2fZAnQWWQMutBa",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 21: El desafío del Monolito",
+                    "Capítulo 22: El Asterismo de aquel blanco ...",
+                    "Capítulo 23: Evaluación de la Biblioteca...",
+                    "Capítulo 24: El examinador Perverso",
+                    "Capítulo 25: El hombre que espera en el...",
+                    "Capítulo 26: Stick Swinger",
+                    "Capítulo 27: Muro de Electra",
+                    "Capítulo 28: Julius Juukulius",
+                    "Capítulo 29: Perdedor",
+                    "Capítulo 30: La estrategia de captura del...",
+                    "Capítulo 31: Un Delicioso Estímulo para...",
+                    "Capítulo 32: ¿Quién Eres?",
+                    "Capítulo 33: ■■■ · ■■■"
+                ]
+            },
+            {
+                "volumen": "Arco 6-3",
+                "driveId": "1xg4AVuZRpZ9uVZtY381nLHGcbcz_PGBz",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 34: Al salir de la tienda de Convivencia,...",
+                    "Capítulo 35: Relaciones que caminan sobre...",
+                    "Capítulo 36: Un Lugar de Alivio",
+                    "Capítulo 37: El Sueño de un Papel-Mache",
+                    "Capítulo 38: Quien Eres Tú",
+                    "Capítulo 39: Ruinas",
+                    "Capítulo 40: Abandonado por las Estrellas",
+                    "Capítulo 41: El Aroma de la Paz",
+                    "Capítulo 42: Torre de los Muertos",
+                    "Capítulo 43: Torre de los Vivos",
+                    "Capítulo 44: Medalla de Sangre",
+                    "Capítulo 45: El Abrazo de los Culpables",
+                    "Capítulo 46: Meili Portroute",
+                    "Capítulo 47: No lo Perdonare",
+                    "Capítulo 48: El Asesinato se Convierte en...",
+                    "Capítulo 49: Tus Disculpas no tienen Ningún...",
+                    "Capítulo 50: Tus Excusas son Absolutamente...",
+                    "Capítulo 51: Torre de los Vivos, Parte 2",
+                    "Capítulo 52: Dios por favor Perdóname",
+                    "Capítulo 53: —Y de pronto surgió una voz",
+                    "Capítulo 54: Re: Comenzar la Vida en un..."
+                ]
+            },
+            {
+                "volumen": "Arco 6-4",
+                "driveId": "12jfQs3DRbDALEhtwWMXxhD5brkeoZEis",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 55: Tú qué esperas el deshielo",
+                    "Capítulo 56: Hablando de lo que espera",
+                    "Capítulo 57: Vamos a ignorarlo por ahora",
+                    "Capítulo 58: Eso es eso, esto es esto",
+                    "Capítulo 59: Lo que sonríe en el mundo blanco",
+                    "Capítulo 60: Un solo punto de sol",
+                    "Capítulo 61: —Levántate",
+                    "Capítulo 62: Temblores de colapso",
+                    "Capítulo 63: Cinco obstáculos",
+                    "Capítulo 64: El Segundo Obstáculo",
+                    "Capítulo 65: El segundo, el quinto, seguido por",
+                    "Capítulo 66: Segunda oportunidad hacia,",
+                    "Capítulo 67: Pequeño rey",
+                    "Capítulo 68: La mujer de Escorpio",
+                    "Capítulo 69: El absurdo martillo de hierro",
+                    "Capítulo 70: La estrella ferviente"
+                ]
+            },
+            {
+                "volumen": "Arco 6-5",
+                "driveId": "1EE3Cx0HzQfXkWMLKYZ7TsBBi5EQMvdG3",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 71: Cuenta uno",
+                    "Capítulo 72: ■■・■",
+                    "Capítulo 73: 「Natsuki Subaru」",
+                    "Capítulo 74: Natsuki Subaru",
+                    "Capítulo 75: Louis Arneb",
+                    "Capítulo 76: El infierno que lleva el nombre de sí...",
+                    "Capítulo 77: Contraataque",
+                    "Capítulo 78: Las cuatro esquinas",
+                    "Capítulo 79: Ready Steady Go",
+                    "Capítulo 80: Muerte de la mente",
+                    "Capítulo 81: Encantado de conocerte",
+                    "Capítulo 82: Una batalla encadenada",
+                    "Capítulo 83: Ram",
+                    "Capítulo 84: ¡Tener que! ¡Tener que!",
+                    "Capítulo 85: Buen Perdedor",
+                    "Capítulo 86: Hablando del ayer",
+                    "Capítulo 87: Una mirada lejana",
+                    "Capítulo 88: Pido tu voluntad",
+                    "Capítulo 89: Shaula",
+                    "Capítulo 90: Héroe"
+                ]
+            }
+        
+        ]
     }
 ]

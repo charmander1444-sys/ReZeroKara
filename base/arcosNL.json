@@ -453,74 +453,62 @@
       },
       {
         "volumen": "Volumen 7",
-        "driveId": "",
+        "driveId": "12bGhJK8hXCSrBhcX40pAkMHreRLQJx5u",
         "imagenes": [
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/de3d9e060bb0.webp","https://cdn.imgchest.com/files/afd54ae2bd17.webp"],
+            "tags": ["theresia van astrea","wilhelm van astrea"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/8a1631ecdd1b.webp"],
+            "tags": ["wilhelm van astrea","felix argyle","crusch karsten","subaru natsuki","rem","Ricardo Welkin","mimi pearlbaton","hetaro pearlbaton"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/03e5e0da177a.webp"],
+            "tags": ["rem","subaru natsuki","patrasche","ballena blanca","mabestia"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/f0f326c05d10.webp"],
+            "tags": ["wilhelm van astrea","theresia van astrea"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/9729cc8d734f.webp","https://cdn.imgchest.com/files/c2f8a1bb7060.webp"],
+            "tags": ["subaru natsuki","rem"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/c14ee2fff1e9.webp"],
+            "tags": ["crusch karsten"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/944780032352.webp"],
+            "tags": ["subaru natsuki","ballena blanca","mabestia"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/9e0e47ed49ea.webp"],
+            "tags": ["subaru natsuki"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/276aafd5954c.webp"],
+            "tags": ["subaru natsuki","patrasche","ballena blanca","mabestia"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/a6828e41ccff.webp"],
+            "tags": ["wilhelm van astrea","ballena blanca","mabestia"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/5ee9605ecf41.webp"],
+            "tags": ["wilhelm van astrea","felix argyle","crusch karsten","Ricardo Welkin","mimi pearlbaton","hetaro pearlbaton"]
           },
           {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/0e7b2ef3eedb.webp"],
+            "tags": ["chamov","ballena blanca","mabestia","diseño"]
           },
           {
-            "src": [""],
-            "tags": [""]
-          },
-          {
-            "src": [""],
-            "tags": [""]
-          },
-          {
-            "src": [""],
-            "tags": [""]
-          },
-          {
-            "src": [""],
-            "tags": [""]
+            "src": ["https://cdn.imgchest.com/files/8aed07d0fca9.webp"],
+            "tags": ["subaru natsuki","wilhelm van astrea"]
           }
         ],
-        "capitulos": [""]
+        "capitulos": ["Capítulo 1: Tarjetas distribuidas", "Capítulo 2: La noche antes de la batalla decisiva", "Capítulo 3: La batalla contra Hakugei", "Capítulo 4: Una apuesta desafiando la desesperación", "Capítulo 5: Wilhelm van Astrea", "Capítulo 6: El camino a los territorios de Mathers"]
       }
     ]
   }
