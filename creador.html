@@ -54,50 +54,83 @@
   </header>
 
   <main class="container my-5">
-    <h1 id="titulo" class="mb-4"></h1>
+  <h1 id="titulo" class="mb-4 titulo"></h1>
 
-    <section class="videos-section">
-      <h3 class="mb-4 titulo">
-        <i class="fa-brands fa-youtube"></i> Últimos videos
-      </h3>
+  <section class="videos-section">
+    <h3 class="mb-4 section-title">
+      <i class="fa-brands fa-youtube"></i> Contenido Reciente
+    </h3>
+    <div class="row g-4" id="videos"></div>
+  </section>
+</main>
 
-      <div class="row g-4" id="videos"></div>
-    </section>
-
-
-    <script>
-      fetch("/api/youtube")
-        .then(res => res.json())
-        .then(data => {
-          document.getElementById("titulo").textContent = data.channel;
-
-          const container = document.getElementById("videos");
-
-data.videos.forEach(v => {
-  container.innerHTML += `
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="video-container-card">
-        <div class="video-preview">
-          <img src="${v.thumbnail}" alt="Thumbnail">
-          <a href="${v.link}" target="_blank" class="play-overlay">
-            <i class="fa-solid fa-play"></i>
-          </a>
-        </div>
-        <div class="video-info">
-          <span class="badge-new">Nuevo</span>
-          <h4 class="video-title-text">${v.title}</h4>
-          <a href="${v.link}" target="_blank" class="watch-link">
-            Ver contenido <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
+<div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content glass-modal">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-info" id="modalVideoTitle">Reproduciendo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe src="" id="videoIframe" allowfullscreen allow="autoplay"></iframe>
         </div>
       </div>
     </div>
-  `;
-});
-        });
-    </script>
+  </div>
+</div>
 
-  </main>
+<script>
+  fetch("/api/youtube")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("titulo").textContent = data.channel;
+      const container = document.getElementById("videos");
+
+      data.videos.forEach(v => {
+        // Extraer ID de youtube para el iframe
+        const videoId = v.link.split('v=')[1] || v.link.split('/').pop();
+
+        container.innerHTML += `
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="video-card-premium">
+              <div class="video-visuals">
+                <img src="${v.thumbnail}" alt="Thumbnail" class="v-thumb">
+                <div class="v-overlay">
+                  <button class="v-play-btn" onclick="playVideo('${videoId}', '${v.title.replace(/'/g, "\\'")}')">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="video-details">
+                <span class="v-category">YouTube</span>
+                <h4 class="v-title">${v.title}</h4>
+                <div class="v-footer">
+                   <button class="btn-watch" onclick="playVideo('${videoId}', '${v.title.replace(/'/g, "\\'")}')">
+                      Ver ahora <i class="fa-solid fa-circle-play ms-1"></i>
+                   </button>
+                   <a href="${v.link}" target="_blank" class="v-external"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    });
+
+  // Función para manejar el reproductor
+  function playVideo(id, title) {
+    const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+    document.getElementById('videoIframe').src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+    document.getElementById('modalVideoTitle').innerText = title;
+    modal.show();
+
+    // Limpiar iframe al cerrar para detener el audio
+    document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+      document.getElementById('videoIframe').src = "";
+    });
+  }
+</script>
 
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

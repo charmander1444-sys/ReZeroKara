@@ -133,3 +133,144 @@
     transform: translateX(5px);
     box-shadow: 0 0 15px var(--accent-color);
 }
+
+/* ==================================================
+   CARDS DE VIDEO PREMIUM
+================================================== */
+
+.video-card-premium {
+    background: rgba(31, 40, 51, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(102, 252, 241, 0.1);
+    border-radius: 24px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.video-card-premium:hover {
+    transform: translateY(-12px);
+    border-color: var(--color-primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(102, 252, 241, 0.15);
+}
+
+/* Contenedor de imagen */
+.video-visuals {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.v-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.video-card-premium:hover .v-thumb {
+    transform: scale(1.1);
+}
+
+/* Overlay de Play */
+.v-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 12, 16, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.v-play-btn {
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    border: none;
+    border-radius: 50%;
+    color: #000;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.video-card-premium:hover .v-overlay { opacity: 1; }
+.video-card-premium:hover .v-play-btn { transform: scale(1); }
+
+/* Detalles */
+.video-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.v-category {
+    color: var(--color-primary);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.v-title {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Footer de la Card */
+.v-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-watch {
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-watch:hover {
+    background: var(--color-primary);
+    color: #000;
+}
+
+.v-external {
+    color: #ff0000;
+    font-size: 1.3rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.v-external:hover { opacity: 1; }
+
+/* Estilo del Modal */
+.glass-modal {
+    background: rgba(11, 12, 16, 0.95) !important;
+    border: 1px solid var(--color-primary) !important;
+    backdrop-filter: blur(15px);
+    border-radius: 20px !important;
+}
