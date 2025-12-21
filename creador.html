@@ -77,9 +77,12 @@
             container.innerHTML += `
   <div class="col-md-4">
     <div class="video-card glass h-100">
-      <a href="${v.link}" target="_blank" class="video-thumb">
-        <img src="${v.thumbnail}" alt="Miniatura del video">
-      </a>
+      <div class="video-thumb-wrapper">
+  <a href="${v.link}" target="_blank" class="video-thumb">
+    <img src="${v.thumbnail}" alt="Miniatura del video">
+  </a>
+</div>
+
       <div class="video-body">
         <div class="video-title">${v.title}</div>
         <a href="${v.link}" target="_blank" class="video-btn">
