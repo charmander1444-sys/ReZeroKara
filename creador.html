@@ -16,9 +16,11 @@ fetch("/api/youtube")
     const parser = new DOMParser();
     const doc = parser.parseFromString(xml, "text/xml");
 
+    // ✅ NOMBRE DEL CANAL
     document.getElementById("titulo").textContent =
-      doc.querySelector("title").textContent;
+      doc.querySelector("author > name").textContent;
 
+    // ✅ VIDEOS
     const entries = doc.querySelectorAll("entry");
 
     entries.forEach(entry => {
