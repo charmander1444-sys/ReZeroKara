@@ -12,22 +12,52 @@ export default async function handler(req, res) {
   }
   const channelId = channelIdMatch[1];
 
-  // 3️⃣ Extraer estadísticas (scraping)
-  const subsMatch = html.match(/"subscriberCountText":\{"simpleText":"([^"]+)"/);
-  const viewsMatch = html.match(/"viewCountText":\{"simpleText":"([^"]+)"/);
-  const videosMatch = html.match(/"videoCountText":\{"simpleText":"([^"]+)"/);
+  // ============================
+  // 3️⃣ SUSCRIPTORES (simpleText o runs)
+  // ============================
+  let subscribers = "No disponible";
 
-  const subscribers = subsMatch ? subsMatch[1] : "No disponible";
-  const views = viewsMatch ? viewsMatch[1] : "No disponible";
-  const videoCount = videosMatch ? videosMatch[1] : "No disponible";
+  const subsSimple = html.match(
+    /"subscriberCountText":\{"simpleText":"([^"]+)"/
+  );
 
-  // 4️⃣ RSS (videos)
+  const subsRuns = html.match(
+    /"subscriberCountText":\{"runs":\[\{"text":"([^"]+)"/
+  );
+
+  if (subsSimple) {
+    subscribers = subsSimple[1];
+  } else if (subsRuns) {
+    subscribers = subsRuns[1] + " suscriptores";
+  }
+
+  // ============================
+  // 4️⃣ TOTAL DE VIDEOS
+  // ============================
+  let videoCount = "No disponible";
+
+  const videosSimple = html.match(
+    /"videoCountText":\{"simpleText":"([^"]+)"/
+  );
+
+  const videosRuns = html.match(
+    /"videoCountText":\{"runs":\[\{"text":"([^"]+)"/
+  );
+
+  if (videosSimple) {
+    videoCount = videosSimple[1];
+  } else if (videosRuns) {
+    videoCount = videosRuns[1];
+  }
+
+  // ============================
+  // 5️⃣ RSS (últimos 3 videos)
+  // ============================
   const rssRes = await fetch(
     `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`
   );
   const rss = await rssRes.text();
 
-  // 5️⃣ Parsear RSS
   const entries = [...rss.matchAll(/<entry>([\s\S]*?)<\/entry>/g)]
     .slice(0, 3)
     .map(e => {
@@ -39,10 +69,12 @@ export default async function handler(req, res) {
       };
     });
 
+  // ============================
+  // RESPUESTA FINAL
+  // ============================
   res.status(200).json({
     channel: HANDLE,
     subscribers,
-    views,
     videoCount,
     videos: entries
   });

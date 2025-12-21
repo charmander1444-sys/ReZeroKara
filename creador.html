@@ -13,15 +13,11 @@
   <div class="row text-center mb-4">
     <div class="col">
       <h5>Suscriptores</h5>
-      <p id="subs"></p>
-    </div>
-    <div class="col">
-      <h5>Vistas</h5>
-      <p id="views"></p>
+      <p id="subs" class="fw-bold"></p>
     </div>
     <div class="col">
       <h5>Videos</h5>
-      <p id="videosCount"></p>
+      <p id="videosCount" class="fw-bold"></p>
     </div>
   </div>
 
@@ -35,7 +31,6 @@ fetch("/api/youtube")
   .then(data => {
     document.getElementById("titulo").textContent = data.channel;
     document.getElementById("subs").textContent = data.subscribers;
-    document.getElementById("views").textContent = data.views;
     document.getElementById("videosCount").textContent = data.videoCount;
 
     const container = document.getElementById("videos");
@@ -44,7 +39,7 @@ fetch("/api/youtube")
       container.innerHTML += `
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img src="${v.thumbnail}" class="card-img-top">
+            <img src="${v.thumbnail}" class="card-img-top" alt="Miniatura">
             <div class="card-body">
               <h6 class="card-title">${v.title}</h6>
               <a href="${v.link}" target="_blank" class="btn btn-danger btn-sm">
