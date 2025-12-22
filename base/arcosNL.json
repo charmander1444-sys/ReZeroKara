@@ -250,6 +250,8 @@
     "volumenes": "Volúmenes 4, 5, 6, 7, 8 y 9",
     "scans": [
       {"nombre": "Einherjar Project",
+        "link": "#"},
+      {"nombre": "Romtraducciones",
         "link": "#"}
     ],
     "volumenes_detalle": [
@@ -509,9 +511,142 @@
           }
         ],
         "capitulos": ["Capítulo 1: Tarjetas distribuidas", "Capítulo 2: La noche antes de la batalla decisiva", "Capítulo 3: La batalla contra Hakugei", "Capítulo 4: Una apuesta desafiando la desesperación", "Capítulo 5: Wilhelm van Astrea", "Capítulo 6: El camino a los territorios de Mathers"]
+      },
+      {
+        "volumen": "Volumen 8",
+        "driveId": "1TTBTqNupXHzA2KB2ufHBOUeMTNEncOZd",
+        "imagenes": [
+          {
+            "src": ["https://cdn.imgchest.com/files/32f4e613812a.webp","https://cdn.imgchest.com/files/df688266b9da.webp"],
+            "tags": ["petelgeuse romanee-conti"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/76e8075a744e.webp"],
+            "tags": ["subaru natsuki","felix argyle","julius juukulius","Ricardo Welkin","mimi pearlbaton","tivey pearlbaton"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/a51b3278f597.webp"],
+            "tags": ["reinhard van astrea","felt","rom"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/475cbc819ec8.webp"],
+            "tags": ["petelgeuse romanee-conti","wilhelm van astrea"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/e886c37f1e90.webp"],
+            "tags": ["mimi pearlbaton","tivey pearlbaton"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/238776424af7.webp"],
+            "tags": ["petelgeuse romanee-conti"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/f5f8eb7b492c.webp"],
+            "tags": ["ram"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/6beca101a40b.webp"],
+            "tags": ["julius juukulius"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/7d700c20b5ce.webp"],
+            "tags": ["felix argyle"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/947451892491.webp"],
+            "tags": ["mabestia"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/956535ddac90.webp"],
+            "tags": ["emilia"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/ec44957eb5e8.webp"],
+            "tags": ["subaru natsuki","petelgeuse romanee-conti"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/7a226b462000.webp"],
+            "tags": ["rem","beatrice"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/b5ce3fbc43b3.webp"],
+            "tags": ["felt","reinhard van astrea"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/5cf57f140914.webp"],
+            "tags": ["emilia","portada"]
+          }
+        ],
+        "capitulos": ["Capítulo 1: Un destello de pereza","Capítulo 2: ... ¡Lucha!","Capítulo 3: El significado del retorno","Capítulo 4: Malvada pereza","Capítulo 5: La ejecución de un contrato"]
+      },
+      {
+        "volumen": "Volumen 9",
+        "driveId": "1EQHOHriMWowGiSrMf4dAKnTrjhFiDBPL",
+        "imagenes": [
+          {
+            "src": ["https://cdn.imgchest.com/files/002142274541.webp"],
+            "tags": ["julius juukulius","subaru natsuki","petelgeuse romanee-conti"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/49e373c22443.webp"],
+            "tags": ["subaru natsuki","emilia","petra leyte","lucas","mild"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/69abf5da7b09.webp"],
+            "tags": ["rem","subaru natsuki","rigel natsuki","spica natsuki","chamov"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/40dace7f698f.webp"],
+            "tags": ["petra leyte","lucas","mild"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/022cfb363ed3.webp"],
+            "tags": ["subaru natsuki","mild","petra leyte","milde arlam","rasphum"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/0468a80be5f3.webp"],
+            "tags": ["otto suwen"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/d867535b9357.webp"],
+            "tags": ["subaru natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/a95ff482bc39.webp"],
+            "tags": ["petelgeuse romanee-conti"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/7aed4d399951.webp"],
+            "tags": ["subaru natsuki","emilia"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/e089e42048af.webp"],
+            "tags": ["rem","spica natsuki"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/aa3db7cf317b.webp"],
+            "tags": ["regulus corneas","Ley Batenkaitos"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/6f22bc2fd315.webp"],
+            "tags": ["crusch karsten","felix argyle"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/6f4c5920de5b.webp"],
+            "tags": ["rem","subaru natsuki","emilia"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/8a11f6d734a3.webp"],
+            "tags": ["rem","subaru natsuki","spica natsuki","rigel natsuki","diseño"]
+          },
+          {
+            "src": ["https://cdn.imgchest.com/files/1daff51abf01.webp"],
+            "tags": ["rem","emilia"]
+          }
+
+        ],
+        "capitulos": ["Prólogo: Re:Inicio","Capítulo 1: Un evangelio conocido como el calor","Capítulo 2: El detrás de escenas de los preparativos","Capítulo 3: El autoproclamado caballero y el más valioso caballero","Capítulo 4: El fin de la pereza","Capítulo 5: De eso trata esta historia","Interludio: Un momento en la carroza de dragón","Fragmento: Natsuki Rem","Interludio: Comamos","Capítulo 6: Votos respectivos"]
       }
     ]
   }
-
-  
 ]
