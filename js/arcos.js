@@ -87,8 +87,6 @@ async function cargarArcos(filename, tipo) {
                 ride: 'carousel',
                 wrap: true
             });
-
-            // Forzamos el inicio inmediato
             instance.cycle();
         });
 

@@ -534,5 +534,637 @@
             }
         
         ]
+    },
+    {
+        "id": 7,
+        "tipo": "web_novel",
+        "nombre": "Arco 7",
+        "titulo": "La Tierra de los Lobos",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/34026cd92a21.webp"
+                ]
+            }
+        ],
+        "volumenes": "Volumen 26,27,28,29,30,31,32,33",
+        "scans": [
+             {
+                "nombre": "Fhol",
+                "link": "#"
+            },
+             {
+                "nombre": "Nexudus",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Arco 7-1",
+                "driveId": "1UcgeY5csOYnokBL4-KfyJJ27kvo6c5yJ",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 1: Iniciación",
+                    "Capítulo 2: Seguimiento de animales",
+                    "Capítulo 3: VS Rem",
+                    "Capítulo 4: Una elección valiente",
+                    "Capítulo 5: Ser hombre es duro",
+                    "Capítulo 6: Una tierra muy al sur",
+                    "Capítulo 7: Ser hombre era duro",
+                    "Capítulo 8: Nombre",
+                    "Capítulo 9: Camino imperial",
+                    "Capítulo 10: Gente de Shudrak",
+                    "Capítulo 11: Ritual de sangre",
+                    "Capítulo 12: Imperio Vollachia"
+                ]
+            },
+            {
+                "volumen": "Arco 7-2",
+                "driveId": "1Gc_mwiVAQyStDleOoUIzsojZBwq2bL2R",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 13: El cuerpo de un simple ser humano",
+                    "Capítulo 14: Valores que son difíciles de completar",
+                    "Capítulo 15: Las cosas que desea proteger",
+                    "Capítulo 16: Asuntos imperiales",
+                    "Capítulo 17: Maldad rastrera",
+                    "Capítulo 18: Asedio a la ciudad amurallada de Guaral",
+                    "Capítulo 19: Una reunión aborrecible",
+                    "Capítulo 20: Emperador / Comerciante / Natsuki Subaru",
+                    "Capítulo 21: Zikr Osman",
+                    "Capítulo 22: El plan de la ciudad sin sangre",
+                    "Capítulo 23: La Música Natsumi Schwartz",
+                    "Capítulo 24: Arrogancia Carmesí",
+                    "Contenido Extra “SS1”",
+                    "Contenido Extra “SS2”",
+                    "Contenido Extra “SS3”"
+                ]
+            },
+            {
+                "volumen": "Arco 7-3",
+                "driveId": "11XZhJBcoMABokfYOcTma2tP276f1ODgd",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 25: Reunión como una marea de sangre ardiente",
+                    "Capítulo 26: El baile de la mesa redonda",
+                    "Capítulo 27: Lo que tienes y no tienes",
+                    "Capítulo 28: Condiciones de victoria",
+                    "Capítulo 29: Cómo se encuentra cada uno de nosotros",
+                    "Capítulo 30: Autoproclamado héroe Natsuki Subaru",
+                    "Capítulo 31: Una charla en casa",
+                    "Capítulo 32: El camino a seguir",
+                    "Capítulo 33: Ahora el viaje a la Ciudad Mágica",
+                    "Capítulo 34: Problema del carruaje",
+                    "Capítulo 35: Charla nocturna",
+                    "Capítulo 36: Ciudad mágica caótica",
+                    "Capítulo 37: Señor del Castillo Rojo Ruri",
+                    "Capítulo 38: Recompensa de ocho años",
+                    "Capítulo 39: Maldad",
+                    "SS: La tierra de los lobos / Muerte a los débiles, sin piedad (3)",
+                    "SS: Paranoia provisional de Rem / Un debate metal para un Demonio",
+                    "SS: La nación del dragón / Crónica de la búsqueda del niño perdido (3)"
+                ]
+            },
+            {
+                "volumen": "Arco 7-4",
+                "driveId": "1_p2QgelWDs_YQ1Kb4sGvm-IJtd8dhkq1",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 40: Nachuki Shubawu",
+                    "Capítulo 41: Charla de té",
+                    "Capítulo 42: Bestia de la ambición",
+                    "Capítulo 43: Detrás de los parpados",
+                    "Capítulo 44: Visión reducida",
+                    "Capítulo 45: Toc, toc",
+                    "Capítulo 46: Valentía infantil",
+                    "Capítulo 47: Indeleble ■■",
+                    "Capítulo 48: Ciudad demoníaca de intenciones enredadas",
+                    "Capítulo 49: Estrellas alineadas",
+                    "Capítulo 50: Un agujero con una gran vista",
+                    "Capítulo 51: La amante de la Ciudad Demonio",
+                    "Capítulo 52: El amor no se puede legar",
+                    "Capítulo 53: Lo que hay más allá del undécimo segundo",
+                    "Capítulo 54: La utopía de la Llama del Caos",
+                    "SS: La nación del dragón / Crónica de la búsqueda del niño perdido (4)",
+                    "SS: Paranoia provisional de Rem / La bondad se encuentra en todas partes",
+                    "SS: La tierra de los lobos / Muerte a los débiles, sin piedad (4)"
+
+                ]
+            },
+            {
+                "volumen": "Arco 7-5",
+                "driveId": "16p-V6sNIpFyo53pI9M6WuxI78wmS3Szb",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 55: La cacofonía de la Ciudad Demonio",
+                    "Capítulo 56: El gran desastre",
+                    "Capítulo 57: No se puede vivir sabiamente",
+                    "Capítulo 58: Aquellos sin lugar a donde recurrir",
+                    "Capítulo 59: Taritta Shudrak",
+                    "Capítulo 60: La plantación de una plántula tumultuosa",
+                    "Capítulo 54B: Cubriendo el cielo azul",
+                    "Capítulo 55B: La Cacofonía de la Ciudad Fortaleza",
+                    "Capítulo 56B: El Cataclismo del Dragón Volador",
+                    "Capítulo 57B: No me importa que me llamen imbécil",
+                    "Capítulo 58B: Aquellos que no tienen a dónde acudir",
+                    "Capítulo 59B: Flop O'Connell",
+                    "SS: La Nación del Dragón / Crónica de la Búsqueda del Niño Perdido (5)"
+
+                ]
+            },
+            {
+                "volumen": "Arco 7-6",
+                "driveId": "1Rh-RhlJo1V2BOoPWKgc_uUX2kYQwWlpe",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 61: ¡Bienvenidos a la Isla de los Gladiadores!",
+                    "Capítulo 62: El orden de la isla",
+                    "Capítulo 63: Sparka",
+                    "Capítulo 64: Palabras Mágicas",
+                    "Capítulo 65: El luchador de la comida escolar",
+                    "Capítulo 66: Hiain Yatz",
+                    "Capítulo 67: Oculto detrás del molar",
+                    "Capítulo 68: Guía del Lobo Espada",
+                    "Capítulo 69: Llegando desde la Capital Imperial",
+                    "Capítulo 70: Una Cosa",
+                    "Capítulo 71: Agua",
+                    "Capítulo 72: Rumores ridículos",
+                    "Capítulo 73: Weitz Rogen",
+                    "Capítulo 74: Idra Missanga",
+                    "Capítulo 75: Lo sé"
+                ]
+            },
+            {
+                "volumen": "Arco 7-7",
+                "driveId": "1_M8_WcwqAlQ5PFZayvD2lsf7x6uOxKpz",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 76: Reuniones fortuitas en la Capital Imperial",
+                    "Capítulo 77: Giro del destino",
+                    "Capítulo 78: Una reunión volátil",
+                    "Capítulo 79: Un rugido de risa escarlata",
+                    "Capítulo 80: Iris y el Rey de las Espinas",
+                    "Capítulo 81: La Dama Feroz y el Payaso",
+                    "Capítulo 82: La Intención de los Rebeldes",
+                    "Capítulo 83: Guerra y zonas de guerra",
+                    "Capítulo 84: Cámara del té",
+                    "Capítulo 85: Amigo",
+                    "Capítulo 86: Los Cinco Baluartes",
+                    "Capítulo 87: Batalla decisiva en el bastión",
+                    "Capítulo 88: Nuevo Viento",
+                    "Capítulo 89: Kafma Irulux",
+                    "Capítulo 90: La Cuna del Infierno",
+                    "Capítulo 91: Carreras por el campo de batalla",
+                    "Capítulo 92: Reavivar viejos lazos",
+                    "Capítulo 93: El Ejército de Piedra",
+                    "Capítulo 94: Determinación por el bien de quién",
+                    "Capítulo 95: Enemigos en todos los bastiones",
+                    "Capítulo 96: Pintar con Amor Profundo"
+
+                ]
+            },
+            {
+                "volumen": "Arco 7-8",
+                "driveId": "1nYRcmq2QIhvR9EUA1fE26BRClutdKL8X",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                   "Capítulo 97: Llegando desde más allá del Oeste",
+                    "Capítulo 98: El Batallón de las Pléyades",
+                    "Capítulo 99: Aquellos que Gobiernan el Cielo",
+                    "Capítulo 100: Una mirada de cambios en los bastiones",
+                    "Capítulo 101: El amor es una llama",
+                    "Capítulo 102: Muro de Resolución",
+                    "Capítulo 103: Cuenta regresiva de las estrellas",
+                    "Capítulo 104: Bastiones en el caos (Primera Parte)",
+                    "Capítulo 105: Bastiones en el caos (Segunda Parte)",
+                    "Capítulo 106: Bastiones en el Caos (Tercera Parte)",
+                    "Capítulo 107: Chisha Gold",
+                    "Capítulo 108: El Gran Desastre Próximo",
+                    "Capítulo 109: La Espada Lobo del imperio",
+                    "Capítulo 110: Palabras de Felicitación"
+
+                ]
+            }
+        
+        ]
+    },
+    {
+        "id": 8,
+        "tipo": "web_novel",
+        "nombre": "Arco 8",
+        "titulo": "Vincent Vollachia",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/cc54a69e90e7.webp"
+                ]
+            }
+        ],
+        "volumenes": "Volumen 34,35,36,37,38",
+        "scans": [
+             {
+                "nombre": "DeedScans",
+                "link": "#"
+            },
+             {
+                "nombre": "Nexudus",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Arco 8-1",
+                "driveId": "1Ok7_IEXOOeh75TqMvpJzOpJQBwNJZS5-",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 1: Cambio de las Condiciones de Victoria",
+                    "Capítulo 2: Resentimientos",
+                    "Capítulo 3: Tres Razones",
+                    "Capítulo 4: Instinto de guerrero",
+                    "Capítulo 5: Perdón",
+                    "Capítulo 6: No suplicaré perdón",
+                    "Capítulo 7: Todd Fang",
+                    "Capítulo 8: Perspectivas futuras",
+                    "Capítulo 9: Decidiendo Amar",
+                    "Capítulo 10: Nadie puede estar solo",
+                    "Capítulo 11: Cierra la boca",
+                    "Capítulo 12: Natsuki Subaru y Vincent Abellux",
+                    "Capítulo 13: A cada uno sus heridas",
+                    "Capítulo 14: El Reino y el Imperio",
+                    "Capítulo 15: Admiración"
+
+                ]
+            },
+            {
+                "volumen": "Arco 8-2",
+                "driveId": "1c0xEJbu-ranRa9MR9KGnbcW8YmTYYtnk",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 16: El cataclismo de los muertos vivientes",
+                    "Capítulo 17: Un enfoque mágico",
+                    "Capítulo 18: Las reuniones no son más que un momento",
+                    "Capítulo 19: La estratagema de Valga Cromwell",
+                    "Capítulo 20: Las Dos Luces",
+                    "Capítulo 21: Un destino inevitable",
+                    "Capítulo 22: Quiero creer, no perdonará",
+                    "Capítulo 23: Louise",
+                    "Capítulo 24: Andar en la Luz",
+                    "Capítulo 25: Los deseos de aquellos que están cerca de la muerte",
+                    "Capítulo 26: La Princesa Venenosa",
+                    "Capítulo 27: Belstets Fondalfon",
+                    "Capítulo 28: Hermanos del Imperio",
+                    "SS: La Crónica de búsqueda del compañero de Anastasia (1)",
+                    "SS: El Reino del Dragón / Observaciones de Meili sobre las Mabestias (4)"
+
+                ]
+            },
+            {
+                "volumen": "Arco 8-3",
+                "driveId": "16LQA9-xlAWleeXezmq4nwRk1Ngt55unZ",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 29: No Quería Amar",
+                    "Capítulo 30: Malas Noticias",
+                    "Capítulo 31: La Piedra",
+                    "Capítulo 32: Selección de Miembros",
+                    "Capítulo 33: Veredicto de Amor",
+                    "Capítulo 34: No te Perdonaré Hasta que me lo Expliques",
+                    "Capítulo 35: Trabajos que Ponen en Riesgo la Vida",
+                    "Capítulo 36: Capital de los No Muertos, Lupugana",
+                    "Capítulo 37: Hora de Presagiar",
+                    "Capítulo 38: Louann Segmunt",
+                    "Capítulo 39: La Risa del Ilimitado",
+                    "Capítulo 40: Una Amenaza sin Consecuencias",
+                    "Capítulo 41: Donde Reside el Infierno",
+                    "Capítulo 42: La Gran Esclava",
+                    "Capítulo 43: Cada Uno con sus Deseos"
+
+                ]
+            },
+            {
+                "volumen": "Arco 8-4",
+                "driveId": "1ylrtaU7IwgNnw_XdSqBK9YKOCteeRvzT",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Interludio: Ubilk",
+                    "Capítulo 44: Cómo Responder a la Fe",
+                    "Capítulo 45: Cómo Caer las Estrellas",
+                    "Capítulo 46: El Sabor del Viento",
+                    "Capítulo 47: Tanza",
+                    "Capítulo 48: La Maldición de las Espinas",
+                    "Capítulo 49: El Rey de las Espinas",
+                    "Capítulo 50: Eugard Vollachia",
+                    "Capítulo 51: Tennozan",
+                    "Capítulo 52: Medium O'Connell",
+                    "Capítulo 53: El Tirador Mágico",
+                    "Capítulo 54: Soumatou",
+                    "Capítulo 55: Madelyn Eschart",
+                    "Capítulo 56: Arakiya",
+                    "Capítulo 57: Cecilus Segmunt",
+                    "Capítulo 58: La Prueba de la Existencia",
+                    "Capítulo 59: Sphinx",
+                    "Capítulo 60: Bruja"
+                ]
+            },
+            {
+                "volumen": "Arco 8-5",
+                "driveId": "1jpGmPXVxSSpEA-5p9m1LLDlUI7yQdrg4",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 61: Palladio Manesque",
+                    "Capítulo 62: El Poder del Amor",
+                    "Capítulo 63: Sobre estos Labios, Saboreo este Milagro",
+                    "Capítulo 64: Padre e Hijo del Imperio",
+                    "Capítulo 65: Caída de Estrellas sobre la Capital Imperial",
+                    "Capítulo 66: El Cañón de Cristal Mágico",
+                    "Capítulo 67: Las Cartas en la Mano",
+                    "Capítulo 68: El Hombre del que me Enamoré",
+                    "Capítulo 69: Te Perdono",
+                    "Capítulo 70: La Estratagema Final",
+                    "Capítulo 71: Ensueños Heroicos",
+                    "Capítulo 72: La Princesa del Sol",
+                    "Capítulo 73: Enemigas Predestinadas",
+                    "Capítulo 74: Amor",
+                    "Capítulo Final: Priscilla Barielle"
+                ]
+            }
+        
+        ]
+    },
+    {
+        "id": 9,
+        "tipo": "web_novel",
+        "nombre": "Arco 9",
+        "titulo": "Luz de la Estrella Sin Nombre",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/75a9fdff1937.jpg"
+                ]
+            }
+        ],
+        "volumenes": "Volumen 39,40,41,42,43",
+        "scans": [
+             {
+                "nombre": "DeedScans",
+                "link": "#"
+            },
+             {
+                "nombre": "Nexudus",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Arco 9-1",
+                "driveId": "1LAPTtFdvxyP7JEkcBHtj_h32-bCGOGSX",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 1: Oraciones, Sean Como Nubes",
+                    "Capítulo 2: No Hacer de Villano",
+                    "Capítulo 3: A Cada Uno su Luto por Ti",
+                    "Capítulo 4: Cabeza Hueca",
+                    "Capítulo 5: Novecientos Treinta y Un Golpes",
+                    "Capítulo 6: Partida",
+                    "Interludio: Catiua Aurelie",
+                    "Capítulo 7: Reunión en el Viento de Arena",
+                    "Capítulo 8: Cómo Arrepentirse",
+                    "Capítulo 9: Puerta de Inducción Hechiza de Alta Eficiencia",
+                    "Capítulo 10: Límite de Tres Días",
+                    "Capítulo 11: Ya No Estás Entre Nosotros",
+                    "Capítulo 12: La Luz de las Estrellas Más Allá del Reino de Un Billón",
+                    "Capítulo 13: El Más Amado y el Menos Amado"
+                ]
+            },
+            {
+                "volumen": "Arco 9-2",
+                "driveId": "1Aa4xQk8J7EuIFae4LALf1-MNEsDajAf6",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 14: El Más Fuerte",
+                    "Capítulo 15: El Derrotado",
+                    "Capítulo 16: Los Cómplices",
+                    "Capítulo 17: No Me Perdones, Por Favor",
+                    "Capítulo 18: Cien Veces Más Problemático",
+                    "Capítulo 19: Refriega en las Sombras",
+                    "Capítulo 20: Cómo Usar una Vida",
+                    "Capítulo 21: Valga Cromwell",
+                    "Capítulo 22: Cómo Terminar una Batalla",
+                    "Capítulo 23: La Pandilla Está Aquí"
+                ]
+            },
+            {
+                "volumen": "Arco 9-3",
+                "driveId": "1iOuaaZoSWBe_K8kUw7VPgAgrPXydUhib",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo Extra: Relato del Sueño de una Bruja",
+                    "Capítulo 24: El Enemigo de la Humanidad",
+                    "Capítulo 25: Emilia se Enfureció",
+                    "Capítulo 26: El Demonio de la Espada VS la Sakura Carmesí",
+                    "Capítulo 27: Palabras de un Niño",
+                    "Capítulo 28: Una Estrofa de la Leyenda",
+                    "Capítulo 29: Pie Sobre la Mesa",
+                    "Capítulo 30: Plan B",
+                    "Capítulo 31: Cien Porciento de Esfuerzo",
+                    "Capítulo 32: El Hombre Llamado Clind",
+                    "Capítulo 33: La Chica Llamada Petra Leyte",
+                    "Capítulo 34: Atracción",
+                    "Capítulo 35: La Estrella Despierta",
+                    "Capítulo 36: Problema"
+                ]
+            },
+            {
+                "volumen": "Arco 9-4",
+                "driveId": "1ekcizuHmTkuwbjx_9DBh7veJaWLrk2uz",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "",
+                            "portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Capítulo 37: Mentalidad",
+                    "Capítulo 38: Quemado por el Sol",
+                    "Capítulo 39: La Línea Final",
+                    "Capítulo 40: Flash Remnade",
+                    "Capítulo 41: Informar al Usurpador",
+                    "Capítulo 42: Qué Esfuerzo Destroza el Corazón",
+                    "Capítulo 43: Verdadero Nombre",
+                    "Capítulo 44: Conspiración Bajo la Superficie del Agua",
+                    "Capítulo 45: Choque de lo Suprarracional",
+                    "Capítulo 46: La Bruja de la Melancolía",
+                    "Capítulo 47: 『Voz』",
+                    "Capítulo 48: La Forma de Vida Definitiva",
+                    "Capítulo 49: Mago"
+                ]
+            }
+        ]
     }
 ]
+

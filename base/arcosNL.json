@@ -648,5 +648,130 @@
         "capitulos": ["Prólogo: Re:Inicio","Capítulo 1: Un evangelio conocido como el calor","Capítulo 2: El detrás de escenas de los preparativos","Capítulo 3: El autoproclamado caballero y el más valioso caballero","Capítulo 4: El fin de la pereza","Capítulo 5: De eso trata esta historia","Interludio: Un momento en la carroza de dragón","Fragmento: Natsuki Rem","Interludio: Comamos","Capítulo 6: Votos respectivos"]
       }
     ]
-  }
+  },
+  {
+    "id": 4,
+    "tipo": "novela_ligera",
+    "nombre": "Arco 4",
+    "titulo": "Contrato Eterno",
+    "imagenes": [
+      {
+        "src": "https://cdn.imgchest.com/files/56395bb343f2.webp",
+        "tags": ["echidna","portada"]
+      },
+      {
+        "src": "https://cdn.imgchest.com/files/64d9560e91c3.webp",
+        "tags": ["petra leyte","Frederica Baumann","portada"]
+      },
+      {
+        "src": "https://cdn.imgchest.com/files/5bbf23cb58ae.webp",
+        "tags": ["meili portroute","elsa granhiert","portada"]
+      },
+      {
+        "src": "https://cdn.imgchest.com/files/890d705d51c9.webp",
+        "tags": ["otto suwen","garfiel tinsel","portada"]
+      },
+      {
+        "src": "https://cdn.imgchest.com/files/7d1f4d74aac1.webp",
+        "tags": ["petelgeuse romanee-conti","emilia","fortuna","sirius","portada"]
+      },
+      {
+        "src": "https://cdn.imgchest.com/files/b663de00653f.webp",
+        "tags": ["beatrice","portada"]
+      }
+    ],
+    "volumenes": "Volúmenes 10, 11, 12, 13, 14 y 15",
+    "scans": [
+      {
+        "nombre": "Einherjar Project",
+        "link": "#"
+      }
+    ],
+    "volumenes_detalle": [
+      {
+        "volumen": "Volumen 10",
+        "driveId": "",
+        "imagenes": [
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]}
+          ],
+          "capitulos": [""]
+        },
+        {
+        "volumen": "Volumen 11",
+        "driveId": "",
+        "imagenes": [
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]}
+          ],
+          "capitulos": [""]
+        },
+        {
+        "volumen": "Volumen 12",
+        "driveId": "",
+        "imagenes": [
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]}
+          ],
+          "capitulos": [""]
+        },
+        {
+        "volumen": "Volumen 13",
+        "driveId": "",
+        "imagenes": [
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]}
+          ],
+          "capitulos": [""]
+        },
+        {
+        "volumen": "Volumen 14",
+        "driveId": "",
+        "imagenes": [
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]}
+          ],
+          "capitulos": [""]
+        },
+        {
+        "volumen": "Volumen 15",
+        "driveId": "",
+        "imagenes": [
+          {
+            "src": [""],
+            "tags": [""]
+          },
+          {
+            "src": [""],
+            "tags": [""]}
+          ],
+          "capitulos": [""]
+        }
+        ]
+      }
 ]
