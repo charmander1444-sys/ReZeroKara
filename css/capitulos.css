@@ -25,3 +25,41 @@
     mask-image: none;
     -webkit-mask-image: none;
 }
+
+/* Contenedor de paginación estilo rejilla cian */
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 0; /* Sin espacio para que parezcan una sola cuadrícula */
+}
+
+.pagination .page-item .page-link {
+    background-color: transparent;
+    border: 1px solid #00bcd4; /* Color cian de tu imagen */
+    color: #00bcd4;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-family: sans-serif;
+    transition: all 0.2s;
+    display: block;
+}
+
+/* Estado activo: fondo cian con texto oscuro */
+.pagination .page-item.active .page-link {
+    background-color: #00bcd4;
+    color: #000;
+}
+
+/* Hover: un brillo sutil */
+.pagination .page-item:not(.active):not(.disabled) .page-link:hover {
+    background-color: rgba(0, 188, 212, 0.2);
+}
+
+/* Estilo para los puntos suspensivos y botones deshabilitados */
+.pagination .page-item.disabled .page-link {
+    border-color: #004d57; /* Cian oscuro para lo deshabilitado */
+    color: #004d57;
+    cursor: not-allowed;
+}

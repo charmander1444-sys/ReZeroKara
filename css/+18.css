@@ -1,0 +1,53 @@
+
+#sugerenciasTags .list-group-item {
+    background: rgba(31,40,51,.95);
+    color: #fff;
+    border: none;
+    transition: 0.2s;
+}
+
+#sugerenciasTags .list-group-item:hover {
+    background: var(--color-primary);
+    color: #000;
+    font-weight: 600;
+}
+/* ===============================
+   FIX AUTOCOMPLETADO BUSCADOR
+================================ */
+
+/* Elevar TODO el bloque del buscador */
+.container.my-4 {
+    position: relative;
+    z-index: 100000;
+}
+
+/* Elevar el glass */
+.container.my-4 .glass {
+    position: relative;
+    z-index: 100000;
+}
+
+/* Elevar el wrapper del input */
+.position-relative {
+    position: relative;
+    z-index: 100001;
+}
+
+/* Forzar que las sugerencias queden encima de TODO */
+#sugerenciasTags {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100002 !important;
+    background: #0b0c10;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,.9);
+}
+
+/* Evitar que la galería tape elementos flotantes */
+#galeria18 {
+    position: relative;
+    z-index: 1;
+}
