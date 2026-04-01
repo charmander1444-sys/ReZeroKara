@@ -21,7 +21,6 @@
    ESTILO DE TARJETAS EN DETALLE
 ================================ */
 
-/* Reutilizamos el estilo de galería para las imágenes dentro de detalles */
 .tarjeta-galeria {
     position: relative;
     aspect-ratio: 2 / 3;

@@ -17,27 +17,41 @@ const obtenerSrc = src => Array.isArray(src) ? src[0] : (src || "");
 
 const RUTA_BASE = location.pathname.includes("/subhtml/") ? "../base/" : "base/";
 
+// Actualizar la función iniciarApp en mostrar-detalle.js
 async function iniciarApp() {
     const contenedor = $("detalle-arco");
     if (!contenedor) return;
-    const id = obtenerIdURL();
-    if (id === null) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const id = Number(params.get("id"));
+    const tipo = params.get("tipo"); // Obtenemos el tipo de la URL
+
+    if (!id) return;
 
     let arco = null;
     try {
-        const arcosNL = await cargarJSON(`${RUTA_BASE}arcosNL.json`);
-        arco = arcosNL.find(a => a.id === id);
-    } catch {}
+        // Seleccionamos el archivo según el tipo
+        let archivo = "";
+        if (tipo === "novela_ligera") archivo = "arcosNL.json";
+        else if (tipo === "web_novel") archivo = "arcosWN.json";
+        else if (tipo === "tanpenshuu") archivo = "Tanpenshuu.json";
+        
+        if (archivo) {
+            const data = await cargarJSON(`${RUTA_BASE}${archivo}`);
+            arco = data.find(a => a.id === id);
+        }
 
-    if (!arco) {
-        try {
-            const arcosWN = await cargarJSON(`${RUTA_BASE}arcosWN.json`);
-            arco = arcosWN.find(a => a.id === id);
-        } catch {}
+        // Si por alguna razón no vino el tipo, hacemos la búsqueda vieja por descarte
+        if (!arco) {
+            // ... (aquí pones tus 3 bloques try/catch que ya tenías)
+        }
+
+    } catch (e) {
+        console.error("Error al buscar el detalle:", e);
     }
 
     if (!arco) {
-        contenedor.innerHTML = `<div class="alert alert-danger text-center">Arco no encontrado</div>`;
+        contenedor.innerHTML = `<div class="alert alert-danger text-center">Contenido no encontrado</div>`;
         return;
     }
 

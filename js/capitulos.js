@@ -1,9 +1,8 @@
 // ================================
-// Variables globales para paginación
+// Variables globales
 // ================================
 let capitulosTotales = [];
 const filasPorPagina = 15;
-let paginaActual = 1;
 let capitulosFiltrados = [];
 
 /**
@@ -23,7 +22,7 @@ async function inicializarCapitulos() {
         const datosNL = await respNL.json();
         const datosWN = await respWN.json();
 
-        // 🔥 Unimos capítulos de ambas fuentes
+        // 🔥 Unimos capítulos
         capitulosTotales = [
             ...extraerCapitulos(datosNL, 'LN'),
             ...extraerCapitulos(datosWN, 'WN')
@@ -31,12 +30,24 @@ async function inicializarCapitulos() {
 
         capitulosFiltrados = capitulosTotales;
 
-        // Mostrar primera página
-        mostrarCapitulosPorPagina(capitulosFiltrados, paginaActual);
-        configurarPaginacion(capitulosFiltrados.length, paginaActual);
+        // 🔥 Inicializar paginación global
+        crearPaginacion({
+            id: "capitulos",
+            contenedorId: "contenedorPaginacion",
+            totalItems: capitulosFiltrados.length,
+            itemsPorPagina: filasPorPagina,
+            onRender: (pagina) => {
+                mostrarCapitulosPorPagina(capitulosFiltrados, pagina);
+
+                document
+                    .getElementById('tablaCapitulos')
+                    .scrollIntoView({ behavior: 'smooth' });
+            }
+        });
 
     } catch (error) {
         console.error("No se pudieron cargar los archivos JSON:", error);
+
         const tbody = document
             .getElementById('tablaCapitulos')
             .querySelector('tbody');
@@ -51,7 +62,7 @@ async function inicializarCapitulos() {
 }
 
 /**
- * Recorre la estructura de datos para crear un array plano de objetos capítulo.
+ * Convierte JSON en lista plana
  */
 function extraerCapitulos(datosArcos, origen = 'LN') {
     const listaCapitulos = [];
@@ -62,18 +73,18 @@ function extraerCapitulos(datosArcos, origen = 'LN') {
         const arcId = arco.id;
 
         if (Array.isArray(arco.volumenes_detalle)) {
-            arco.volumenes_detalle.forEach(volumenDetalle => {
-                const nombreVolumen = volumenDetalle.volumen || 'N/A';
+            arco.volumenes_detalle.forEach(vol => {
+                const nombreVolumen = vol.volumen || 'N/A';
 
-                if (Array.isArray(volumenDetalle.capitulos)) {
-                    volumenDetalle.capitulos.forEach(capitulo => {
+                if (Array.isArray(vol.capitulos)) {
+                    vol.capitulos.forEach(capitulo => {
                         listaCapitulos.push({
                             nombre: capitulo,
                             arco: nombreArco,
                             tipo: tipoArco,
                             volumen: nombreVolumen,
                             arcId: arcId,
-                            origen: origen // LN o WN
+                            origen: origen
                         });
                     });
                 }
@@ -85,7 +96,7 @@ function extraerCapitulos(datosArcos, origen = 'LN') {
 }
 
 /**
- * Rellena el tbody de la tabla con los capítulos de la página actual.
+ * Renderiza la tabla según la página
  */
 function mostrarCapitulosPorPagina(capitulos, pagina) {
     const tbody = document
@@ -96,28 +107,21 @@ function mostrarCapitulosPorPagina(capitulos, pagina) {
 
     const inicio = (pagina - 1) * filasPorPagina;
     const fin = inicio + filasPorPagina;
-    const capitulosPagina = capitulos.slice(inicio, fin);
+    const lista = capitulos.slice(inicio, fin);
 
-    capitulosPagina.forEach(cap => {
+    lista.forEach(cap => {
         const row = tbody.insertRow();
 
-        // Data-sets
         row.dataset.arco = cap.arco.toLowerCase();
         row.dataset.capitulo = cap.nombre.toLowerCase();
         row.dataset.tipo = cap.tipo.toLowerCase();
         row.dataset.volumen = cap.volumen.toLowerCase();
         row.dataset.origen = cap.origen.toLowerCase();
 
-        // Nombre
         row.insertCell().textContent = cap.nombre;
-
-        // Volumen
         row.insertCell().textContent = cap.volumen;
-
-        // Arco
         row.insertCell().textContent = cap.arco;
 
-        // Tipo (LN / WN)
         const tipoFormateado =
             cap.origen + ' - ' +
             cap.tipo.charAt(0).toUpperCase() +
@@ -125,117 +129,47 @@ function mostrarCapitulosPorPagina(capitulos, pagina) {
 
         row.insertCell().textContent = tipoFormateado;
 
-        // Acción
         const celdaAccion = row.insertCell();
-        const botonVer = document.createElement('a');
+        const boton = document.createElement('a');
 
-        botonVer.href = `mostrar-detalle.html?id=${cap.arcId}&volumen=${encodeURIComponent(cap.volumen)}`;
-        botonVer.textContent = 'Ver';
-        botonVer.classList.add('btn', 'btn-sm', 'btn-info');
+        boton.href = `mostrar-detalle.html?id=${cap.arcId}&volumen=${encodeURIComponent(cap.volumen)}`;
+        boton.textContent = 'Ver';
+        boton.classList.add('btn', 'btn-sm', 'btn-info');
 
-        celdaAccion.appendChild(botonVer);
+        celdaAccion.appendChild(boton);
     });
 }
 
 /**
- * Configura la paginación numérica
- */
-function configurarPaginacion(totalCapitulos, pagina) {
-    renderizarPaginacionNumerica(
-        'contenedorPaginacion',
-        totalCapitulos,
-        filasPorPagina,
-        pagina,
-        'cambiarPagina'
-    );
-}
-
-function cambiarPagina(nuevaPagina) {
-    const totalPaginas = Math.ceil(capitulosFiltrados.length / filasPorPagina);
-
-    if (nuevaPagina >= 1 && nuevaPagina <= totalPaginas) {
-        paginaActual = nuevaPagina;
-        mostrarCapitulosPorPagina(capitulosFiltrados, paginaActual);
-        configurarPaginacion(capitulosFiltrados.length, paginaActual);
-
-        document
-            .getElementById('tablaCapitulos')
-            .scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-/**
- * Filtra los capítulos según la búsqueda del usuario
+ * Filtro de búsqueda
  */
 function filtrarCapitulos() {
-    const input = document.getElementById('buscarCapitulo');
-    const filtro = input.value.toLowerCase();
+    const filtro = document
+        .getElementById('buscarCapitulo')
+        .value
+        .toLowerCase();
 
-    capitulosFiltrados = capitulosTotales.filter(cap => {
-        return (
-            cap.nombre.toLowerCase().includes(filtro) ||
-            cap.arco.toLowerCase().includes(filtro) ||
-            cap.tipo.toLowerCase().includes(filtro) ||
-            cap.volumen.toLowerCase().includes(filtro) ||
-            cap.origen.toLowerCase().includes(filtro) // LN / WN
-        );
-    });
+    capitulosFiltrados = capitulosTotales.filter(cap =>
+        cap.nombre.toLowerCase().includes(filtro) ||
+        cap.arco.toLowerCase().includes(filtro) ||
+        cap.tipo.toLowerCase().includes(filtro) ||
+        cap.volumen.toLowerCase().includes(filtro) ||
+        cap.origen.toLowerCase().includes(filtro)
+    );
 
-    paginaActual = 1;
-    mostrarCapitulosPorPagina(capitulosFiltrados, paginaActual);
-    configurarPaginacion(capitulosFiltrados.length, paginaActual);
-}
-
-function renderizarPaginacionNumerica(contenedorId, totalItems, itemsPorPagina, paginaActual, funcionCambio) {
-    const contenedor = document.getElementById(contenedorId);
-    const totalPaginas = Math.ceil(totalItems / itemsPorPagina);
-    
-    if (totalPaginas <= 1) {
-        contenedor.innerHTML = '';
-        return;
-    }
-
-    let html = `<ul class="pagination">`;
-
-    // Botón Anterior
-    html += `<li class="page-item ${paginaActual === 1 ? 'disabled' : ''}">
-                <a class="page-link" href="#" onclick="event.preventDefault(); ${funcionCambio}(${paginaActual - 1})">&lt;</a>
-             </li>`;
-
-    // Lógica de truncado
-    const rango = 1; // Muestra 1 número a la izquierda y derecha de la actual
-    
-    for (let i = 1; i <= totalPaginas; i++) {
-        // Mostrar siempre: primera, última, y las cercanas a la actual
-        if (i === 1 || i === totalPaginas || (i >= paginaActual - rango && i <= paginaActual + rango)) {
-            html += `<li class="page-item ${i === paginaActual ? 'active' : ''}">
-                        <a class="page-link" href="#" onclick="event.preventDefault(); ${funcionCambio}(${i})">${i}</a>
-                     </li>`;
-        } 
-        // Mostrar puntos suspensivos
-        else if (i === paginaActual - rango - 1 || i === paginaActual + rango + 1) {
-            html += `<li class="page-item disabled"><span class="page-link">...</span></li>`;
+    // 🔥 Re-crear paginación con nuevos datos
+    crearPaginacion({
+        id: "capitulos",
+        contenedorId: "contenedorPaginacion",
+        totalItems: capitulosFiltrados.length,
+        itemsPorPagina: filasPorPagina,
+        onRender: (pagina) => {
+            mostrarCapitulosPorPagina(capitulosFiltrados, pagina);
         }
-    }
-
-    // Botón Siguiente
-    html += `<li class="page-item ${paginaActual === totalPaginas ? 'disabled' : ''}">
-                <a class="page-link" href="#" onclick="event.preventDefault(); ${funcionCambio}(${paginaActual + 1})">&gt;</a>
-             </li>`;
-
-    html += `</ul>`;
-    contenedor.innerHTML = html;
+    });
 }
 
 // ================================
 // Inicialización
 // ================================
 document.addEventListener('DOMContentLoaded', inicializarCapitulos);
-
-// Menú lateral
-function toggleMenu(show) {
-    const menuLateral = document.getElementById('menuLateral');
-    if (menuLateral) {
-        menuLateral.style.width = show ? "250px" : "0";
-    }
-}

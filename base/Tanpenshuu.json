@@ -1,0 +1,161 @@
+[
+    {
+        "id": 1,
+        "tipo": "tanpenshuu",
+        "nombre": "Tanpenshuu Volumen 1",
+        "titulo": "Tanpenshuu Volumen 1",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/61b61ed7f3e1.webp"
+                ]
+            }
+        ],
+        "scans": [
+            {
+                "nombre": "Nexudus",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Volumen 1",
+                "driveId": "1Ai1aEp5wGo394GOmL4AixhsCpePTt_6M",
+                "imagenes": [
+                    {
+                        "src": ["https://cdn.imgchest.com/files/239ae0676a2e.webp"],
+                        "tags": [
+                            "emilia",
+                            "rem","beatrice","subaru natsuki","liliana masquerade"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Un Cuento Heroico a Partir de Cero", "Emilia in Wonderland","¡Viva la Princesa del Sol!","El día libre de Rem"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "tipo": "tanpenshuu",
+        "nombre": "Tanpenshuu Volumen 2",
+        "titulo": "Tanpenshuu Volumen 2",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/c7d842d6e277.webp"
+                ]
+            }
+        ],
+        "scans": [
+            {
+                "nombre": "Gergod Serenno",
+                "link": "#"
+            },
+            {
+                "nombre": "Leonardo Romero",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Volumen 2",
+                "driveId": "1bgIHnHnQRZ_tn4WVZLq6avtggZy",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "Portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Una cancion de amor para EMT","Ram manda","Operacion Kokkuri","La reacia promesa de Beatrice la bibliotecaria","A algunos les gusta el frio","Panico de alcohol"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "tipo": "tanpenshuu",
+        "nombre": "Tanpenshuu Volumen 3",
+        "titulo": "Tanpenshuu Volumen 3",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/dcf75e8db07b.webp"
+                ]
+            }
+        ],
+        "scans": [
+            {
+                "nombre": "Dorian Bastidas",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Volumen 3",
+                "driveId": "1lnYrI94nq7Wv8QM_T9eduOMKf3PzYVNR",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "Portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Mi bella y mala Dama","El mundo que vio Petra","Un dia muy feliz para Rem","La chica de kararagi conoce a los gatos","La luz del sol sobre el agua"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "tipo": "tanpenshuu",
+        "nombre": "Tanpenshuu Volumen 4",
+        "titulo": "Tanpenshuu Volumen 4",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/e266f76515ed.webp"
+                ]
+            }
+        ],
+        "scans": [
+            {
+                "nombre": "Evil Eye Translations",
+                "link": "#"
+            },
+            {
+                "nombre": "Erifuru",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Volumen 4",
+                "driveId": "1b6UU5Cp-o0MWKUOZpPZ3FLaKhhHpRwrw",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "Portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "La vida de Felt en la seleccion Real desde Cero","La vida en la seleccion Real desde Cero : El leon dorado y el Santo de la espada","Orgullo, Prejuicio y Zombis","El agridulce registro de ventas de Otto"
+                ]
+            }
+        ]
+    }
+]

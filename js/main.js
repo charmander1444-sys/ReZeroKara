@@ -59,66 +59,118 @@ function activarEnlaceActual() {
 }
 
 
-// ---------------------------------------------
-// --- 3. Funciones de Paginación Global ---
-// ---------------------------------------------
+// ================================
+// 🔥 SISTEMA DE PAGINACIÓN GLOBAL
+// ================================
+const Paginador = {};
 
 /**
- * Renderiza los controles de paginación con botones numéricos.
- * Esta función es reutilizable para Capítulos y Galería.
- * * @param {string} contenedorId - ID del elemento DOM donde se inyectará la paginación.
- * @param {number} totalItems - Número total de elementos disponibles.
- * @param {number} itemsPerPage - Elementos visibles por página.
- * @param {number} currentPage - La página actual (base 1).
- * @param {string} changePageFunctionName - Nombre de la función JS local a llamar al hacer clic (e.g., 'cambiarPagina' o 'changePage').
+ * Registra una nueva paginación
  */
-window.renderizarPaginacionNumerica = (contenedorId, totalItems, itemsPerPage, currentPage, changePageFunctionName) => {
-    const contenedorPaginacion = document.getElementById(contenedorId);
-    if (!contenedorPaginacion) return;
+window.crearPaginacion = function ({
+    id,
+    contenedorId,
+    totalItems,
+    itemsPorPagina,
+    paginaInicial = 1,
+    onRender
+}) {
+    Paginador[id] = {
+        contenedorId,
+        totalItems,
+        itemsPorPagina,
+        paginaActual: paginaInicial,
+        onRender
+    };
 
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
-    if (totalPages <= 1) {
-        contenedorPaginacion.innerHTML = "";
+    cambiarPagina(id, paginaInicial);
+};
+
+/**
+ * Cambia de página (GLOBAL)
+ */
+window.cambiarPagina = function (id, nuevaPagina) {
+    const instancia = Paginador[id];
+    if (!instancia) return;
+
+    const totalPaginas = Math.ceil(instancia.totalItems / instancia.itemsPorPagina);
+
+    if (nuevaPagina < 1 || nuevaPagina > totalPaginas) return;
+
+    instancia.paginaActual = nuevaPagina;
+
+    // Render contenido
+    instancia.onRender(nuevaPagina);
+
+    // Render paginación
+    renderizarControles(id);
+};
+
+/**
+ * Dibuja botones
+ */
+function renderizarControles(id) {
+    const instancia = Paginador[id];
+    const contenedor = document.getElementById(instancia.contenedorId);
+
+    if (!contenedor) return;
+
+    const totalPaginas = Math.ceil(instancia.totalItems / instancia.itemsPorPagina);
+
+    if (totalPaginas <= 1) {
+        contenedor.innerHTML = '';
         return;
     }
 
-    let numericButtons = '';
+    let html = `<ul class="pagination justify-content-center mt-3">`;
 
-    // Generación de botones numéricos
-    for (let i = 1; i <= totalPages; i++) {
-        const linkClass = i === currentPage ? ACTIVE_CLASSES : LINK_CLASSES;
-
-        numericButtons += `
-            <li class="page-item ${i === currentPage ? 'active' : ''}">
-                <a class="${linkClass}" href="#" 
-                   onclick="event.preventDefault(); ${changePageFunctionName}(${i});">${i}</a>
-            </li>
-        `;
-    }
-
-    const htmlPaginacion = `
-        <ul class="pagination justify-content-center mt-3">
-            <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
-                <a class="${LINK_CLASSES}" href="#" 
-                   onclick="event.preventDefault(); ${changePageFunctionName}(${currentPage - 1});">
-                    Anterior
-                </a>
-            </li>
-
-            ${numericButtons}
-
-            <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
-                <a class="${LINK_CLASSES}" href="#" 
-                   onclick="event.preventDefault(); ${changePageFunctionName}(${currentPage + 1});">
-                    Siguiente
-                </a>
-            </li>
-        </ul>
+    // Anterior
+    html += `
+        <li class="page-item ${instancia.paginaActual === 1 ? 'disabled' : ''}">
+            <a class="page-link" href="#"
+               onclick="event.preventDefault(); cambiarPagina('${id}', ${instancia.paginaActual - 1})">
+               &lt;
+            </a>
+        </li>
     `;
 
-    contenedorPaginacion.innerHTML = htmlPaginacion;
-}
+    const rango = 1;
 
+    for (let i = 1; i <= totalPaginas; i++) {
+        if (
+            i === 1 ||
+            i === totalPaginas ||
+            (i >= instancia.paginaActual - rango && i <= instancia.paginaActual + rango)
+        ) {
+            html += `
+                <li class="page-item ${i === instancia.paginaActual ? 'active' : ''}">
+                    <a class="page-link" href="#"
+                       onclick="event.preventDefault(); cambiarPagina('${id}', ${i})">
+                       ${i}
+                    </a>
+                </li>
+            `;
+        } else if (
+            i === instancia.paginaActual - rango - 1 ||
+            i === instancia.paginaActual + rango + 1
+        ) {
+            html += `<li class="page-item disabled"><span class="page-link">...</span></li>`;
+        }
+    }
+
+    // Siguiente
+    html += `
+        <li class="page-item ${instancia.paginaActual === totalPaginas ? 'disabled' : ''}">
+            <a class="page-link" href="#"
+               onclick="event.preventDefault(); cambiarPagina('${id}', ${instancia.paginaActual + 1})">
+               &gt;
+            </a>
+        </li>
+    `;
+
+    html += `</ul>`;
+    contenedor.innerHTML = html;
+}
 
 /* ===============================
    VISOR DE IMÁGENES UNIFICADO

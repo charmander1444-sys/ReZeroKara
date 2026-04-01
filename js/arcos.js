@@ -72,9 +72,9 @@ async function cargarArcos(filename, tipo) {
                             <p class="subtitulo-arco text-white-50">${arco.titulo}</p>
                             <div class="capitulos-grid-wrapper">${capitulosHTML}</div>
                             ${scansHTML}
-                            <a href="../mostrar-detalle.html?id=${arco.id}" class="btn btn-primary-custom mt-3">
-                                📖 Ver Detalles
-                            </a>
+                            <a href="../mostrar-detalle.html?id=${arco.id}&tipo=${arco.tipo}" class="btn btn-primary-custom mt-3">
+    📖 Ver Detalles
+</a>
                         </div>
                     </div>
                 </div>`;
@@ -104,5 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (location.pathname.includes("web-novel")) {
         cargarArcos("arcosWN.json", "web_novel");
+    }
+    // AÑADIR ESTO:
+    if (location.pathname.includes("tanpenshuu")) {
+        cargarArcos("Tanpenshuu.json", "tanpenshuu");
     }
 });

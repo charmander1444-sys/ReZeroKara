@@ -1,113 +1,167 @@
+// ================================
 // Configuración de la Galería
+// ================================
 const ELEMENTOS_POR_PAGINA = 20;
 let todosLosItemsGaleria = [];
 let itemsFiltrados = [];
-let paginaActual = 1;
 
 const contenedorGaleria = document.getElementById("galeria");
 
-/**
- * Crea el HTML para una tarjeta de imagen individual
- */
-function crearTarjetaImagen(url, etiquetasBreves, todasLasEtiquetas) {
+// ================================
+// Crear tarjeta
+// ================================
+function crearTarjetaImagen(url, etiquetasBreves = [], todasLasEtiquetas = "") {
     return `
-        <div class="col-6 col-sm-4 col-md-3 item-galeria-contenedor" data-tags="${todasLasEtiquetas}">
+        <div class="col-6 col-sm-4 col-md-3 item-galeria-contenedor" 
+             data-tags="${todasLasEtiquetas}">
+             
             <div class="tarjeta-foto-galeria">
                 <img src="${url}" 
-                     alt="${(etiquetasBreves || []).join(", ")}" 
+                     alt="${etiquetasBreves.join(", ")}" 
                      class="imagen-clicable"
+                     loading="lazy"
                      onclick="abrirVisualizador('${url}')">
             </div>
+
         </div>
     `;
 }
 
-/**
- * Renderiza los elementos en el contenedor según la página
- */
-function renderizarPagina(numPagina) {
+// ================================
+// RENDER (usa main.js)
+// ================================
+function renderGaleria(pagina) {
     if (!contenedorGaleria) return;
 
-    paginaActual = numPagina;
-    const totalItems = itemsFiltrados.length;
-    const indiceInicio = (paginaActual - 1) * ELEMENTOS_POR_PAGINA;
-    const indiceFin = Math.min(indiceInicio + ELEMENTOS_POR_PAGINA, totalItems);
+    const inicio = (pagina - 1) * ELEMENTOS_POR_PAGINA;
+    const fin = inicio + ELEMENTOS_POR_PAGINA;
 
-    const htmlPagina = itemsFiltrados.slice(indiceInicio, indiceFin).join("");
-    contenedorGaleria.innerHTML = htmlPagina;
+    const html = itemsFiltrados
+        .slice(inicio, fin)
+        .map(item => item.html)
+        .join("");
 
-    actualizarPaginacion(totalItems);
+    contenedorGaleria.innerHTML = html;
+
+    // Scroll bonito
+    const target = document.getElementById("buscadorGaleria") || contenedorGaleria;
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function actualizarPaginacion(totalItems) {
-    if (typeof renderizarPaginacionNumerica === 'function') {
-        renderizarPaginacionNumerica(
-            'paginacionContenedor',
-            totalItems,
-            ELEMENTOS_POR_PAGINA,
-            paginaActual,
-            'cambiarPagina'
-        );
-    }
-}
-
-window.cambiarPagina = (nuevaPagina) => {
-    const totalPaginas = Math.ceil(itemsFiltrados.length / ELEMENTOS_POR_PAGINA);
-    if (nuevaPagina >= 1 && nuevaPagina <= totalPaginas) {
-        renderizarPagina(nuevaPagina);
-        const elementoScroll = document.getElementById("buscadorGaleria") || contenedorGaleria;
-        elementoScroll.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-}
-
+// ================================
+// FILTRO
+// ================================
 window.filtrarGaleria = () => {
-    const busqueda = document.getElementById("buscadorGaleria").value.toLowerCase().trim();
-    if (busqueda === "") {
+    const input = document.getElementById("buscadorGaleria");
+    const busqueda = input.value.toLowerCase().trim();
+
+    if (!busqueda) {
         itemsFiltrados = todosLosItemsGaleria;
     } else {
-        const palabrasClave = busqueda.split(/\s+/).filter(p => p.length > 0);
-        itemsFiltrados = todosLosItemsGaleria.filter(htmlItem => {
-            const coincidenciaTags = htmlItem.match(/data-tags="([^"]+)"/);
-            if (coincidenciaTags && coincidenciaTags[1]) {
-                const tagsItem = coincidenciaTags[1];
-                return palabrasClave.every(palabra => tagsItem.includes(palabra));
-            }
-            return false;
-        });
+        const palabras = busqueda.split(/\s+/);
+
+        itemsFiltrados = todosLosItemsGaleria.filter(item =>
+            palabras.every(p => item.tags.includes(p))
+        );
     }
-    renderizarPagina(1);
-}
 
-// Carga de datos inicial
-document.addEventListener("DOMContentLoaded", async () => {
-    if (!contenedorGaleria) return;
-    try {
-        const respuesta = await fetch("base/arcosNL.json");
-        const datosArcos = await respuesta.json();
-        let listaTemporal = [];
+    // 🔥 reinicia paginación global
+    crearPaginacion({
+        id: "galeria",
+        contenedorId: "paginacionContenedor",
+        totalItems: itemsFiltrados.length,
+        itemsPorPagina: ELEMENTOS_POR_PAGINA,
+        onRender: renderGaleria
+    });
+};
 
-        datosArcos.forEach(arco => {
-            const etiquetasBase = [arco.nombre, arco.titulo].map(s => s.toLowerCase());
-            (arco.imagenes || []).forEach(img => {
-                const etiquetasUnidas = [...etiquetasBase, ...(img.tags || [])].join(" ").toLowerCase();
-                listaTemporal.push(crearTarjetaImagen(img.src, img.tags, etiquetasUnidas));
+// ================================
+// PROCESAR DATOS
+// ================================
+function procesarArcos(datos, origen = "LN") {
+    let lista = [];
+
+    datos.forEach(arco => {
+        const etiquetasBase = [
+            arco.nombre,
+            arco.titulo,
+            origen
+        ].map(e => (e || "").toLowerCase());
+
+        (arco.imagenes || []).forEach(img => {
+            const tags = [...etiquetasBase, ...(img.tags || [])]
+                .join(" ")
+                .toLowerCase();
+
+            lista.push({
+                html: crearTarjetaImagen(img.src, img.tags, tags),
+                tags: tags
             });
-            (arco.volumenes_detalle || []).forEach(vol => {
-                const etiquetaVol = vol.volumen.toLowerCase();
-                (vol.imagenes || []).forEach(grupo => {
-                    const etiquetasUnidas = [...etiquetasBase, etiquetaVol, ...(grupo.tags || [])].join(" ").toLowerCase();
-                    (grupo.src || []).forEach(urlImg => {
-                        listaTemporal.push(crearTarjetaImagen(urlImg, grupo.tags, etiquetasUnidas));
+        });
+
+        (arco.volumenes_detalle || []).forEach(vol => {
+            const etiquetaVol = (vol.volumen || "").toLowerCase();
+
+            (vol.imagenes || []).forEach(grupo => {
+                const tags = [...etiquetasBase, etiquetaVol, ...(grupo.tags || [])]
+                    .join(" ")
+                    .toLowerCase();
+
+                (grupo.src || []).forEach(url => {
+                    lista.push({
+                        html: crearTarjetaImagen(url, grupo.tags, tags),
+                        tags: tags
                     });
                 });
             });
         });
+    });
 
-        todosLosItemsGaleria = listaTemporal;
-        itemsFiltrados = listaTemporal;
-        renderizarPagina(1);
+    return lista;
+}
+
+// ================================
+// CARGA INICIAL
+// ================================
+document.addEventListener("DOMContentLoaded", async () => {
+    if (!contenedorGaleria) return;
+
+    try {
+        const [respNL, respWN] = await Promise.all([
+            fetch("base/arcosNL.json"),
+            fetch("base/arcosWN.json")
+        ]);
+
+        if (!respNL.ok || !respWN.ok) {
+            throw new Error("Error al cargar JSON");
+        }
+
+        const datosNL = await respNL.json();
+        const datosWN = await respWN.json();
+
+        todosLosItemsGaleria = [
+            ...procesarArcos(datosNL, "LN"),
+            ...procesarArcos(datosWN, "WN")
+        ];
+
+        itemsFiltrados = todosLosItemsGaleria;
+
+        // 🔥 PAGINACIÓN GLOBAL DESDE MAIN.JS
+        crearPaginacion({
+            id: "galeria",
+            contenedorId: "paginacionContenedor",
+            totalItems: itemsFiltrados.length,
+            itemsPorPagina: ELEMENTOS_POR_PAGINA,
+            onRender: renderGaleria
+        });
+
     } catch (error) {
         console.error("Error cargando galería:", error);
-        contenedorGaleria.innerHTML = '<p class="text-danger">Error al cargar las imágenes.</p>';
+
+        contenedorGaleria.innerHTML = `
+            <p class="text-danger text-center">
+                ⚠️ Error al cargar la galería
+            </p>
+        `;
     }
 });
