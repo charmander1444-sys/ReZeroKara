@@ -157,5 +157,173 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 5,
+        "tipo": "tanpenshuu",
+        "nombre": "Tanpenshuu Volumen 5",
+        "titulo": "Tanpenshuu Volumen 5",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/2eeff8eee808.webp"
+                ]
+            }
+        ],
+        "scans": [
+            {
+                "nombre": "Espina22",
+                "link": "#"
+            },
+            {
+                "nombre": "Recuerdos de Beako",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Volumen 5",
+                "driveId": "1unGmkpfsSqj2lOum5_rfT2UGrbinlqkH",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "Portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Precuela de la Seleccion Real: El sucesor de Blue","Chica kararagi y ojo de gato", "Los tres idiotas se pusieron en accion: episodio de la Araña de tierra"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "tipo": "tanpenshuu",
+        "nombre": "Tanpenshuu Volumen 6",
+        "titulo": "Tanpenshuu Volumen 6",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/38c273607a4b.webp"
+                ]
+            }
+        ],
+        "scans": [
+            {
+                "nombre": "Evil Eye Translations",
+                "link": "#"
+            },
+            {
+                "nombre": "Dorian Bastidas",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Volumen 6",
+                "driveId": "1z6qi-5OFQKzhPV3cy15c_wLsTrSIZwsE",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "Portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Las hermanas onis de la aldea oculta - EX: Un dia de bendiciones","Los tres idiotas se pusieron en accion: episodio de la estatua maldita de la Diosa","Despues de la fiesta de te de la bruja: Los requisitos para ser una bruja"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "tipo": "tanpenshuu",
+        "nombre": "Tanpenshuu Volumen 7",
+        "titulo": "Tanpenshuu Volumen 7",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/1534fa2e376d.webp"
+                ]
+            }
+        ],
+        "scans": [
+            {
+                "nombre": "Dorian Bastidas",
+                "link": "#"
+            },
+            {
+                "nombre": "Evil Eye Translations",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Volumen 7",
+                "driveId": "1y3DQhbGklNDomErw4Z1Mp0tWSOh3yQXs",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "Portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Documentos de Lugunica","Identidad de la espada","La liga Scarlata"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "tipo": "tanpenshuu",
+        "nombre": "Tanpenshuu Volumen 8",
+        "titulo": "Tanpenshuu Volumen 8",
+        "imagenes": [
+            {
+                "src": [
+                    "https://cdn.imgchest.com/files/cc0170421ab8.webp"
+                ]
+            }
+        ],
+        "scans": [
+            {
+                "nombre": "Evil Eye Translations",
+                "link": "#"
+            },
+            {
+                "nombre": "Dorian Bastidas",
+                "link": "#"
+            }
+        ],
+        "volumenes_detalle": [
+            {
+                "volumen": "Volumen 8",
+                "driveId": "1olyvM633GeDtMHNRQOqL15qO-QxeFU1h/",
+                "imagenes": [
+                    {
+                        "src": [
+                            ""
+                        ],
+                        "tags": [
+                            "Portada"
+                        ]
+                    }
+                ],
+                "capitulos": [
+                    "Quedate a mi lado Pleyades","Quedate a mi lado Pleyades: El regreso del hijo prodigo","Quedate a mi lado Pleyades: Las varoniles negociaciones de Petra","Quedate a mi lado Pleyades: La novia de sangre de Frederica", "Historia de Poltergeist", "Justia muy, muy dura"
+                ]
+            }
+        ]
     }
 ]
